@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import styles from "./courses.module.css";
 import { useSearchParams } from "next/navigation";
 import { fetchCourses } from "@/lib/mockApi";
+import AddToPlannerButton from "@/components/AddToPlannerButton";
 
 const KEY = "conu-planner:selected";
 
@@ -35,12 +36,11 @@ export default function CoursesPage() {
     const raw = localStorage.getItem(KEY);
     const list = raw ? JSON.parse(raw) : [];
     if (list.some(i => i.course_id === course.course_id)) {
-      alert("Already in planner");
       return;
     }
     const next = [...list, course];
     localStorage.setItem(KEY, JSON.stringify(next));
-    alert(`${course.subject} ${course.catalogue} added to planner`);
+
   }
 
   return (
@@ -66,7 +66,7 @@ export default function CoursesPage() {
                   {(c.credits ?? "-")} cr {c.session ? `• ${c.session}` : ""} {c.term ? `• ${c.term}` : ""}
                 </div>
                 <div className={styles.actions}>
-                  <button className={styles.addBtn} onClick={()=>addToPlanner(c)}>Add to Planner</button>
+                   <AddToPlannerButton onAdd={() => addToPlanner(c)} />
                 </div>
               </div>
             ))}

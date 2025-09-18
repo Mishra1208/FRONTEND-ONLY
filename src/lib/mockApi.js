@@ -1,20 +1,72 @@
-const MOCK = [
-  { course_id: "COMP-352", subject: "COMP", catalogue: "352", title: "Data Structures and Algorithms", credits: 3, term: "Fall", session: "Lecture" },
-  { course_id: "COMP-228", subject: "COMP", catalogue: "228", title: "System Hardware", credits: 3, term: "Fall", session: "Lecture" },
-  { course_id: "SOEN-228", subject: "SOEN", catalogue: "228", title: "System Hardware (SOEN)", credits: 3, term: "Winter", session: "Lecture" },
-  { course_id: "COMP-248", subject: "COMP", catalogue: "248", title: "Object-Oriented Programming I", credits: 3, term: "Fall", session: "Lecture" },
-  { course_id: "COMP-249", subject: "COMP", catalogue: "249", title: "Object-Oriented Programming II", credits: 3, term: "Winter", session: "Lecture" },
-  { course_id: "SOEN-287", subject: "SOEN", catalogue: "287", title: "Web Programming", credits: 3, term: "Fall", session: "Lecture" },
-];
+// "use client";  // keep this if this file is imported by a Client Component
+import Papa from "papaparse";
 
-export async function fetchPopularCourses() {
-  return MOCK.slice(0, 6);
+let MOCK = [];
+
+let loadPromise;
+async function ensureLoaded() {
+  if (MOCK.length) return MOCK;
+  if (!loadPromise) {
+    loadPromise = (async () => {
+      const res = await fetch("/courses.csv");
+      const text = await res.text();
+      const { data } = Papa.parse(text, { header: true, skipEmptyLines: true });
+
+      const norm = (v) => (typeof v === "string" ? v.trim() : v);
+
+      // helper to coalesce possible header variants
+      const pick = (row, keys) => {
+        for (const k of keys) {
+          if (row[k] != null && String(row[k]).trim() !== "") return norm(row[k]);
+        }
+        return undefined;
+      };
+
+      MOCK = data.map((r) => {
+        const subject = pick(r, ["subject", "Subject"]);
+        const catalogue = pick(r, ["catalogue", "Catalogue", "catalog"]);
+        const title = pick(r, ["title", "Title", "course_name"]);
+        const term = pick(r, ["term", "Term"]);
+        const session = pick(r, ["session", "Session"]) || "Lecture";
+        const creditsRaw = pick(r, ["credits", "Credits", "course_cre", "course_credits", "course_cr", "course_credit"]);
+        const credits = Number(creditsRaw ?? 0);
+
+        return {
+          course_id: pick(r, ["course_id", "Course_ID"]) || `${subject}-${catalogue}`,
+          subject,
+          catalogue,
+          title,
+          credits: Number.isFinite(credits) ? credits : 0,
+          term,
+          session,
+        };
+      });
+
+      return MOCK;
+    })();
+  }
+  return loadPromise;
 }
 
-export async function fetchCourses({ search = "", subject = "ALL", term = "ALL", minCredits = 0, maxCredits = 6 }) {
+export async function fetchPopularCourses() {
+  const data = await ensureLoaded();
+  return data.slice(0, 6);
+}
+
+export async function fetchCourses(opts = {}) {
+  const {
+    search = "",
+    subject = "ALL",
+    term = "ALL",
+    minCredits = 0,
+    maxCredits = 6,
+  } = opts;
+
+  const data = await ensureLoaded();
   const s = search.trim().toLowerCase();
-  return MOCK.filter(c => {
-    const text = `${c.subject} ${c.catalogue} ${c.title}`.toLowerCase();
+
+  return data.filter((c) => {
+    const text = `${c.subject ?? ""} ${c.catalogue ?? ""} ${c.title ?? ""}`.toLowerCase();
     const matchSearch = s ? text.includes(s) : true;
     const matchSubject = subject === "ALL" ? true : c.subject === subject;
     const matchTerm = term === "ALL" ? true : (c.term?.toLowerCase() === term.toLowerCase());
@@ -23,3 +75,5 @@ export async function fetchCourses({ search = "", subject = "ALL", term = "ALL",
     return matchSearch && matchSubject && matchTerm && matchCredits;
   });
 }
+
+export { MOCK };

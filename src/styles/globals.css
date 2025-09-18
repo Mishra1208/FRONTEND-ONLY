@@ -1,3 +1,20 @@
+/* tick animation */
+.checkmark-container { width: 22px; height: 22px; display: inline-block; }
+.checkmark { width: 22px; height: 22px; display: block; }
+.checkmark-circle {
+  stroke: #22c55e; stroke-width: 2; stroke-miterlimit: 10;
+  stroke-dasharray: 166; stroke-dashoffset: 166; stroke-linecap: round;
+  animation: cm-stroke 0.5s ease-out forwards;
+  fill: none;
+}
+.checkmark-check {
+  stroke: #22c55e; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 48; stroke-dashoffset: 48; animation: cm-stroke 0.3s ease-out 0.5s forwards;
+  fill: none;
+}
+@keyframes cm-stroke { to { stroke-dashoffset: 0; } }
+
+
 :root{
   --bg:#faf7fb;
   --panel:#ffffff;
@@ -323,3 +340,75 @@ dialog::backdrop{
 :is(dialog,[role="dialog"],.modal,.toast) hr{ border-color: rgba(255,255,255,.10) }
 :is(dialog,[role="dialog"],.modal,.toast) a{ color: var(--accent); text-decoration:none }
 :is(dialog,[role="dialog"],.modal,.toast) a:hover{ text-decoration:underline }
+
+
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 9999px;            /* pill */
+  cursor: pointer;
+
+  color: #fff;
+  background: linear-gradient(90deg, #a78bfa, #22d3ee); /* purple → cyan */
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  font-weight: 600;
+
+  transition: transform .15s ease, filter .15s ease, opacity .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  transform: translateY(0);
+  filter: brightness(.98);
+}
+
+.btn:disabled {
+  opacity: .75;
+  cursor: default;
+  transform: none;
+  filter: none;
+}
+
+/* checkmark animation */
+.check {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.check circle,
+.check path {
+  fill: none;
+  stroke: #22c55e;                  /* green */
+}
+
+.check circle {
+  stroke-width: 2;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-linecap: round;
+  animation: cm-stroke .5s ease-out forwards;
+}
+
+.check path {
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: cm-stroke .3s ease-out .5s forwards;
+}
+
+@keyframes cm-stroke { to { stroke-dashoffset: 0; } }
+

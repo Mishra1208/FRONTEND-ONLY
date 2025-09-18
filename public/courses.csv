@@ -1,0 +1,177 @@
+course_id,course_credit,prereqdescription,career,equivalent_course_description,term,session,subject,catalogue,title,location_description,course_name
+040329,3.0,,UGRD,,Winter,13W,COMP,108,COMP INDUS EXPER REF LRNG I,Sir George Williams Campus,COMP 108
+040329,3.0,,UGRD,,Summer,13W,COMP,108,COMP INDUS EXPER REF LRNG I,Sir George Williams Campus,COMP 108
+040331,3.0,,UGRD,,Winter,13W,COMP,208,COMP INDUS EXPER REF LRNG II,Sir George Williams Campus,COMP 208
+040331,3.0,,UGRD,,Summer,13W,COMP,208,COMP INDUS EXPER REF LRNG II,Sir George Williams Campus,COMP 208
+040331,3.0,,UGRD,,Fall,13W,COMP,208,COMP INDUS EXPER REF LRNG II,Sir George Williams Campus,COMP 208
+005337,3.0,   Never Taken/Not Registered: COMP248 You must complete 1 of the following rules   Course Prerequisite: MATH201,UGRD,,Winter,13W,COMP,218,FUNDAMENTALS OF PROGRAMMING,On Line,COMP 218
+005337,3.0,   Never Taken/Not Registered: COMP248 You must complete 1 of the following rules   Course Prerequisite: MATH201,UGRD,,Fall,13W,COMP,218,FUNDAMENTALS OF PROGRAMMING,On Line,COMP 218
+005350,3.0,Prerequisite/Corequisite:The following course must be completed previously: COMP 248. The following courses must be completed previously or concurrently: MATH 203 or Cegep Mathematics 103 or NYA; MATH 204 or Cegep Mathematics 105 or NYC.,UGRD,SOEN 228 = COMP 228,Winter,13W,COMP,228,SYSTEM HARDWARE,Sir George Williams Campus,COMP 228
+005350,3.0,Prerequisite/Corequisite:The following course must be completed previously: COMP 248. The following courses must be completed previously or concurrently: MATH 203 or Cegep Mathematics 103 or NYA; MATH 204 or Cegep Mathematics 105 or NYC.,UGRD,SOEN 228 = COMP 228,Summer,6H1,COMP,228,SYSTEM HARDWARE,Sir George Williams Campus,COMP 228
+005350,3.0,Prerequisite/Corequisite:The following course must be completed previously: COMP 248. The following courses must be completed previously or concurrently: MATH 203 or Cegep Mathematics 103 or NYA; MATH 204 or Cegep Mathematics 105 or NYC.,UGRD,SOEN 228 = COMP 228,Fall,13W,COMP,228,SYSTEM HARDWARE,Sir George Williams Campus,COMP 228
+005353,3.0,"Course Prerequisite: MATH204, MATH203Never Taken: COMP 238 or COEN 231",UGRD,COMP 232 = COMP 238,Winter,13W,COMP,232,MATH. FOR COMPUTER SCIENCE,Sir George Williams Campus,COMP 232
+005353,3.0,"Course Prerequisite: MATH204, MATH203Never Taken: COMP 238 or COEN 231",UGRD,COMP 232 = COMP 238,Summer,6H1,COMP,232,MATH. FOR COMPUTER SCIENCE,Sir George Williams Campus,COMP 232
+005353,3.0,"Course Prerequisite: MATH204, MATH203Never Taken: COMP 238 or COEN 231",UGRD,COMP 232 = COMP 238,Fall,13W,COMP,232,MATH. FOR COMPUTER SCIENCE,Sir George Williams Campus,COMP 232
+005354,3.0,"Course Prerequisite: MATH205• Students who have received credit for BIOL 322, ENGR 371, STAT 249, STAT 250, COMM 215, MAST 221, MAST 333 may not take this course for credit.",UGRD,,Winter,13W,COMP,233,PROB. & STATS. FOR COMP. SC.,Sir George Williams Campus,COMP 233
+005354,3.0,"Course Prerequisite: MATH205• Students who have received credit for BIOL 322, ENGR 371, STAT 249, STAT 250, COMM 215, MAST 221, MAST 333 may not take this course for credit.",UGRD,,Summer,6H2,COMP,233,PROB. & STATS. FOR COMP. SC.,Sir George Williams Campus,COMP 233
+005354,3.0,"Course Prerequisite: MATH205• Students who have received credit for BIOL 322, ENGR 371, STAT 249, STAT 250, COMM 215, MAST 221, MAST 333 may not take this course for credit.",UGRD,,Fall,13W,COMP,233,PROB. & STATS. FOR COMP. SC.,Sir George Williams Campus,COMP 233
+005363,3.5,Pre-requisite: Previously or Co-currently: MATH204,UGRD,,Winter,13W,COMP,248,OBJ-ORIENTED PROGRAMMING I,Sir George Williams Campus,COMP 248
+005363,3.5,Pre-requisite: Previously or Co-currently: MATH204,UGRD,,Summer,6H1,COMP,248,OBJ-ORIENTED PROGRAMMING I,Sir George Williams Campus,COMP 248
+005363,3.5,Pre-requisite: Previously or Co-currently: MATH204,UGRD,,Fall,13W,COMP,248,OBJ-ORIENTED PROGRAMMING I,Sir George Williams Campus,COMP 248
+005364,3.5,Course Prerequisite: COMP248; MATH 203; Course Co-requisite: MATH205,UGRD,COEN 241 = COEN 244,Winter,13W,COMP,249,OBJ-ORIENTED PROGRAMMING II,Sir George Williams Campus,COMP 249
+005364,3.5,Course Prerequisite: COMP248; MATH 203; Course Co-requisite: MATH205,UGRD,COEN 241 = COEN 244,Summer,6H2,COMP,249,OBJ-ORIENTED PROGRAMMING II,Sir George Williams Campus,COMP 249
+005364,3.5,Course Prerequisite: COMP248; MATH 203; Course Co-requisite: MATH205,UGRD,COEN 241 = COEN 244,Fall,13W,COMP,249,OBJ-ORIENTED PROGRAMMING II,Sir George Williams Campus,COMP 249
+005391,3.0,   Course Prerequisite: COMP346,UGRD,,Fall,13W,COMP,326,COMPUTER ARCHITECTURE,Sir George Williams Campus,COMP 326
+049700,4.0,Prerequisite: COMP 233 or ENGR 371; COMP 352; ENCS 282,UGRD,,Winter,13W,COMP,333,DATA ANALYTICS,Sir George Williams Campus,COMP 333
+049700,4.0,Prerequisite: COMP 233 or ENGR 371; COMP 352; ENCS 282,UGRD,,Fall,13W,COMP,333,DATA ANALYTICS,Sir George Williams Campus,COMP 333
+005394,3.0,Prerequisite/Corequisite: The following courses must be completed previously: COMP 232 or COEN 231; and COMP 249 or COEN 244.,UGRD,,Winter,13W,COMP,335,INTRO/THEORETICAL COMP SCI,Sir George Williams Campus,COMP 335
+005394,3.0,Prerequisite/Corequisite: The following courses must be completed previously: COMP 232 or COEN 231; and COMP 249 or COEN 244.,UGRD,,Summer,6H1,COMP,335,INTRO/THEORETICAL COMP SCI,Sir George Williams Campus,COMP 335
+005394,3.0,Prerequisite/Corequisite: The following courses must be completed previously: COMP 232 or COEN 231; and COMP 249 or COEN 244.,UGRD,,Fall,13W,COMP,335,INTRO/THEORETICAL COMP SCI,Sir George Williams Campus,COMP 335
+005398,3.0,   Course Prerequisite: COMP232,UGRD,COMP 339 = MATH 339,Fall,13W,COMP,339,COMBINATORICS,Sir George Williams Campus,COMP 339
+005405,4.0,   Course Corequisite: COMP352,UGRD,,Winter,13W,COMP,345,"ADVANCED PROGRAM DESIGN, C++",Sir George Williams Campus,COMP 345
+005405,4.0,   Course Corequisite: COMP352,UGRD,,Fall,13W,COMP,345,"ADVANCED PROGRAM DESIGN, C++",Sir George Williams Campus,COMP 345
+005406,4.0,Prerequisite: COMP 228 or SOEN 228; COMP 352.,UGRD,,Winter,13W,COMP,346,OPERATING SYSTEMS,Sir George Williams Campus,COMP 346
+005406,4.0,Prerequisite: COMP 228 or SOEN 228; COMP 352.,UGRD,,Summer,6H2,COMP,346,OPERATING SYSTEMS,Sir George Williams Campus,COMP 346
+005406,4.0,Prerequisite: COMP 228 or SOEN 228; COMP 352.,UGRD,,Fall,13W,COMP,346,OPERATING SYSTEMS,Sir George Williams Campus,COMP 346
+005407,3.0,Prerequisite: The following courses must be completed previously: COMP 249,UGRD,,Winter,13W,COMP,348,PRIN./PROGRAMMING LANGUAGES,Sir George Williams Campus,COMP 348
+005407,3.0,Prerequisite: The following courses must be completed previously: COMP 249,UGRD,,Summer,6H1,COMP,348,PRIN./PROGRAMMING LANGUAGES,Sir George Williams Campus,COMP 348
+005407,3.0,Prerequisite: The following courses must be completed previously: COMP 249,UGRD,,Fall,13W,COMP,348,PRIN./PROGRAMMING LANGUAGES,Sir George Williams Campus,COMP 348
+005409,3.0,Prerequisite: COMP 249; Co-requisite COMP 232,UGRD,COEN 352 = COMP 352,Winter,13W,COMP,352,DATA STRUCTURES + ALGORITHMS,Sir George Williams Campus,COMP 352
+005409,3.0,Prerequisite: COMP 249; Co-requisite COMP 232,UGRD,COEN 352 = COMP 352,Summer,6H1,COMP,352,DATA STRUCTURES + ALGORITHMS,Sir George Williams Campus,COMP 352
+005409,3.0,Prerequisite: COMP 249; Co-requisite COMP 232,UGRD,COEN 352 = COMP 352,Fall,13W,COMP,352,DATA STRUCTURES + ALGORITHMS,Sir George Williams Campus,COMP 352
+005410,4.0,"Never Taken: COMP451, COMP454, COMP458, SOEN 363Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352.",UGRD,,Winter,13W,COMP,353,DATABASES,Sir George Williams Campus,COMP 353
+005410,4.0,"Never Taken: COMP451, COMP454, COMP458, SOEN 363Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352.",UGRD,,Summer,6H2,COMP,353,DATABASES,Sir George Williams Campus,COMP 353
+005410,4.0,"Never Taken: COMP451, COMP454, COMP458, SOEN 363Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352.",UGRD,,Fall,13W,COMP,353,DATABASES,Sir George Williams Campus,COMP 353
+005411,4.0,Course Prerequisite: COMP352; ENCS282,UGRD,COEN 431 = COMP 354,Winter,13W,COMP,354,SOFTWARE ENGINEERING I,Sir George Williams Campus,COMP 354
+005411,4.0,Course Prerequisite: COMP352; ENCS282,UGRD,COEN 431 = COMP 354,Summer,13W,COMP,354,SOFTWARE ENGINEERING I,Sir George Williams Campus,COMP 354
+005411,4.0,Course Prerequisite: COMP352; ENCS282,UGRD,COEN 431 = COMP 354,Fall,13W,COMP,354,SOFTWARE ENGINEERING I,Sir George Williams Campus,COMP 354
+005412,3.0,Course Prerequisite: COMP249; COMP238 or COMP232,UGRD,,Winter,13W,COMP,361,ELEMENTARY NUMERICAL METHODS,Sir George Williams Campus,COMP 361
+005412,3.0,Course Prerequisite: COMP249; COMP238 or COMP232,UGRD,,Fall,13W,COMP,361,ELEMENTARY NUMERICAL METHODS,Sir George Williams Campus,COMP 361
+005414,3.0,Course Prerequisite: MATH 222 or COMP 232 or equivalent; COMP 248 or equivalent,UGRD,COMP 367 = MAST 332,Winter,13W,COMP,367,TECH./SYMBOLIC COMPUTATIONS,Sir George Williams Campus,COMP 367
+005415,4.0,"Never Taken: COMP376, COMP477 Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352",UGRD,COMP 371 = COMP 471,Winter,13W,COMP,371,COMPUTER GRAPHICS,Sir George Williams Campus,COMP 371
+005415,4.0,"Never Taken: COMP376, COMP477 Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352",UGRD,COMP 371 = COMP 471,Summer,6H2,COMP,371,COMPUTER GRAPHICS,Sir George Williams Campus,COMP 371
+005416,4.0,"Prerequisite/Corequisite: The following courses must be completed previously: COMP 371.Never Taken: COMP476, CARTR 315",UGRD,CART 315 = CART 398 = COMP 376,Fall,13W,COMP,376,INTRO. TO GAME DEVELOPMENT,Sir George Williams Campus,COMP 376
+049310,4.0,PREREQ COMP425: must complete all 200 level courses before enrolling in any 400 level course,UGRD,,Winter,13W,COMP,425,COMPUTER VISION,Sir George Williams Campus,COMP 425
+005446,4.0,Prerequisite: COMP346 or COEN346,UGRD,,Fall,13W,COMP,426,MULTICORE PROGRAMMING,Sir George Williams Campus,COMP 426
+005449,4.0,Course Prerequisite: COMP346;,UGRD,,Fall,13W,COMP,428,PARALLEL PROGRAMMING,Sir George Williams Campus,COMP 428
+049701,4.0,"Prerequisite: COMP 352, Must complete all 200 level courses before enrolling in 400 level courses.",UGRD,,Winter,13W,COMP,432,MACHINE LEARNING,Sir George Williams Campus,COMP 432
+049701,4.0,"Prerequisite: COMP 352, Must complete all 200 level courses before enrolling in 400 level courses.",UGRD,,Fall,13W,COMP,432,MACHINE LEARNING,Sir George Williams Campus,COMP 432
+005454,4.0,"Prerequisite: COMP 352, Must complete all 200 level courses before enrolling in 400 level courses.",UGRD,,Fall,13W,COMP,433,INTRODUCTION TO DEEP LEARNING,Sir George Williams Campus,COMP 433
+050448,4.0,"Prerequisite: COMP 352, Must complete all 200 level courses before enrolling in 400 level courses.",UGRD,,Winter,13W,COMP,438,GEOMETRIC MODELING AND PROCESS,Sir George Williams Campus,COMP 438
+005461,4.0,Prerequisite: COMP 228 or SOEN 228 or COEN 311; COMP 335; COMP 352 or COEN 352,UGRD,,Winter,13W,COMP,442,COMPILER DESIGN,Sir George Williams Campus,COMP 442
+005464,4.0,Course Prerequisite: COMP346;,UGRD,,Winter,13W,COMP,445,DATA COMM + COMP NETWORKS,Sir George Williams Campus,COMP 445
+005464,4.0,Course Prerequisite: COMP346;,UGRD,,Fall,13W,COMP,445,DATA COMM + COMP NETWORKS,Sir George Williams Campus,COMP 445
+005477,3.0,Prerequisite: COMP 232 or COEN 231; COMP 339; COMP 352 or COEN?352,UGRD,,Winter,13W,COMP,465,DESIGN+ANALYSIS/ALGORITHMS,Sir George Williams Campus,COMP 465
+005482,4.0,Course Prerequisite: COMP352 or COEN352,UGRD,,Winter,13W,COMP,472,ARTIFICIAL INTELLIGENCE,Sir George Williams Campus,COMP 472
+005482,4.0,Course Prerequisite: COMP352 or COEN352,UGRD,,Summer,6H1,COMP,472,ARTIFICIAL INTELLIGENCE,Sir George Williams Campus,COMP 472
+005482,4.0,Course Prerequisite: COMP352 or COEN352,UGRD,,Fall,13W,COMP,472,ARTIFICIAL INTELLIGENCE,Sir George Williams Campus,COMP 472
+005483,4.0,Course Prerequisite: COMP352,UGRD,,Winter,13W,COMP,473,PATTERN RECOGNITION,Sir George Williams Campus,COMP 473
+005483,4.0,Course Prerequisite: COMP352,UGRD,,Fall,13W,COMP,473,PATTERN RECOGNITION,Sir George Williams Campus,COMP 473
+005484,4.0,Course Prerequisite: COMP352 or COEN352,UGRD,,Winter,13W,COMP,474,INTELLIGENT SYSTEMS,Sir George Williams Campus,COMP 474
+045940,4.0,"Prerequisite: COMP 371, and must complete all 200 level courses before enrolling in any 400 level course",UGRD,,Winter,13W,COMP,475,Immersive Technologies,Sir George Williams Campus,COMP 475
+045940,4.0,"Prerequisite: COMP 371, and must complete all 200 level courses before enrolling in any 400 level course",UGRD,,Fall,13W,COMP,475,Immersive Technologies,Sir George Williams Campus,COMP 475
+005485,4.0,Course Prerequisite: COMP376; COMP361 or ENGR391,UGRD,,Winter,13W,COMP,476,ADVANCED GAME DEVELOPMENT,Sir George Williams Campus,COMP 476
+005486,4.0,Course Prerequisite: COMP371; COMP361 or ENGR391,UGRD,,Fall,13W,COMP,477,ANIMATION FOR COMPUTER GAMES,Sir George Williams Campus,COMP 477
+005487,4.0,Course Prerequisite: COMP352,UGRD,,Winter,13W,COMP,478,IMAGE PROCESSING,Sir George Williams Campus,COMP 478
+005487,4.0,Course Prerequisite: COMP352,UGRD,,Fall,13W,COMP,478,IMAGE PROCESSING,Sir George Williams Campus,COMP 478
+005488,4.0,Course Prerequisite: COMP352; ENGR371or COMP233,UGRD,,Fall,13W,COMP,479,INFO. RETRIEVAL & WEB SEARCH,Sir George Williams Campus,COMP 479
+005491,3.0,Course Prerequisite: ENCS282,UGRD,,Winter,13W,COMP,490,COMPUTER SCIENCE PROJECT I,Sir George Williams Campus,COMP 490
+005491,3.0,Course Prerequisite: ENCS282,UGRD,,Summer,6H1,COMP,490,COMPUTER SCIENCE PROJECT I,Sir George Williams Campus,COMP 490
+005491,3.0,Course Prerequisite: ENCS282,UGRD,,Fall,13W,COMP,490,COMPUTER SCIENCE PROJECT I,Sir George Williams Campus,COMP 490
+005492,3.0,   Course Corequisite: COMP490,UGRD,,Winter,13W,COMP,492,COMPUTER SCIENCE PROJECT II,Sir George Williams Campus,COMP 492
+005492,3.0,   Course Corequisite: COMP490,UGRD,,Summer,6H2,COMP,492,COMPUTER SCIENCE PROJECT II,Sir George Williams Campus,COMP 492
+005492,3.0,   Course Corequisite: COMP490,UGRD,,Fall,13W,COMP,492,COMPUTER SCIENCE PROJECT II,Sir George Williams Campus,COMP 492
+005493,1.0,Course Prerequisite: ENCS282,UGRD,,Winter,13W,COMP,495,HONOURS SEMINAR,Sir George Williams Campus,COMP 495
+005493,1.0,Course Prerequisite: ENCS282,UGRD,,Fall,13W,COMP,495,HONOURS SEMINAR,Sir George Williams Campus,COMP 495
+046579,3.0,Students must complete all 200-level courses required for their program before registering for any 400-level courses. ,UGRD,,Fall,13W,COMP,498,TOPICS IN COMPUTER SCIENCE,Sir George Williams Campus,COMP 498
+048956,4.0,Students must complete all 200-level courses required for their program before registering for any 400-level courses. ,UGRD,,Winter,13W,COMP,499,TOPICS IN COMPUTER SCIENCE,Sir George Williams Campus,COMP 499
+048956,4.0,Students must complete all 200-level courses required for their program before registering for any 400-level courses. ,UGRD,,Fall,13W,COMP,499,TOPICS IN COMPUTER SCIENCE,Sir George Williams Campus,COMP 499
+005500,4.0,,GRAD,,Fall,13W,COMP,5201,COMP. ORGANIZ N+ASSEMB.LANG.,Sir George Williams Campus,COMP 5201
+040332,3.0,   Course Prerequisite: COMP5461,GRAD,,Fall,13W,COMP,5261,COMPUTER ARCHITECTURE,Sir George Williams Campus,COMP 5261
+005520,4.0,,GRAD,,Fall,13W,COMP,5361,DISCRETE STR.+FORMAL LANG.,Sir George Williams Campus,COMP 5361
+005522,4.0,   Course Prerequisite: COMP5511,GRAD,,Summer,13W,COMP,5421,ADVANCED PROGRAMMING,Sir George Williams Campus,COMP 5421
+005526,4.0,"   Course Prerequisite: COMP5201, COMP5511",GRAD,,Winter,13W,COMP,5461,OPERATING SYSTEMS,Sir George Williams Campus,COMP 5461
+005526,4.0,"   Course Prerequisite: COMP5201, COMP5511",GRAD,,Summer,13W,COMP,5461,OPERATING SYSTEMS,Sir George Williams Campus,COMP 5461
+005530,4.0,   Course Prerequisite: COMP5481,GRAD,,Fall,13W,COMP,5511,PRINCIPLES/DATA STRUCTURES,Sir George Williams Campus,COMP 5511
+005534,4.0,"   Course Prerequisite: COMP5361, COMP5511",GRAD,,Winter,13W,COMP,5531,FILES AND DATABASES,Sir George Williams Campus,COMP 5531
+005534,4.0,"   Course Prerequisite: COMP5361, COMP5511",GRAD,,Summer,13W,COMP,5531,FILES AND DATABASES,Sir George Williams Campus,COMP 5531
+005536,4.0,"   Course Prerequisite: COMP5361, COMP5511, ENCS6721",GRAD,,Winter,13W,COMP,5541,TOOLS+TECHNIQUES / SW ENGR.,Sir George Williams Campus,COMP 5541
+040335,3.0,"   Course Prerequisite: COMP5361, COMP5511",GRAD,,Winter,13W,COMP,5611,ELEMENTARY NUMERICAL METHODS,Sir George Williams Campus,COMP 5611
+040335,3.0,"   Course Prerequisite: COMP5361, COMP5511",GRAD,,Fall,13W,COMP,5611,ELEMENTARY NUMERICAL METHODS,Sir George Williams Campus,COMP 5611
+005567,4.0,,GRAD,,Winter,13W,COMP,6231,DISTRIBUTED SYSTEM DESIGN,Sir George Williams Campus,COMP 6231
+005567,4.0,,GRAD,,Summer,13W,COMP,6231,DISTRIBUTED SYSTEM DESIGN,Sir George Williams Campus,COMP 6231
+005567,4.0,,GRAD,,Fall,13W,COMP,6231,DISTRIBUTED SYSTEM DESIGN,Sir George Williams Campus,COMP 6231
+005570,4.0,,GRAD,,Fall,13W,COMP,6281,PARALLEL PROGRAMMING,Sir George Williams Campus,COMP 6281
+040344,4.0,   Course Corequisite: COMP6761,GRAD,,Fall,13W,COMP,6311,ANIMATION FOR COMPUTER GAMES,Sir George Williams Campus,COMP 6311
+005572,4.0,,GRAD,,Winter,13W,COMP,6321,MACHINE LEARNING,Sir George Williams Campus,COMP 6321
+005572,4.0,,GRAD,,Fall,13W,COMP,6321,MACHINE LEARNING,Sir George Williams Campus,COMP 6321
+047980,4.0,,GRAD,,Winter,13W,COMP,6331,ADVANCED GAME DEVELOPMENT,Sir George Williams Campus,COMP 6331
+049309,4.0,,GRAD,,Winter,13W,COMP,6341,COMPUTER VISION,Sir George Williams Campus,COMP 6341
+049309,4.0,,GRAD,,Fall,13W,COMP,6341,COMPUTER VISION,Sir George Williams Campus,COMP 6341
+005577,4.0,Prereq for COMP 6361,GRAD,,Winter,13W,COMP,6361,NUMERIC ANALY/NONLINEAR EQUA,Sir George Williams Campus,COMP 6361
+005577,4.0,Prereq for COMP 6361,GRAD,,Fall,13W,COMP,6361,NUMERIC ANALY/NONLINEAR EQUA,Sir George Williams Campus,COMP 6361
+050123,4.0,,GRAD,,Winter,13W,COMP,6371,IMMERSIVE TECHNOLOGIES,Sir George Williams Campus,COMP 6371
+050123,4.0,,GRAD,,Fall,13W,COMP,6371,IMMERSIVE TECHNOLOGIES,Sir George Williams Campus,COMP 6371
+049712,4.0,,GRAD,,Winter,13W,COMP,6381,DIGITAL GEOMETRIC MODELING,Sir George Williams Campus,COMP 6381
+049712,4.0,,GRAD,,Fall,13W,COMP,6381,DIGITAL GEOMETRIC MODELING,Sir George Williams Campus,COMP 6381
+005579,4.0,,GRAD,,Winter,13W,COMP,6411,COMPARAT.STUDY/PROGRAM.LANG.,Sir George Williams Campus,COMP 6411
+005579,4.0,,GRAD,,Summer,6H1,COMP,6411,COMPARAT.STUDY/PROGRAM.LANG.,Sir George Williams Campus,COMP 6411
+005579,4.0,,GRAD,,Fall,13W,COMP,6411,COMPARAT.STUDY/PROGRAM.LANG.,Sir George Williams Campus,COMP 6411
+040345,4.0,,GRAD,,Winter,13W,COMP,6421,COMPILER DESIGN,Sir George Williams Campus,COMP 6421
+005585,4.0,,GRAD,,Winter,13W,COMP,6461,COMPUTER NETWORKS + PROTOCOL,Sir George Williams Campus,COMP 6461
+005585,4.0,,GRAD,,Fall,13W,COMP,6461,COMPUTER NETWORKS + PROTOCOL,Sir George Williams Campus,COMP 6461
+005589,4.0,,GRAD,,Winter,13W,COMP,6481,PROGRAM & PROBLEM SOLVING,Sir George Williams Campus,COMP 6481
+005589,4.0,,GRAD,,Fall,13W,COMP,6481,PROGRAM & PROBLEM SOLVING,Sir George Williams Campus,COMP 6481
+005592,4.0,,GRAD,,Winter,13W,COMP,6521,ADV.DATABASE TECH. AND APPL.,Sir George Williams Campus,COMP 6521
+005592,4.0,,GRAD,,Fall,13W,COMP,6521,ADV.DATABASE TECH. AND APPL.,Sir George Williams Campus,COMP 6521
+005593,4.0,,GRAD,,Winter,13W,COMP,6531,FOUNDATIONS/SEMANTIC WEB,Sir George Williams Campus,COMP 6531
+005598,4.0,,GRAD,,Winter,13W,COMP,6591,INTRO/KNOWLEDGE-BASE SYSTEMS,Sir George Williams Campus,COMP 6591
+005598,4.0,,GRAD,,Summer,6H1,COMP,6591,INTRO/KNOWLEDGE-BASE SYSTEMS,Sir George Williams Campus,COMP 6591
+049296,4.0,,GRAD,,Fall,13W,COMP,6631,LARGE-SCALE OPTIMIZATION,Sir George Williams Campus,COMP 6631
+005605,4.0,,GRAD,,Winter,13W,COMP,6651,ALGORITHM DESIGN TECHNIQUES,Sir George Williams Campus,COMP 6651
+005605,4.0,,GRAD,,Summer,6H2,COMP,6651,ALGORITHM DESIGN TECHNIQUES,Sir George Williams Campus,COMP 6651
+005605,4.0,,GRAD,,Fall,13W,COMP,6651,ALGORITHM DESIGN TECHNIQUES,Sir George Williams Campus,COMP 6651
+005607,4.0,,GRAD,,Fall,13W,COMP,6661,COMBINATORIAL ALGORITHMS,Sir George Williams Campus,COMP 6661
+005610,4.0,,GRAD,,Winter,13W,COMP,6711,COMPUTATIONAL GEOMETRY,Sir George Williams Campus,COMP 6711
+040353,4.0,   Never Taken/Not Registered: COMP472,GRAD,,Winter,13W,COMP,6721,APPLIED ARTIFICIAL INTELLIGENC,Sir George Williams Campus,COMP 6721
+040353,4.0,   Never Taken/Not Registered: COMP472,GRAD,,Summer,6H1,COMP,6721,APPLIED ARTIFICIAL INTELLIGENC,Sir George Williams Campus,COMP 6721
+040353,4.0,   Never Taken/Not Registered: COMP472,GRAD,,Fall,13W,COMP,6721,APPLIED ARTIFICIAL INTELLIGENC,Sir George Williams Campus,COMP 6721
+040354,4.0,   Never Taken/Not Registered: COMP473,GRAD,,Winter,13W,COMP,6731,PATTERN RECOGNITION,Sir George Williams Campus,COMP 6731
+040354,4.0,   Never Taken/Not Registered: COMP473,GRAD,,Fall,13W,COMP,6731,PATTERN RECOGNITION,Sir George Williams Campus,COMP 6731
+040355,4.0,   Never Taken/Not Registered: COMP474,GRAD,,Winter,13W,COMP,6741,INTELLIGENT SYSTEMS,Sir George Williams Campus,COMP 6741
+005615,4.0,,GRAD,,Fall,13W,COMP,6751,NATURAL LANGUAGE ANALYSIS,Sir George Williams Campus,COMP 6751
+005619,4.0,   Never Taken/Not Registered: COMP478,GRAD,,Winter,13W,COMP,6771,Image Processing,Sir George Williams Campus,COMP 6771
+005619,4.0,   Never Taken/Not Registered: COMP478,GRAD,,Fall,13W,COMP,6771,Image Processing,Sir George Williams Campus,COMP 6771
+005620,4.0,,GRAD,,Winter,13W,COMP,6781,STAT L NAT. LANG PROCESSING,Sir George Williams Campus,COMP 6781
+005620,4.0,,GRAD,,Fall,13W,COMP,6781,STAT L NAT. LANG PROCESSING,Sir George Williams Campus,COMP 6781
+005621,4.0,   Never Taken/Not Registered: COMP479,GRAD,,Fall,13W,COMP,6791,INFO. RETRIEVAL & WEB SEARCH,Sir George Williams Campus,COMP 6791
+005622,4.0,,GRAD,,Fall,13W,COMP,6811,BIOINFORMATICS ALGORITHMS,Sir George Williams Campus,COMP 6811
+048967,4.0,,GRAD,,Fall,13W,COMP,6821,Bioinformatics Dbases and Sys,Sir George Williams Campus,COMP 6821
+051122,4.0,,GRAD,,Fall,13W,COMP,6831,APPLIED MACHINE LEARNING,Sir George Williams Campus,COMP 6831
+051110,4.0,,GRAD,,Winter,13W,COMP,6841,APPLIED DEEP LEARNING,Sir George Williams Campus,COMP 6841
+051388,4.0,,GRAD,,Winter,13W,COMP,6861,Conversational AI,Sir George Williams Campus,COMP 6861
+046580,4.0,,GRAD,,Winter,13W,COMP,691,TOPICS/COMPUTER SCIENCE,Sir George Williams Campus,COMP 691
+046580,4.0,,GRAD,,Fall,13W,COMP,691,TOPICS/COMPUTER SCIENCE,Sir George Williams Campus,COMP 691
+005656,1.0,,GRAD,,Winter,13W,COMP,6961,GRADUATE SEMINAR-COMP.SC.,Sir George Williams Campus,COMP 6961
+005656,1.0,,GRAD,,Summer,13W,COMP,6961,GRADUATE SEMINAR-COMP.SC.,Sir George Williams Campus,COMP 6961
+005656,1.0,,GRAD,,Fall,13W,COMP,6961,GRADUATE SEMINAR-COMP.SC.,Sir George Williams Campus,COMP 6961
+048285,4.0,,GRAD,,Winter,13W,COMP,6971,Project and Report,Sir George Williams Campus,COMP 6971
+048285,4.0,,GRAD,,Summer,13W,COMP,6971,Project and Report,Sir George Williams Campus,COMP 6971
+048285,4.0,,GRAD,,Fall,13W,COMP,6971,Project and Report,Sir George Williams Campus,COMP 6971
+050482,4.0,"Prerequisite: COMP 6971 ;Students who have received credit for SOEN 6951, SOEN 6971, or ENCS 6931 may not take this course for credit",GRAD,,Summer,13W,COMP,6981,PROJECT AND REPORT II,Sir George Williams Campus,COMP 6981
+005662,4.0,   Course Prerequisite: COMP6461,GRAD,,Winter,13W,COMP,7251,MOBILE COMP+WIRELESS NETWKS,Sir George Williams Campus,COMP 7251
+005724,30.0,,GRAD,,Winter,13W,COMP,792,MASTER S RESEARCH AND THESIS,Sir George Williams Campus,COMP 792
+005724,30.0,,GRAD,,Summer,6H1,COMP,792,MASTER S RESEARCH AND THESIS,Sir George Williams Campus,COMP 792
+005724,30.0,,GRAD,,Fall,13W,COMP,792,MASTER S RESEARCH AND THESIS,Sir George Williams Campus,COMP 792
+040356,30.0,,GRAD,,Winter,13W,COMP,7921,MASTER S RESEARCH AND THESIS,Sir George Williams Campus,COMP 7921
+040356,30.0,,GRAD,,Summer,13W,COMP,7921,MASTER S RESEARCH AND THESIS,Sir George Williams Campus,COMP 7921
+040356,30.0,,GRAD,,Fall,13W,COMP,7921,MASTER S RESEARCH AND THESIS,Sir George Williams Campus,COMP 7921
+040357,29.0,,GRAD,,Winter,13W,COMP,7941,MASTER S RESEARCH AND THESIS,Sir George Williams Campus,COMP 7941
+040357,29.0,,GRAD,,Summer,6H1,COMP,7941,MASTER S RESEARCH AND THESIS,Sir George Williams Campus,COMP 7941
+040357,29.0,,GRAD,,Fall,13W,COMP,7941,MASTER S RESEARCH AND THESIS,Sir George Williams Campus,COMP 7941
+005731,72.0,,GRAD,,Winter,13W,COMP,890,DOCTORAL RESEARCH AND THESIS,Sir George Williams Campus,COMP 890
+005731,72.0,,GRAD,,Summer,6H1,COMP,890,DOCTORAL RESEARCH AND THESIS,Sir George Williams Campus,COMP 890
+005731,72.0,,GRAD,,Fall,13W,COMP,890,DOCTORAL RESEARCH AND THESIS,Sir George Williams Campus,COMP 890
+040358,70.0,,GRAD,,Winter,13W,COMP,8901,DOCTORAL RESEARCH AND THESIS,Sir George Williams Campus,COMP 8901
+040358,70.0,,GRAD,,Summer,6H1,COMP,8901,DOCTORAL RESEARCH AND THESIS,Sir George Williams Campus,COMP 8901
+040358,70.0,,GRAD,,Fall,13W,COMP,8901,DOCTORAL RESEARCH AND THESIS,Sir George Williams Campus,COMP 8901
