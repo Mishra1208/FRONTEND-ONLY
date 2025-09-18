@@ -1,10 +1,9 @@
 import Link from "next/link";
 import styles from "./home.module.css";
-import { fetchPopularCourses } from "@/lib/mockApi";
 import SplitText from "@/components/SplitText";
 
 export default async function HomePage() {
-  const popular = await fetchPopularCourses(); // mock data for now
+
 
   return (
     <main className={styles.page}>
@@ -56,37 +55,6 @@ export default async function HomePage() {
             <ValueCard title="Powerful filters"
                        desc="Subject, term, session, location and credits—plus dedupe by course."/>
             <ValueCard title="Planner-friendly" desc="Add to planner and refine later."/>
-          </div>
-        </div>
-      </section>
-
-      {/* POPULAR COURSES */}
-      <section className={styles.section}>
-      <div className={styles.container}>
-          <div className={styles.rowBetween}>
-            <h2 className={styles.h2}>Popular Courses</h2>
-            <Link href="/pages/courses" className="link">Explore all →</Link>
-          </div>
-
-          <div className={styles.cards}>
-            {popular.length > 0 ? (
-              popular.map((c) => {
-                const cat = c.catalogue ?? c.catalog_nbr ?? "";
-                const cr  = c.credits ?? c.course_credit ?? "-";
-                const term = c.term ?? "";
-                return (
-                  <Link key={c.course_id} href={`/pages/courses?prefocus=${encodeURIComponent(c.course_id)}`} className="card">
-                    <div className="courseCode"><strong>{c.subject} {cat}</strong></div>
-                    <div className="cardTitle">{c.title}</div>
-                    <div className="cardMeta">
-                      {cr ? `${cr} cr` : "-"} {c.session ? `• ${c.session}` : ""} {term ? `• ${term}` : ""}
-                    </div>
-                  </Link>
-                );
-              })
-            ) : (
-              <div className="card">No courses found.</div>
-            )}
           </div>
         </div>
       </section>

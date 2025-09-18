@@ -217,3 +217,109 @@ html, body, .site-nav, .card, .search, .newsForm {
   border: 1px solid rgba(255,255,255,.08);
 }
 [data-theme="dark"] ::placeholder{ color: var(--ink-dim); }
+
+/* === DARK THEME UNIFIER (add at END of globals.css) ===================== */
+
+/* 1) Make page wrappers transparent so the body gradient shows everywhere */
+[data-theme="dark"] :is(main, .site-main, .page, .section, .container){
+  background: transparent !important;
+}
+
+/* 2) Any “panel-like” surface becomes the themed panel */
+[data-theme="dark"] :is(
+  .card,
+  .panel,
+  .box,
+  .search,
+  .newsForm,
+  .plannerPanel,
+  .courseCard,
+  [class*="card"],
+  [class*="panel"],
+  [class*="box"],
+  [class*="Card"]
+){
+  background: var(--panel) !important;
+  color: var(--ink) !important;
+  box-shadow: var(--ring), var(--shadow-lg) !important;
+  border-color: rgba(255,255,255,.08) !important;
+}
+
+/* 3) Muted/secondary text inside panels */
+[data-theme="dark"] :is(.body, .bodyMuted, .cardMeta, .footerMuted, .subtitle){
+  color: var(--ink-dim) !important;
+}
+
+/* 4) Inputs, selects, pills */
+[data-theme="dark"] :is(input, select, textarea){
+  background: var(--panel) !important;
+  color: var(--ink) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+}
+[data-theme="dark"] ::placeholder{ color: var(--ink-dim) !important; }
+
+/* 5) Dialogs/toasts/snackbars (the add-to-planner toast in Courses) */
+[data-theme="dark"] :is(dialog, [role="dialog"], .modal, .toast, [class*="Toast"], [class*="Modal"]){
+  background: var(--panel) !important;
+  color: var(--ink) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  box-shadow: var(--ring), var(--shadow-lg) !important;
+}
+
+/* 6) Course/Planner list items that might be <a> or <div> */
+[data-theme="dark"] :is([class*="course"], [class*="planner"]) :is([class*="item"], [class*="row"], [class*="card"]){
+  background: var(--panel) !important;
+}
+
+/* 7) Keep navbar/hero consistent on dark (already present, re-assert) */
+[data-theme="dark"] .site-nav{
+  background: var(--navbg) !important;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter: saturate(160%) blur(10px);
+}
+[data-theme="dark"] .heroArtBase{
+  background: linear-gradient(160deg,#0b1220,#111827) !important;
+}
+
+
+/* --- Modals / dialogs / toasts — theme-aware (works with portals too) --- */
+
+/* Base (both themes): make dialogs match your panel surface */
+dialog,
+[role="dialog"],
+.modal,
+.toast,
+[class*="Modal"],
+[class*="Toast"]{
+  background: var(--panel) !important;
+  color: var(--ink) !important;
+  border: 1px solid rgba(15,23,42,.12) !important;   /* light */
+  border-radius: var(--radius) !important;
+  box-shadow: var(--ring), var(--shadow-lg) !important;
+}
+
+/* Backdrop for the native <dialog> */
+dialog::backdrop{
+  background: rgba(15,23,42,.35);           /* light */
+  backdrop-filter: blur(2px);
+}
+
+/* Dark overrides */
+[data-theme="dark"] dialog,
+[data-theme="dark"] [role="dialog"],
+[data-theme="dark"] .modal,
+[data-theme="dark"] .toast,
+[data-theme="dark"] [class*="Modal"],
+[data-theme="dark"] [class*="Toast"]{
+  border-color: rgba(255,255,255,.10) !important;
+}
+
+[data-theme="dark"] dialog::backdrop{
+  background: rgba(2,6,23,.65);
+  backdrop-filter: blur(2px);
+}
+
+/* Common bits inside the dialog */
+:is(dialog,[role="dialog"],.modal,.toast) hr{ border-color: rgba(255,255,255,.10) }
+:is(dialog,[role="dialog"],.modal,.toast) a{ color: var(--accent); text-decoration:none }
+:is(dialog,[role="dialog"],.modal,.toast) a:hover{ text-decoration:underline }
