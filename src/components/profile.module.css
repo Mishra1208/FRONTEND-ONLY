@@ -1,0 +1,41 @@
+.card{
+  background: var(--panel);
+  color: var(--ink);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--ring), var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px 14px;
+  align-items: center;
+  transition: box-shadow .25s ease, transform .2s ease;
+}
+.card:hover{ transform: translateY(-2px); box-shadow: var(--ring), 0 24px 70px rgba(0,0,0,.18) }
+
+.img{
+  width:64px; height:64px; border-radius:999px; object-fit:cover;
+  border:1px solid rgba(15,23,42,.12);
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  grid-row: 1 / span 2;
+}
+
+.meta{ display:flex; flex-direction:column; gap:4px }
+.name{ font-weight:800 }
+.role{ color: var(--ink-dim); font-size:14px }
+
+.socialBar{
+  grid-column: 1 / -1;
+  display:flex; align-items:center; justify-content:space-evenly;
+  gap:12px; padding:8px 10px; margin-top:6px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  border: 1px solid rgba(15,23,42,.10);
+}
+.socialBar a{
+  color: var(--ink); display:inline-flex; align-items:center;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.socialBar a:hover{ transform: scale(1.1) }
+[data-theme="dark"] .img{ border-color: rgba(255,255,255,.1) }
+[data-theme="dark"] .socialBar{ border-color: rgba(255,255,255,.12) }

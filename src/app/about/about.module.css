@@ -35,3 +35,16 @@
 }
 .name{ font-weight:800 }
 .role{ color:var(--ink-dim); font-size:14px; margin-top:2px }
+
+.teamHead{
+  margin-top:32px;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+
+.teamHead{
+  margin-top:32px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}

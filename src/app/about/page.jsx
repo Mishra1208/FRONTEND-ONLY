@@ -1,4 +1,5 @@
 import styles from "./about.module.css";
+import Profile from "@/components/Profile"; // ← use the profile widget
 
 export const metadata = {
   title: "About • ConU Planner",
@@ -6,11 +7,38 @@ export const metadata = {
 };
 
 const TEAM = [
-  // Add/adjust members. Avatar can be a public image path or leave empty to show initials.
-  { name: "Your Name", role: "Founder & Dev", avatar: "/team/you.jpg" },
-  { name: "Teammate One", role: "Backend", avatar: "" },
-  { name: "Teammate Two", role: "Design", avatar: "" },
+  {
+    name: "Aryan Kotecha",
+    role: "Founder & Dev",
+    avatar: "/team/profile1.jpg",
+    links: {
+      github: "https://github.com/your-handle",
+      instagram: "https://instagram.com/your-handle",
+      linkedin: "https://linkedin.com/in/your-handle"
+    }
+  },
+  {
+    name: "Narendra Mishra",
+    role: "Backend",
+    avatar: "/team/profile1.jpg",
+    links: {
+      github: "https://github.com/your-handle",
+      instagram: "https://instagram.com/your-handle",
+      linkedin: "https://linkedin.com/in/your-handle"
+    }
+  },
+  {
+    name: "Neelendra Mishra",
+    role: "Design",
+    avatar: "/team/profile1.jpg",
+    links: {
+      github: "https://github.com/your-handle",
+      instagram: "https://instagram.com/your-handle",
+      linkedin: "https://linkedin.com/in/your-handle"
+    }
+  }
 ];
+
 
 export default function AboutPage() {
   return (
@@ -32,7 +60,7 @@ export default function AboutPage() {
             <p className={styles.muted}>Clean UI, instant results, filters that make sense.</p>
           </div>
           <div className={styles.card}>
-            <h3>Advanced search & filters</h3>
+            <h3>Advanced search &amp; filters</h3>
             <p className={styles.muted}>
               Filter by subject, term, credits, session, location—dedupe repeated offerings.
             </p>
@@ -67,41 +95,25 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <section className={styles.section}>
+     <section className={styles.section}>
         <h2 className={styles.h2}>Team</h2>
+
         <div className={styles.teamGrid}>
           {TEAM.map((m) => (
-            <div className={styles.member} key={m.name}>
-              <div
-                className={styles.avatar}
-                style={
-                  m.avatar
-                    ? { backgroundImage: `url(${m.avatar})` }
-                    : undefined
-                }
-              >
-                {!m.avatar ? initials(m.name) : null}
-              </div>
-              <div>
-                <div className={styles.name}>{m.name}</div>
-                <div className={styles.role}>{m.role}</div>
-              </div>
-            </div>
+            <Profile
+              key={m.name}
+              name={m.name}
+              role={m.role}
+              avatar={m.avatar}
+              links={m.links}
+            />
           ))}
         </div>
+
         <p className="body" style={{ marginTop: 10 }}>
           Want to contribute? <a className="link" href="mailto:hello@conuplanner.app">Email us</a>.
         </p>
       </section>
     </main>
   );
-}
-
-function initials(name){
-  return name
-    .split(" ")
-    .map((n) => n[0] || "")
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
 }
