@@ -1,0 +1,219 @@
+:root{
+  --bg:#faf7fb;
+  --panel:#ffffff;
+  --ink:#0f172a;
+  --ink-dim:#475569;
+  --accent:#9333ea;
+  --accent-2:#6d28d9;
+  --ring:0 0 0 1px rgba(15,23,42,.06);
+  --shadow-lg:0 20px 60px rgba(15,23,42,.08);
+  --radius:14px;
+  --radius-lg:18px;
+  --grid:1200px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font:16px/1.5 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+}
+
+/* top nav */
+.site-nav{ position:sticky; top:0; z-index:50;
+  backdrop-filter: saturate(160%) blur(8px);
+  background:rgba(255,255,255,.65);
+  border-bottom:1px solid rgba(15,23,42,.06);
+}
+.site-nav__inner{ max-width:var(--grid); margin:0 auto; padding:10px 20px;
+  display:flex; align-items:center; justify-content:space-between; }
+.site-nav .brand a{ font-weight:800; letter-spacing:.2px; text-decoration:none; color:var(--ink) }
+.site-nav ul{ list-style:none; display:flex; gap:18px; margin:0; padding:0 }
+.site-nav a{ text-decoration:none; color:var(--ink-dim);
+  padding:8px 12px; border-radius:9999px; font-weight:600; }
+.site-nav a:hover{ color:var(--ink) }
+.site-nav li a[aria-current="page"], .site-nav li a:focus-visible{
+  background:#fff; color:var(--ink);
+  box-shadow:var(--ring), var(--shadow-lg);
+}
+
+/* helpers */
+.container{ max-width:var(--grid); margin:0 auto; padding:0 20px }
+.h2{ font-size:28px; line-height:1.2; margin:0 0 12px }
+.body{ color:var(--ink-dim) }
+.link{ color:var(--accent); text-decoration:none }
+.link:hover{ text-decoration:underline }
+.card{ background:#fff; border-radius:var(--radius); padding:18px; box-shadow:var(--ring), var(--shadow-lg); }
+.cardTitle{ font-weight:800; margin-bottom:6px }
+.cardMeta{ color:var(--ink-dim) }
+.courseCode{ color:var(--ink-dim); margin-bottom:6px }
+
+/* prevent descender clipping for GSAP split wrappers */
+.split-parent,
+.split-line { overflow: visible; }
+.split-char, .split-word { display: inline-block; }
+
+/* sticky footer layout */
+body{
+  min-height: 100dvh;          /* full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+.site-main{                     /* the content area grows */
+  flex: 1 0 auto;
+}
+/* footer styles (dark band) */
+.site-footer{
+  margin-top: 44px;
+  background:black;
+  color:#fff;
+  padding: 40px 0 28px;
+}
+.footer-grid{
+  display:grid; gap:18px; grid-template-columns: repeat(4,1fr);
+}
+@media (max-width:980px){
+  .footer-grid{ grid-template-columns: 1fr 1fr; }
+}
+.footer-brand{ font-weight:800 }
+.footer-muted{ color:rgba(255,255,255,.75) }
+.footer-head{ font-weight:700; margin-bottom:6px }
+.footer-list{ list-style:none; padding:0; margin:0; display:grid; gap:8px }
+.footer-link{ color:rgba(255,255,255,.8); text-decoration:none }
+.footer-link:hover{ color:#fff }
+.footer-bottom{ text-align:center; margin-top:16px; color:rgba(255,255,255,.7) }
+
+
+/* ---------- THEME VARIABLES ---------- */
+:root{
+  --navbg: rgba(255,255,255,.65);                /* navbar glass */
+}
+
+[data-theme="dark"]{
+  --bg:#070b13;                /* deep navy, not pure black (better for text) */
+  --panel:#0e1726;             /* elevated surfaces */
+  --ink:#e6edf3;               /* body text */
+  --ink-dim:#a3b3c7;           /* muted text (raised for readability) */
+  --accent:#a78bfa;            /* primary accent */
+  --accent-2:#22d3ee;          /* gradient buddy (purple -> cyan) */
+  --ring:0 0 0 1px rgba(255,255,255,.06);
+  --shadow-lg:0 24px 70px rgba(0,0,0,.55);
+  --navbg:rgba(7,11,19,.75);   /* glassy nav */
+}
+
+[data-theme="dark"] body{
+  background:
+    radial-gradient(1100px 600px at 20% -10%, rgba(168,85,247,.14), transparent 60%),
+    radial-gradient(900px 520px at 120% 10%, rgba(34,211,238,.14), transparent 60%),
+    var(--bg);
+}
+
+/* smooth color transitions */
+html, body, .site-nav, .card, .search, .newsForm {
+  transition: background-color .25s ease, color .25s ease, box-shadow .25s ease;
+}
+
+/* use the themeable navbar bg */
+.site-nav{ background: var(--navbg); }
+
+/* active link chip works in both themes */
+.site-nav li a[aria-current="page"], .site-nav li a:focus-visible{
+  background: rgba(255,255,255,.9);
+}
+[data-theme="dark"] .site-nav{
+  background: var(--navbg);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter: saturate(160%) blur(10px);
+}
+[data-theme="dark"] .site-nav li a[aria-current="page"],
+[data-theme="dark"] .site-nav li a:focus-visible{
+  background: rgba(255,255,255,.08);
+  box-shadow: var(--ring), 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* hero inner panel looks right on dark too */
+[data-theme="dark"] .heroArtBase{
+  background: linear-gradient(160deg,#0f172a,#111827);
+}
+
+/* Make the shared footer theme-aware (if you used the Footer component) */
+.site-footer .footer-link{ color: var(--ink-dim); }
+.site-footer .footer-link:hover{ color: var(--ink); }
+
+/* ---------- TOGGLER STYLES ---------- */
+.theme-toggle{
+  appearance:none; border:0; cursor:pointer; outline:0;
+  width:36px; height:36px; border-radius:999px;
+  display:grid; place-items:center;
+  background: #fff;
+  box-shadow: var(--ring), 0 8px 20px rgba(15,23,42,.08);
+}
+[data-theme="dark"] .theme-toggle{
+  background: #0b1220;
+  box-shadow: var(--ring), 0 8px 20px rgba(0,0,0,.5);
+}
+.theme-toggle svg{
+  fill: currentColor; stroke: currentColor;
+  color: var(--ink);
+  transition: transform .35s ease, opacity .2s ease;
+}
+.theme-toggle .moon{ position:absolute; opacity:0; transform: scale(.65) rotate(-90deg); }
+[data-theme="dark"] .theme-toggle .sun{ opacity:0; transform: scale(.65) rotate(90deg); }
+[data-theme="dark"] .theme-toggle .moon{ opacity:1; transform: scale(1) rotate(0deg); }
+/* Always-dark footer */
+.site-footer{
+  background:black;      /* black/navy */
+  color:#fff;
+}
+
+/* footer links + muted text on dark background */
+.site-footer .footer-link{ color:rgba(255,255,255,.82); text-decoration:none; }
+.site-footer .footer-link:hover{ color:#fff; }
+.site-footer .footer-muted,
+.site-footer .footer-bottom{ color:rgba(255,255,255,.7); }
+
+
+/* search and small pills look polished in dark */
+[data-theme="dark"] .search,
+[data-theme="dark"] .newsForm{
+  box-shadow: var(--ring), 0 18px 50px rgba(0,0,0,.55);
+}
+.site-nav li a[aria-current="page"]{
+  background: rgba(255,255,255,.9);
+}
+[data-theme="dark"] .site-nav li a[aria-current="page"]{
+  background: rgba(255,255,255,.08);
+  box-shadow: var(--ring), 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* Dark mode: make any “panel/card” use the themed surface */
+[data-theme="dark"] :is(
+  .card,
+  .search,
+  .newsForm,
+  .panel,
+  .box,
+  .courseCard,
+  [class*="card"],
+  [class*="panel"],
+  [class*="box"]
+){
+  background: var(--panel) !important;
+  color: var(--ink);
+  box-shadow: var(--ring), var(--shadow-lg);
+}
+
+/* Muted text inside panels */
+[data-theme="dark"] :is(.bodyMuted, .footerMuted, .cardMeta, .subtitle){
+  color: var(--ink-dim) !important;
+}
+
+/* Inputs look right in dark */
+[data-theme="dark"] :is(input, select, textarea){
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid rgba(255,255,255,.08);
+}
+[data-theme="dark"] ::placeholder{ color: var(--ink-dim); }

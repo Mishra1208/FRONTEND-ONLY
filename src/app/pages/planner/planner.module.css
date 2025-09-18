@@ -1,0 +1,7 @@
+.wrap { max-width: 1000px; margin: 24px auto; padding: 0 20px; }
+.panel{ background:#fff; border-radius:var(--radius); padding:18px; box-shadow:var(--ring), var(--shadow-lg); }
+.list{ list-style:none; padding:0; margin:12px 0 0; display:grid; gap:12px; }
+.item{ padding:12px; border:1px solid rgba(15,23,42,.08); border-radius:12px; background:#fafafa; }
+.itemHead{ font-weight:700; margin-bottom:4px; }
+.itemMeta{ color:var(--ink-dim) }
+.remove{ margin-top:8px; border:0; padding:8px 12px; border-radius:999px; font-weight:700; background:#111; color:#fff; cursor:pointer; }
