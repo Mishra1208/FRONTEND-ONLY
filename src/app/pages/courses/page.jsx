@@ -1,38 +1,102 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import styles from "./courses.module.css";
-import { useSearchParams } from "next/navigation";
 import { fetchCourses } from "@/lib/mockApi";
 import AddButton from "@/components/AddButton";
 
 const KEY = "conu-planner:selected";
 
+/* -------------------------------- helpers -------------------------------- */
+const safeUpper = (v) => (v ?? "").toString().trim().toUpperCase();
+
+const loadList = () => {
+  try {
+    return JSON.parse(localStorage.getItem(KEY) ?? "[]");
+  } catch {
+    return [];
+  }
+};
+
+const saveList = (arr) => {
+  try {
+    localStorage.setItem(KEY, JSON.stringify(arr));
+  } catch {}
+};
+
+function courseKey(c) {
+  const subj = safeUpper(c?.subject);
+  const cat = safeUpper(c?.catalogue);
+  const term = safeUpper(c?.term) || "TERMLESS";
+  return `${subj}-${cat}-${term}`;
+}
+
+function dedupeByOffering(list) {
+  const seen = new Set();
+  const out = [];
+  for (const it of list) {
+    const k = courseKey(it);
+    if (!seen.has(k)) {
+      seen.add(k);
+      out.push(it);
+    }
+  }
+  return out;
+}
+
+function broadcastPlannerChange() {
+  try {
+    window.dispatchEvent(new Event("planner:update"));
+  } catch {}
+}
+
+/* -------------------------------- component ------------------------------- */
 export default function CoursesPage() {
   const params = useSearchParams();
+  const router = useRouter();
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Track courses already in planner + little toast
-  const [selectedIds, setSelectedIds] = useState(new Set());
-  const [toast, setToast] = useState(null); // { text, kind: "ok" | "warn" }
+  const [selectedKeys, setSelectedKeys] = useState(new Set());
+  const [toast, setToast] = useState(null); // { text, kind: "ok"|"warn" }
 
-  // Load planner ids on mount
+  const refreshSelectedFromStorage = () => {
+    const list = loadList();
+    setSelectedKeys(new Set(list.map((i) => courseKey(i))));
+  };
+
   useEffect(() => {
-    const raw = localStorage.getItem(KEY);
-    const list = raw ? JSON.parse(raw) : [];
-    setSelectedIds(new Set(list.map((i) => i.course_id)));
+    refreshSelectedFromStorage();
   }, []);
 
-  // Auto-hide toast
+  useEffect(() => {
+    const onStorage = (e) => {
+      if (e?.key === KEY || e?.key == null) refreshSelectedFromStorage();
+    };
+    const onVisible = () => {
+      if (!document.hidden) refreshSelectedFromStorage();
+    };
+    const onPlannerUpdate = () => refreshSelectedFromStorage();
+
+    window.addEventListener("storage", onStorage);
+    document.addEventListener("visibilitychange", onVisible);
+    window.addEventListener("planner:update", onPlannerUpdate);
+
+    return () => {
+      window.removeEventListener("storage", onStorage);
+      document.removeEventListener("visibilitychange", onVisible);
+      window.removeEventListener("planner:update", onPlannerUpdate);
+    };
+  }, []);
+
   useEffect(() => {
     if (!toast) return;
     const t = setTimeout(() => setToast(null), 1500);
     return () => clearTimeout(t);
   }, [toast]);
 
-  // Build filters from URL
   const f = useMemo(
     () => ({
       search: params.get("search") || "",
@@ -44,14 +108,13 @@ export default function CoursesPage() {
     [params]
   );
 
-  // Fetch data
   useEffect(() => {
     let alive = true;
     (async () => {
       setLoading(true);
       const res = await fetchCourses(f);
       if (!alive) return;
-      setData(res);
+      setData(Array.isArray(res) ? res : []);
       setLoading(false);
     })();
     return () => {
@@ -59,21 +122,26 @@ export default function CoursesPage() {
     };
   }, [f]);
 
-  // Return true when added, false when duplicate
   async function addToPlanner(course) {
-    const id = course.course_id;
-    if (selectedIds.has(id)) {
-      setToast({ text: "Course already added to the planner", kind: "warn" });
+    const key = courseKey(course);
+
+    if (selectedKeys.has(key)) {
+      const termLabel = course?.term ? ` for ${course.term}` : "";
+      setToast({ text: `Course already added to the planner${termLabel}`, kind: "warn" });
       return false;
     }
-    const raw = localStorage.getItem(KEY);
-    const list = raw ? JSON.parse(raw) : [];
-    localStorage.setItem(KEY, JSON.stringify([...list, course]));
-    setSelectedIds((prev) => {
-      const next = new Set(prev);
-      next.add(id);
-      return next;
+
+    const list = loadList();
+    const next = dedupeByOffering([...list, course]);
+    saveList(next);
+
+    setSelectedKeys((prev) => {
+      const s = new Set(prev);
+      s.add(key);
+      return s;
     });
+
+    broadcastPlannerChange();
     setToast({ text: "Added to planner", kind: "ok" });
     return true;
   }
@@ -84,7 +152,7 @@ export default function CoursesPage() {
         <h1 className="h2">Courses</h1>
       </div>
 
-      <FiltersInline />
+      <FiltersInline onApply={(q) => router.push(`/pages/courses?${q}`)} />
 
       {loading ? (
         <p className="body">Loading…</p>
@@ -94,30 +162,23 @@ export default function CoursesPage() {
         <div className="cards grid">
           <div className={styles.grid}>
             {data.map((c) => {
-              const isSelected = selectedIds.has(c.course_id);
+              const k = courseKey(c);
+              const isSelected = selectedKeys.has(k);
               return (
-                <div
-                  key={c.course_id}
-                  className={`card ${isSelected ? styles.cardSelected : ""}`}
-                >
+                <div key={k} className={`card ${isSelected ? styles.cardSelected : ""}`}>
                   <div className="courseCode">
                     <strong>
-                      {c.subject} {c.catalogue}
+                      {c?.subject} {c?.catalogue}
                     </strong>
                   </div>
 
-                  {/* Title tinted when already in planner */}
-                  <div
-                    className={`cardTitle ${
-                      isSelected ? styles.cardTitleAdded : ""
-                    }`}
-                  >
-                    {c.title}
+                  <div className={`cardTitle ${isSelected ? styles.cardTitleAdded : ""}`}>
+                    {c?.title}
                   </div>
 
                   <div className="cardMeta">
-                    {(c.credits ?? "-")} cr {c.session ? `• ${c.session}` : ""}{" "}
-                    {c.term ? `• ${c.term}` : ""}
+                    {(c?.credits ?? "-")} cr {c?.session ? `• ${c.session}` : ""}{" "}
+                    {c?.term ? `• ${c.term}` : ""}
                   </div>
 
                   <div className={styles.actions}>
@@ -130,14 +191,8 @@ export default function CoursesPage() {
         </div>
       )}
 
-      {/* Toast bubble */}
       {toast && (
-        <div
-          className={styles.toast}
-          data-kind={toast.kind}
-          aria-live="polite"
-          role="status"
-        >
+        <div className={styles.toast} data-kind={toast.kind} aria-live="polite">
           {toast.text}
         </div>
       )}
@@ -145,7 +200,7 @@ export default function CoursesPage() {
   );
 }
 
-function FiltersInline() {
+function FiltersInline({ onApply }) {
   const params = useSearchParams();
   const [search, setSearch] = useState(params.get("search") ?? "");
   const [subject, setSubject] = useState(params.get("subject") ?? "ALL");
@@ -161,7 +216,7 @@ function FiltersInline() {
     if (term !== "ALL") q.set("term", term);
     q.set("minCredits", minCredits);
     q.set("maxCredits", maxCredits);
-    window.location.assign(`/pages/courses?${q.toString()}`);
+    onApply?.(q.toString());
   }
 
   return (
@@ -172,20 +227,12 @@ function FiltersInline() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <select
-        className={styles.select}
-        value={subject}
-        onChange={(e) => setSubject(e.target.value)}
-      >
+      <select className={styles.select} value={subject} onChange={(e) => setSubject(e.target.value)}>
         <option value="ALL">All Subjects</option>
         <option value="COMP">COMP</option>
         <option value="SOEN">SOEN</option>
       </select>
-      <select
-        className={styles.select}
-        value={term}
-        onChange={(e) => setTerm(e.target.value)}
-      >
+      <select className={styles.select} value={term} onChange={(e) => setTerm(e.target.value)}>
         <option value="ALL">All Terms</option>
         <option value="Fall">Fall</option>
         <option value="Winter">Winter</option>
