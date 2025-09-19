@@ -130,3 +130,32 @@
 [data-theme="dark"] .heroArtCard{
   background: conic-gradient(from 120deg at 50% 50%, #7dd3fc, #a78bfa, #fb7185, #7dd3fc);
 }
+
+/* Rotating line */
+.rotatorRow{
+  display:flex;
+  align-items: baseline;           /* keep the chip baseline-aligned with big text */
+  gap:16px;
+  margin-top: clamp(20%, 9vw, 12px);
+}
+
+.ctaPrefix{
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.ctaPrefixLarge{
+  font-size: clamp(28px, 3.2vw, 44px);  /* nice responsive size */
+  line-height: 1.05;
+  letter-spacing: .5px;
+  text-shadow: 0 1px 0 rgba(255,255,255,.25); /* subtle lift on light bg */
+}
+
+.rotatorChip{
+  font-size: clamp(14px, 1.2vw, 18px);
+  padding: 10px 16px;                     /* slightly larger to match the heading */
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color:#fff;
+  box-shadow: 0 10px 30px rgba(109,40,217,.25);
+}

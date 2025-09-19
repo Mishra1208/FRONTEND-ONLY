@@ -8,7 +8,7 @@ export const metadata = {
 
 const TEAM = [
   {
-    name: "Aryan Kotecha",
+    name: "Narendra Mishra",
     role: "Founder & Dev",
     avatar: "/team/profile1.jpg",
     links: {
@@ -18,7 +18,7 @@ const TEAM = [
     }
   },
   {
-    name: "Narendra Mishra",
+    name: "Aryan Kotecha",
     role: "Backend",
     avatar: "/team/profile1.jpg",
     links: {
