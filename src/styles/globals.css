@@ -1,4 +1,4 @@
-/* tick animation */
+/* ===== Tick animation (used by Add button) ===== */
 .checkmark-container { width: 22px; height: 22px; display: inline-block; }
 .checkmark { width: 22px; height: 22px; display: block; }
 .checkmark-circle {
@@ -14,7 +14,7 @@
 }
 @keyframes cm-stroke { to { stroke-dashoffset: 0; } }
 
-
+/* ===== Design tokens ===== */
 :root{
   --bg:#faf7fb;
   --panel:#ffffff;
@@ -27,6 +27,7 @@
   --radius:14px;
   --radius-lg:18px;
   --grid:1200px;
+  --navbg: rgba(255,255,255,.65);
 }
 
 *{box-sizing:border-box}
@@ -38,10 +39,10 @@ body{
   background:var(--bg);
 }
 
-/* top nav */
+/* ===== Nav ===== */
 .site-nav{ position:sticky; top:0; z-index:50;
   backdrop-filter: saturate(160%) blur(8px);
-  background:rgba(255,255,255,.65);
+  background:var(--navbg);
   border-bottom:1px solid rgba(15,23,42,.06);
 }
 .site-nav__inner{ max-width:var(--grid); margin:0 auto; padding:10px 20px;
@@ -56,7 +57,7 @@ body{
   box-shadow:var(--ring), var(--shadow-lg);
 }
 
-/* helpers */
+/* ===== Helpers ===== */
 .container{ max-width:var(--grid); margin:0 auto; padding:0 20px }
 .h2{ font-size:28px; line-height:1.2; margin:0 0 12px }
 .body{ color:var(--ink-dim) }
@@ -67,33 +68,16 @@ body{
 .cardMeta{ color:var(--ink-dim) }
 .courseCode{ color:var(--ink-dim); margin-bottom:6px }
 
-/* prevent descender clipping for GSAP split wrappers */
-.split-parent,
-.split-line { overflow: visible; }
+/* GSAP splitting safe */
+.split-parent, .split-line { overflow: visible; }
 .split-char, .split-word { display: inline-block; }
 
-/* sticky footer layout */
-body{
-  min-height: 100dvh;          /* full viewport height */
-  display: flex;
-  flex-direction: column;
-}
-.site-main{                     /* the content area grows */
-  flex: 1 0 auto;
-}
-/* footer styles (dark band) */
-.site-footer{
-  margin-top: 44px;
-  background:black;
-  color:#fff;
-  padding: 40px 0 28px;
-}
-.footer-grid{
-  display:grid; gap:18px; grid-template-columns: repeat(4,1fr);
-}
-@media (max-width:980px){
-  .footer-grid{ grid-template-columns: 1fr 1fr; }
-}
+/* ===== Sticky footer layout ===== */
+body{ min-height: 100dvh; display:flex; flex-direction:column; }
+.site-main{ flex: 1 0 auto; }
+.site-footer{ margin-top:44px; background:black; color:#fff; padding:40px 0 28px; }
+.footer-grid{ display:grid; gap:18px; grid-template-columns: repeat(4,1fr); }
+@media (max-width:980px){ .footer-grid{ grid-template-columns: 1fr 1fr; } }
 .footer-brand{ font-weight:800 }
 .footer-muted{ color:rgba(255,255,255,.75) }
 .footer-head{ font-weight:700; margin-bottom:6px }
@@ -102,24 +86,18 @@ body{
 .footer-link:hover{ color:#fff }
 .footer-bottom{ text-align:center; margin-top:16px; color:rgba(255,255,255,.7) }
 
-
-/* ---------- THEME VARIABLES ---------- */
-:root{
-  --navbg: rgba(255,255,255,.65);                /* navbar glass */
-}
-
+/* ===== Dark theme tokens ===== */
 [data-theme="dark"]{
-  --bg:#070b13;                /* deep navy, not pure black (better for text) */
-  --panel:#0e1726;             /* elevated surfaces */
-  --ink:#e6edf3;               /* body text */
-  --ink-dim:#a3b3c7;           /* muted text (raised for readability) */
-  --accent:#a78bfa;            /* primary accent */
-  --accent-2:#22d3ee;          /* gradient buddy (purple -> cyan) */
+  --bg:#070b13;
+  --panel:#0e1726;
+  --ink:#e6edf3;
+  --ink-dim:#a3b3c7;
+  --accent:#a78bfa;
+  --accent-2:#22d3ee;
   --ring:0 0 0 1px rgba(255,255,255,.06);
   --shadow-lg:0 24px 70px rgba(0,0,0,.55);
-  --navbg:rgba(7,11,19,.75);   /* glassy nav */
+  --navbg:rgba(7,11,19,.75);
 }
-
 [data-theme="dark"] body{
   background:
     radial-gradient(1100px 600px at 20% -10%, rgba(168,85,247,.14), transparent 60%),
@@ -127,18 +105,12 @@ body{
     var(--bg);
 }
 
-/* smooth color transitions */
+/* Smooth transitions */
 html, body, .site-nav, .card, .search, .newsForm {
   transition: background-color .25s ease, color .25s ease, box-shadow .25s ease;
 }
 
-/* use the themeable navbar bg */
-.site-nav{ background: var(--navbg); }
-
-/* active link chip works in both themes */
-.site-nav li a[aria-current="page"], .site-nav li a:focus-visible{
-  background: rgba(255,255,255,.9);
-}
+/* Dark navbar tweaks */
 [data-theme="dark"] .site-nav{
   background: var(--navbg);
   border-bottom:1px solid rgba(255,255,255,.08);
@@ -149,100 +121,15 @@ html, body, .site-nav, .card, .search, .newsForm {
   background: rgba(255,255,255,.08);
   box-shadow: var(--ring), 0 10px 30px rgba(0,0,0,.35);
 }
+[data-theme="dark"] .heroArtBase{ background: linear-gradient(160deg,#0f172a,#111827); }
 
-/* hero inner panel looks right on dark too */
-[data-theme="dark"] .heroArtBase{
-  background: linear-gradient(160deg,#0f172a,#111827);
-}
-
-/* Make the shared footer theme-aware (if you used the Footer component) */
-.site-footer .footer-link{ color: var(--ink-dim); }
-.site-footer .footer-link:hover{ color: var(--ink); }
-
-/* ---------- TOGGLER STYLES ---------- */
-.theme-toggle{
-  appearance:none; border:0; cursor:pointer; outline:0;
-  width:36px; height:36px; border-radius:999px;
-  display:grid; place-items:center;
-  background: #fff;
-  box-shadow: var(--ring), 0 8px 20px rgba(15,23,42,.08);
-}
-[data-theme="dark"] .theme-toggle{
-  background: #0b1220;
-  box-shadow: var(--ring), 0 8px 20px rgba(0,0,0,.5);
-}
-.theme-toggle svg{
-  fill: currentColor; stroke: currentColor;
-  color: var(--ink);
-  transition: transform .35s ease, opacity .2s ease;
-}
-.theme-toggle .moon{ position:absolute; opacity:0; transform: scale(.65) rotate(-90deg); }
-[data-theme="dark"] .theme-toggle .sun{ opacity:0; transform: scale(.65) rotate(90deg); }
-[data-theme="dark"] .theme-toggle .moon{ opacity:1; transform: scale(1) rotate(0deg); }
-/* Always-dark footer */
-.site-footer{
-  background:black;      /* black/navy */
-  color:#fff;
-}
-
-/* footer links + muted text on dark background */
-.site-footer .footer-link{ color:rgba(255,255,255,.82); text-decoration:none; }
-.site-footer .footer-link:hover{ color:#fff; }
-.site-footer .footer-muted,
-.site-footer .footer-bottom{ color:rgba(255,255,255,.7); }
-
-
-/* search and small pills look polished in dark */
-[data-theme="dark"] .search,
-[data-theme="dark"] .newsForm{
-  box-shadow: var(--ring), 0 18px 50px rgba(0,0,0,.55);
-}
-.site-nav li a[aria-current="page"]{
-  background: rgba(255,255,255,.9);
-}
-[data-theme="dark"] .site-nav li a[aria-current="page"]{
-  background: rgba(255,255,255,.08);
-  box-shadow: var(--ring), 0 10px 30px rgba(0,0,0,.35);
-}
-
-/* Dark mode: make any “panel/card” use the themed surface */
-[data-theme="dark"] :is(
-  .card,
-  .search,
-  .newsForm,
-  .panel,
-  .box,
-  .courseCard,
-  [class*="card"],
-  [class*="panel"],
-  [class*="box"]
-){
-  background: var(--panel) !important;
-  color: var(--ink);
-  box-shadow: var(--ring), var(--shadow-lg);
-}
-
-/* Muted text inside panels */
-[data-theme="dark"] :is(.bodyMuted, .footerMuted, .cardMeta, .subtitle){
-  color: var(--ink-dim) !important;
-}
-
-/* Inputs look right in dark */
-[data-theme="dark"] :is(input, select, textarea){
-  background: var(--panel);
-  color: var(--ink);
-  border: 1px solid rgba(255,255,255,.08);
-}
-[data-theme="dark"] ::placeholder{ color: var(--ink-dim); }
-
-/* === DARK THEME UNIFIER (add at END of globals.css) ===================== */
-
-/* 1) Make page wrappers transparent so the body gradient shows everywhere */
+/* ====== DARK THEME UNIFIER ====== */
+/* 1) transparent page wrappers */
 [data-theme="dark"] :is(main, .site-main, .page, .section, .container){
   background: transparent !important;
 }
 
-/* 2) Any “panel-like” surface becomes the themed panel */
+/* 2) panel-like surfaces — BUT do NOT touch the selected course card */
 [data-theme="dark"] :is(
   .card,
   .panel,
@@ -255,19 +142,19 @@ html, body, .site-nav, .card, .search, .newsForm {
   [class*="panel"],
   [class*="box"],
   [class*="Card"]
-){
+):not(.cardSelected){
   background: var(--panel) !important;
   color: var(--ink) !important;
   box-shadow: var(--ring), var(--shadow-lg) !important;
   border-color: rgba(255,255,255,.08) !important;
 }
 
-/* 3) Muted/secondary text inside panels */
+/* 3) muted text inside panels */
 [data-theme="dark"] :is(.body, .bodyMuted, .cardMeta, .footerMuted, .subtitle){
   color: var(--ink-dim) !important;
 }
 
-/* 4) Inputs, selects, pills */
+/* 4) inputs */
 [data-theme="dark"] :is(input, select, textarea){
   background: var(--panel) !important;
   color: var(--ink) !important;
@@ -275,7 +162,7 @@ html, body, .site-nav, .card, .search, .newsForm {
 }
 [data-theme="dark"] ::placeholder{ color: var(--ink-dim) !important; }
 
-/* 5) Dialogs/toasts/snackbars (the add-to-planner toast in Courses) */
+/* 5) dialogs/toasts */
 [data-theme="dark"] :is(dialog, [role="dialog"], .modal, .toast, [class*="Toast"], [class*="Modal"]){
   background: var(--panel) !important;
   color: var(--ink) !important;
@@ -283,132 +170,136 @@ html, body, .site-nav, .card, .search, .newsForm {
   box-shadow: var(--ring), var(--shadow-lg) !important;
 }
 
-/* 6) Course/Planner list items that might be <a> or <div> */
-[data-theme="dark"] :is([class*="course"], [class*="planner"]) :is([class*="item"], [class*="row"], [class*="card"]){
+/* 6) course/planner list items that might be links/divs */
+[data-theme="dark"] :is([class*="course"], [class*="planner"]) :is([class*="item"], [class*="row"], [class*="card"]):not(.cardSelected){
   background: var(--panel) !important;
 }
 
-/* 7) Keep navbar/hero consistent on dark (already present, re-assert) */
-[data-theme="dark"] .site-nav{
-  background: var(--navbg) !important;
-  border-bottom:1px solid rgba(255,255,255,.08);
-  backdrop-filter: saturate(160%) blur(10px);
-}
-[data-theme="dark"] .heroArtBase{
-  background: linear-gradient(160deg,#0b1220,#111827) !important;
-}
-
-
-/* --- Modals / dialogs / toasts — theme-aware (works with portals too) --- */
-
-/* Base (both themes): make dialogs match your panel surface */
-dialog,
-[role="dialog"],
-.modal,
-.toast,
-[class*="Modal"],
-[class*="Toast"]{
-  background: var(--panel) !important;
-  color: var(--ink) !important;
-  border: 1px solid rgba(15,23,42,.12) !important;   /* light */
-  border-radius: var(--radius) !important;
-  box-shadow: var(--ring), var(--shadow-lg) !important;
-}
-
-/* Backdrop for the native <dialog> */
-dialog::backdrop{
-  background: rgba(15,23,42,.35);           /* light */
-  backdrop-filter: blur(2px);
-}
-
-/* Dark overrides */
-[data-theme="dark"] dialog,
-[data-theme="dark"] [role="dialog"],
-[data-theme="dark"] .modal,
-[data-theme="dark"] .toast,
-[data-theme="dark"] [class*="Modal"],
-[data-theme="dark"] [class*="Toast"]{
-  border-color: rgba(255,255,255,.10) !important;
-}
-
-[data-theme="dark"] dialog::backdrop{
-  background: rgba(2,6,23,.65);
-  backdrop-filter: blur(2px);
-}
-
-/* Common bits inside the dialog */
-:is(dialog,[role="dialog"],.modal,.toast) hr{ border-color: rgba(255,255,255,.10) }
-:is(dialog,[role="dialog"],.modal,.toast) a{ color: var(--accent); text-decoration:none }
-:is(dialog,[role="dialog"],.modal,.toast) a:hover{ text-decoration:underline }
-
-
-
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-
-  padding: 10px 16px;
-  border: 0;
-  border-radius: 9999px;            /* pill */
-  cursor: pointer;
-
-  color: #fff;
-  background: linear-gradient(90deg, #a78bfa, #22d3ee); /* purple → cyan */
-  box-shadow: 0 6px 20px rgba(0,0,0,.25);
-  font-weight: 600;
-
+/* ===== Buttons (shared) ===== */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:10px 16px; border:0; border-radius:9999px; cursor:pointer;
+  color:#fff; background:linear-gradient(90deg, #a78bfa, #22d3ee);
+  box-shadow:0 6px 20px rgba(0,0,0,.25); font-weight:600;
   transition: transform .15s ease, filter .15s ease, opacity .2s ease;
 }
+.btn:hover{ transform:translateY(-1px); filter:brightness(1.05) }
+.btn:active{ transform:translateY(0); filter:brightness(.98) }
+.btn:disabled{ opacity:.75; cursor:default; transform:none; filter:none }
 
-.btn:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.05);
+/* ==== “Add to planner” animated pill (re-usable) ==== */
+.addBtn{
+  position:relative; appearance:none; border:0; outline:0; cursor:pointer;
+  padding:8px 14px; border-radius:9999px; font-weight:700; color:#fff;
+  background:linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow:0 10px 30px rgba(109,40,217,.25);
+  transition: transform .15s ease, filter .15s ease, box-shadow .2s ease, background .2s ease;
+  overflow:hidden;
+}
+.addBtn:hover{ filter:brightness(.98) }
+.addBtn:active{ transform:translateY(1px) }
+[data-theme="dark"] .addBtn{ box-shadow: var(--ring), 0 10px 30px rgba(0,0,0,.45) }
+
+/* label / states */
+.addBtn__label{ display:block; transition:opacity .18s ease, transform .18s ease }
+.addBtn__check,
+.addBtn__warn{
+  position:absolute; inset:0; display:grid; place-items:center;
+  color:#fff; opacity:0; transform: scale(.8);
+  transition: opacity .18s ease, transform .18s ease;
 }
 
-.btn:active {
-  transform: translateY(0);
-  filter: brightness(.98);
+/* drawn tick */
+.addBtn__tickPath{ stroke-dasharray:32; stroke-dashoffset:32 }
+@keyframes tickDraw{ to{ stroke-dashoffset:0 } }
+
+/* shine sweep */
+.addBtn__shine{
+  pointer-events:none; position:absolute; inset:0;
+  background: linear-gradient(100deg, transparent 20%, rgba(255,255,255,.45) 45%, transparent 70%);
+  transform: translateX(-120%); opacity:0;
+}
+@keyframes shineSweep{
+  0%{ transform: translateX(-120%); opacity:.3 }
+  100%{ transform: translateX(120%);  opacity:0 }
 }
 
-.btn:disabled {
-  opacity: .75;
-  cursor: default;
-  transform: none;
-  filter: none;
+/* ripple */
+.addBtn::after{
+  content:""; position:absolute; left:50%; top:50%;
+  width:12px; height:12px; border-radius:999px;
+  background: radial-gradient(circle, rgba(255,255,255,.35), transparent 60%);
+  transform: translate(-50%,-50%) scale(.1); opacity:0; pointer-events:none;
+}
+@keyframes ripple{
+  0%{ opacity:.35; transform: translate(-50%,-50%) scale(.2) }
+  100%{ opacity:0; transform: translate(-50%,-50%) scale(2.3) }
 }
 
-/* checkmark animation */
-.check {
-  width: 22px;
-  height: 22px;
-  display: block;
+/* success state */
+.addBtn[data-state="added"] .addBtn__label{ opacity:0; transform: translateY(-6px) }
+.addBtn[data-state="added"] .addBtn__check{ opacity:1; transform: scale(1) }
+.addBtn[data-state="added"] .addBtn__tickPath{ animation: tickDraw .5s ease forwards }
+.addBtn[data-state="added"] .addBtn__shine{ opacity:.9; animation: shineSweep .75s ease forwards .05s }
+.addBtn[data-state="added"]::after{ animation: ripple .6s ease-out forwards }
+.addBtn[data-state="added"]{
+  background: linear-gradient(90deg, #10b981, #22c55e);
+  box-shadow: 0 10px 30px rgba(16,185,129,.25);
 }
 
-.check circle,
-.check path {
-  fill: none;
-  stroke: #22c55e;                  /* green */
+/* warning (already exists) */
+@keyframes btnShake{
+  0%,100%{ transform: translateX(0) }
+  25%{ transform: translateX(-2px) }
+  75%{ transform: translateX(2px) }
+}
+.addBtn[data-state="exists"] .addBtn__label{ opacity:0; transform: translateY(-6px) }
+.addBtn[data-state="exists"] .addBtn__warn{ opacity:1; transform: scale(1) }
+.addBtn[data-state="exists"]{
+  background: linear-gradient(90deg, #f59e0b, #f97316); /* amber */
+  box-shadow: 0 10px 30px rgba(245,158,11,.25);
+  animation: btnShake .28s ease;
 }
 
-.check circle {
-  stroke-width: 2;
-  stroke-dasharray: 166;
-  stroke-dashoffset: 166;
-  stroke-linecap: round;
-  animation: cm-stroke .5s ease-out forwards;
+/* === THEME TOGGLER (restore) ========================================== */
+.theme-toggle{
+  appearance:none;
+  border:0;
+  cursor:pointer;
+  outline:0;
+  width:36px;
+  height:36px;
+  border-radius:999px;
+  display:grid;
+  place-items:center;
+  background:#fff;
+  box-shadow: var(--ring), 0 8px 20px rgba(15,23,42,.08);
+  transition: transform .15s ease, filter .15s ease, background-color .2s ease;
+}
+.theme-toggle:hover{ filter: brightness(1.02) }
+.theme-toggle:active{ transform: translateY(1px) }
+
+[data-theme="dark"] .theme-toggle{
+  background:#0b1220;
+  box-shadow: var(--ring), 0 8px 20px rgba(0,0,0,.50);
 }
 
-.check path {
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 48;
-  stroke-dashoffset: 48;
-  animation: cm-stroke .3s ease-out .5s forwards;
+.theme-toggle svg{
+  fill: currentColor;
+  stroke: currentColor;
+  color: var(--ink);
+  transition: transform .35s ease, opacity .2s ease;
 }
 
-@keyframes cm-stroke { to { stroke-dashoffset: 0; } }
+/* put the two icons on top of each other and cross-fade */
+.theme-toggle .sun,
+.theme-toggle .moon{
+  position:absolute;
+}
 
+/* default: show sun, hide moon */
+.theme-toggle .moon{ opacity:0; transform: scale(.65) rotate(-90deg); }
+
+/* dark: hide sun, reveal moon */
+[data-theme="dark"] .theme-toggle .sun{ opacity:0; transform: scale(.65) rotate(90deg); }
+[data-theme="dark"] .theme-toggle .moon{ opacity:1; transform: scale(1) rotate(0deg); }
