@@ -1,0 +1,74 @@
+.widget{
+  width: 208px;
+  height: 208px;
+  border-radius: 22px;
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid rgba(15,23,42,.10);
+  box-shadow: var(--ring), var(--shadow-lg);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header{
+  display:flex; gap:6px; align-items:center;
+}
+.weekday{ font-size: 20px; font-weight: 800; color: #fb7185; } /* salmon-ish accent */
+.day{ font-size: 20px; font-weight: 800; }
+
+.list{ display: grid; gap: 8px; }
+
+.event{
+  position: relative;
+  display:flex; align-items:center; gap:10px;
+  height: 40px; width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-left: 6px;
+  background: var(--evt-bg);
+  transition: transform .15s ease, filter .15s ease;
+}
+.event:hover{ transform: translateY(-1px); filter: brightness(1.02); }
+
+.bar{ width: 4px; height: 32px; border-radius: 4px; background: var(--evt-bar); }
+
+.info{ display:flex; flex-direction:column; line-height: 1.05; }
+.title{ font-weight: 800; font-size: 14px; color: var(--evt-text); }
+.time{ font-size: 12px; color: var(--evt-meta); }
+
+.moreRow{
+  display:flex; align-items:center; justify-content:space-between;
+  height: 32px; width:100%;
+  border-radius: 10px;
+  border: 1px solid rgba(15,23,42,.12);
+  background: rgba(2,6,23,.03);
+  padding: 0 8px;
+}
+.moreLabel{ font-size: 12px; font-weight: 800; color: var(--ink); }
+.moreTime{ font-size: 11px; opacity: .6 }
+
+.trails{ display:grid; gap:2px; padding: 0 4px; }
+.trails > div{
+  height: 2px; width: 100%;
+  border-radius: 999px;
+  background: rgba(15,23,42,.08);
+}
+.trails > div:nth-child(1){ margin-left: 6px }
+.trails > div:nth-child(2){ margin-left: 12px }
+.trails > div:nth-child(3){ margin-left: 18px }
+
+.noMore{ text-align:center; font-size:12px; font-weight: 800; opacity:.7 }
+
+/* dark-mode tweaks */
+:global([data-theme="dark"]) .widget{
+  border: 1px solid rgba(255,255,255,.08);
+}
+:global([data-theme="dark"]) .moreRow{
+  border-color: rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+}
+:global([data-theme="dark"]) .trails > div{
+  background: rgba(255,255,255,.08);
+}

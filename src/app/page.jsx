@@ -2,10 +2,11 @@ import Link from "next/link";
 import styles from "./home.module.css";
 import SplitText from "@/components/SplitText";
 import RotatingText from "@/components/RotatingText";
+import CalendarEvent from "@/components/widgets/CalendarEvent";
 
-/* NEW: elegant display font for the line */
+/* Fancy display font for the “All you have to …” line */
 import { Playfair_Display } from "next/font/google";
-const playfair = Playfair_Display({ subsets: ["latin"], weight: ["700","800","900"] });
+const playfair = Playfair_Display({ subsets: ["latin"], weight: ["700", "800", "900"] });
 
 export default async function HomePage() {
   return (
@@ -13,7 +14,9 @@ export default async function HomePage() {
       {/* HERO */}
       <section className={`${styles.section} ${styles.hero}`}>
         <div className={styles.container}>
+          {/* 2-col hero */}
           <div className={styles.heroGrid}>
+            {/* Left column */}
             <div>
               <p className={styles.kicker}>ConU Planner</p>
 
@@ -33,11 +36,11 @@ export default async function HomePage() {
               />
 
               <p className={styles.subtitle}>
-                Search COMP &amp; SOEN courses, filter by term, credits, session and more then
+                Search COMP &amp; SOEN courses, filter by term, credits, session and more—then
                 build your perfect schedule.
               </p>
 
-              {/* Rotating line */}
+              {/* Rotating CTA line */}
               <div className={styles.rotatorRow}>
                 <span className={`${styles.ctaPrefix} ${styles.ctaPrefixLarge} ${playfair.className}`}>
                   All you have to
@@ -56,15 +59,26 @@ export default async function HomePage() {
               </div>
             </div>
 
+            {/* Right column */}
             <div className={styles.heroArtWrap}>
               <div className={styles.heroArtCard} />
               <div className={styles.heroArtBase} />
             </div>
           </div>
+
+          {/* NEW: full-width row under the grid → copy at extreme left, widget at right */}
+          <div className={styles.calRow}>
+            <p className={styles.calCopy}>
+              Plan once, tweak in seconds, and skip the
+              headaches. Save hours each term and cut the stress with a clear, glanceable schedule.
+            </p>
+
+            <div className={styles.calDock}>
+              <CalendarEvent show={3} />
+            </div>
+          </div>
         </div>
       </section>
-
-      {/* VALUE PROPS, ABOUT … (unchanged) */}
     </main>
   );
 }
