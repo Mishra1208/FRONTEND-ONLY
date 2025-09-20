@@ -28,7 +28,12 @@
   --radius-lg:18px;
   --grid:1200px;
   --navbg: rgba(255,255,255,.65);
+  --container-pad: 20px;
+  --brand-logo-h: 100px;                   /* default header logo height */
+  --nav-offset: clamp(180px, 16vw, 260px);/* reserved space for the logo + gutter */
 }
+
+
 
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -40,21 +45,15 @@ body{
 }
 
 /* ===== Nav ===== */
-.site-nav{ position:sticky; top:0; z-index:50;
+.site-nav{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;                         /* solid white */
+  border-bottom: 1px solid rgba(15,23,42,.06);
   backdrop-filter: saturate(160%) blur(8px);
-  background:var(--navbg);
-  border-bottom:1px solid rgba(15,23,42,.06);
-}
-.site-nav__inner{ max-width:var(--grid); margin:0 auto; padding:10px 20px;
-  display:flex; align-items:center; justify-content:space-between; }
-.site-nav .brand a{ font-weight:800; letter-spacing:.2px; text-decoration:none; color:var(--ink) }
-.site-nav ul{ list-style:none; display:flex; gap:18px; margin:0; padding:0 }
-.site-nav a{ text-decoration:none; color:var(--ink-dim);
-  padding:8px 12px; border-radius:9999px; font-weight:600; }
-.site-nav a:hover{ color:var(--ink) }
-.site-nav li a[aria-current="page"], .site-nav li a:focus-visible{
-  background:#fff; color:var(--ink);
-  box-shadow:var(--ring), var(--shadow-lg);
+  min-height: calc(var(--brand-logo-h) + 18px);
+  isolation: auto;
 }
 
 /* ===== Helpers ===== */
@@ -100,10 +99,13 @@ body{ min-height: 100dvh; display:flex; flex-direction:column; }
 }
 [data-theme="dark"] body{
   background:
-    radial-gradient(1100px 600px at 20% -10%, rgba(168,85,247,.14), transparent 60%),
-    radial-gradient(900px 520px at 120% 10%, rgba(34,211,238,.14), transparent 60%),
+    radial-gradient(60vw 38vh at 12% -12%, rgba(168,85,247,.06), transparent 62%),
+    radial-gradient(60vw 38vh at 108% -12%, rgba(34,211,238,.06),  transparent 62%),
     var(--bg);
+  background-repeat: no-repeat;
+  background-attachment: fixed, fixed, scroll; /* keeps look similar on retina/non-retina */
 }
+
 
 /* Smooth transitions */
 html, body, .site-nav, .card, .search, .newsForm {
@@ -303,3 +305,75 @@ html, body, .site-nav, .card, .search, .newsForm {
 /* dark: hide sun, reveal moon */
 [data-theme="dark"] .theme-toggle .sun{ opacity:0; transform: scale(.65) rotate(90deg); }
 [data-theme="dark"] .theme-toggle .moon{ opacity:1; transform: scale(1) rotate(0deg); }
+/* --- Header brand logo --- */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0; /* pull out of the container */
+  padding-left:0;           /* keep comfortable hit area */
+  text-decoration: none;
+}
+
+.brandLogo {
+  height: var(--brand-logo-h) !important;  /* win any specificity battles */
+  max-height: none;
+  width: auto;
+  display: block;
+  border: 0;
+  box-shadow: none;
+}
+
+@media (min-width: 980px) {
+  .brandLogo { height: 90px; }
+}
+.site-nav__inner{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* make ONLY the brand hang to the extreme left of the viewport */
+.brand{
+  display: inline-flex;
+  align-items: center;
+  margin-left: calc(-1 * var(--container-pad)); /* pull out of container */
+  padding-left: var(--container-pad);           /* keep comfy hit area */
+  text-decoration: none;
+}
+
+/* logo sizing (adjust to taste) */
+
+.brandLogo{
+  height: var(--brand-logo-h);
+  width: auto;
+  display:block;
+  border:0;
+  box-shadow:none;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.site-nav ul{ list-style:none; display:flex; gap:18px; margin:0; padding:0 }
+.site-nav a{
+  text-decoration:none; color:var(--ink-dim);
+  padding:8px 12px; border-radius:9999px; font-weight:600;
+}
+.site-nav a:hover{ color:var(--ink) }
+.site-nav li a[aria-current="page"],
+.site-nav li a:focus-visible{
+  background:#fff; color:var(--ink);
+  box-shadow: var(--ring), var(--shadow-lg);
+}
+
+/* Dark theme border/color for the shortened bar only */
+[data-theme="dark"] .site-nav::after{
+  background: var(--navbg);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* Optional: scale logo slightly down on small viewports; up on large */
+@media (max-width: 980px){
+  .brandLogo{ height: clamp(48px, 8.5vw, var(--brand-logo-h)); }
+}
