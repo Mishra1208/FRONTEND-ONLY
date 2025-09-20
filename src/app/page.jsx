@@ -4,9 +4,10 @@ import SplitText from "@/components/SplitText";
 import RotatingText from "@/components/RotatingText";
 import CalendarEvent from "@/components/widgets/CalendarEvent";
 import Image from "next/image";
+import Notes from "@/components/widgets/Notes";
 
 import { Playfair_Display } from "next/font/google";
-const playfair = Playfair_Display({ subsets: ["latin"], weight: ["700","800","900"] });
+const playfair = Playfair_Display({ subsets: ["latin"], weight: ["700", "800", "900"] });
 
 export default async function HomePage() {
   return (
@@ -15,7 +16,7 @@ export default async function HomePage() {
         <div className={styles.container}>
           {/* Hero */}
           <div className={styles.heroGrid}>
-            {/* LEFT — sits in column 1 */}
+            {/* LEFT — column 1 */}
             <div className={styles.heroLeft}>
               <p className={styles.kicker}>ConU Planner</p>
 
@@ -41,8 +42,12 @@ export default async function HomePage() {
 
               {/* CTAs */}
               <div className={styles.ctaRow}>
-                <Link href="/pages/courses" className={`${styles.btnPrimary} ${styles.btnLg}`}>Browse courses</Link>
-                <Link href="/pages/planner" className={styles.btnGhost}>Open planner</Link>
+                <Link href="/pages/courses" className={`${styles.btnPrimary} ${styles.btnLg}`}>
+                  Browse courses
+                </Link>
+                <Link href="/pages/planner" className={styles.btnGhost}>
+                  Open planner
+                </Link>
               </div>
 
               {/* Rotating line */}
@@ -71,46 +76,53 @@ export default async function HomePage() {
               </ul>
             </div>
 
-            {/* RIGHT — animated showcase (column 2, aligned to top/right) */}
-            <aside className={styles.showcase}>
-              <div className={styles.showcaseInner}>
-                <Image
-                  src="/img1.jpg"
-                  alt="Campus life"
-                  fill
-                  priority
-                  sizes="(max-width: 980px) 100vw, 520px"
-                  className={`${styles.slide} ${styles.s1}`}
-                />
-                <Image
-                  src="/img2.jpg"
-                  alt="Study space"
-                  fill
-                  sizes="(max-width: 980px) 100vw, 520px"
-                  className={`${styles.slide} ${styles.s2}`}
-                />
-                <Image
-                  src="/img3.jpg"
-                  alt="Concordia vibes"
-                  fill
-                  sizes="(max-width: 980px) 100vw, 520px"
-                  className={`${styles.slide} ${styles.s3}`}
-                />
-              </div>
-              <div className={styles.showcaseGlow} />
-              <div className={styles.showcaseShine} />
-            </aside>
-          </div>
+            {/* RIGHT rail — slideshow only */}
+            <div className={styles.rightRail}>
+              <aside className={styles.showcase}>
+                <div className={styles.showcaseInner}>
+                  <Image
+                    src="/img1.jpg"
+                    alt="Campus life"
+                    fill
+                    priority
+                    sizes="(max-width: 980px) 100vw, 520px"
+                    className={`${styles.slide} ${styles.s1}`}
+                  />
+                  <Image
+                    src="/img2.jpg"
+                    alt="Study space"
+                    fill
+                    sizes="(max-width: 980px) 100vw, 520px"
+                    className={`${styles.slide} ${styles.s2}`}
+                  />
+                  <Image
+                    src="/img3.jpg"
+                    alt="Concordia vibes"
+                    fill
+                    sizes="(max-width: 980px) 100vw, 520px"
+                    className={`${styles.slide} ${styles.s3}`}
+                  />
+                </div>
+                <div className={styles.showcaseGlow} />
+                <div className={styles.showcaseShine} />
+              </aside>
+            </div>
+          </div>{/* <-- closes .heroGrid */}
 
           {/* Full-width row */}
           <div className={styles.calRow}>
             <p className={styles.calCopy}>
-              <strong>Plan once</strong>, tweak in seconds, and skip the headaches. Save hours each term and cut
-              the stress with a clear, glanceable schedule.
+              <strong>Plan once</strong>, tweak in seconds, and skip the headaches. Save hours each term and
+              cut the stress with a clear, glanceable schedule.
             </p>
             <div className={styles.calDock}>
               <CalendarEvent show={3} />
             </div>
+          </div>
+
+          {/* Note below the calendar, left-aligned */}
+          <div className={styles.noteRow}>
+            <Notes />
           </div>
         </div>
       </section>

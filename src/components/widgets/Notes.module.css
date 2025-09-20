@@ -1,0 +1,33 @@
+.noteCard{
+  position: relative;
+  background: linear-gradient(180deg,#fff9c9 0%, #fff3a3 100%); /* yellow stays in dark too */
+  color: #111827;
+  border: 1px solid rgba(15,23,42,.14);
+  border-radius: 18px;
+  padding: 14px 16px;
+  box-shadow: var(--ring), 0 12px 36px rgba(15,23,42,.12);
+}
+
+/* subtle glossy glaze */
+.noteCard::after{
+  content:"";
+  position:absolute; inset:0;
+  border-radius: inherit;
+  pointer-events:none;
+  background:
+    radial-gradient(120% 70% at 50% -10%, rgba(255,255,255,.65), transparent 50%),
+    linear-gradient(180deg, rgba(255,255,255,.35), transparent 35%);
+  mix-blend-mode: soft-light;
+  opacity: .45;
+}
+
+.noteTitle{ display:flex; align-items:center; gap:8px; font-weight:800; letter-spacing:.2px }
+.noteBody { margin-top:8px; line-height:1.5; font-weight:560 }
+.noteSmall{ margin-top:6px; font-size:13px; opacity:.9 }
+
+/* keep contrast in dark without changing the yellow */
+:root [data-theme="dark"] .noteCard{
+  color:#0b0f1a;               /* still dark text for readability on yellow */
+  border-color: rgba(0,0,0,.22);
+  box-shadow: var(--ring), 0 16px 48px rgba(0,0,0,.35);
+}

@@ -144,11 +144,19 @@ html, body, .site-nav, .card, .search, .newsForm {
   [class*="panel"],
   [class*="box"],
   [class*="Card"]
-):not(.cardSelected){
+):not(.cardSelected, .noteKeep){
   background: var(--panel) !important;
   color: var(--ink) !important;
   box-shadow: var(--ring), var(--shadow-lg) !important;
   border-color: rgba(255,255,255,.08) !important;
+}
+
+/* Keep the Notes yellow in dark mode (beats any remaining !important) */
+[data-theme="dark"] .noteKeep{
+  background: linear-gradient(180deg,#fff9c9 0%, #fff3a3 100%) !important;
+  color: #0b0f1a !important;                     /* readable on yellow */
+  border-color: rgba(0,0,0,.22) !important;
+  box-shadow: var(--ring), 0 16px 48px rgba(0,0,0,.35) !important;
 }
 
 /* 3) muted text inside panels */

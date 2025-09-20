@@ -294,3 +294,37 @@
   .heroGrid{ grid-template-columns:1fr }
   .showcase{ grid-column: 1; justify-self: stretch; opacity: .9 }
 }
+
+/* Right column container: sits in col 2, full width of the rail */
+.rightRail{
+  grid-column: 2;
+  justify-self: end;
+  align-self: start;
+  display: grid;
+  gap: 12px;
+  width: clamp(260px, 28vw, 520px);
+}
+
+/* Let the slideshow fill the rail width, slightly softened */
+.showcase{ width: 100%; opacity: .9; }
+[data-theme="dark"] .showcase{ opacity: .88; }
+
+/* Row for the note under the calendar */
+.noteRow{
+  margin-top: clamp(80px, 8vw, 200px);   /* nice breathing room below calRow */
+  max-width: 640px;                     /* aligns visually with left content */
+}
+
+/* Right column container: sits in col 2, full width of the rail */
+.rightRail{
+  grid-column: 2;
+  justify-self: end;
+  align-self: start;
+  display: grid;
+  gap: 12px;
+  width: clamp(260px, 28vw, 520px);
+}
+
+/* Let the slideshow fill the rail width, slightly softened */
+.showcase{ width: 100%; opacity: .9; }
+[data-theme="dark"] .showcase{ opacity: .88; }
