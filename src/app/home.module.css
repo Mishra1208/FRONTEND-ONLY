@@ -1,155 +1,111 @@
 .page{ padding-bottom:80px }
 .section{ padding:64px 0 }
-.hero{ padding:88px 0 }                  /* no big bottom padding now */
+.hero{ padding:88px 0 }
 .container{ max-width:1280px; margin:0 auto; padding:0 20px }
-
 .kicker{ color:var(--accent); font-weight:800; margin:0 0 8px }
 .title{ font-size:64px; line-height:1.1; margin:0 0 16px; font-weight:800; letter-spacing:-.02em }
 .titleDark{ color:#111827 }
-.subtitle{ color:var(--ink-dim); max-width:55ch; margin:0 0 22px }
+.subtitle{ color:var(--ink-dim); max-width:55ch; margin:0 0 16px }
 
-.heroGrid{
-  display:grid; align-items:center; gap:36px;
-  grid-template-columns: 1.2fr .8fr;
+/* CTA row + buttons */
+.ctaRow{ display:flex; gap:12px; margin:12px 0 8px }
+.btnLg{ padding:14px 18px; font-size:16px }
+.btnGhost{
+  appearance:none; border:1px solid rgba(15,23,42,.12);
+  background:transparent; color:var(--ink);
+  padding:12px 16px; border-radius:9999px; font-weight:700;
+  text-decoration:none; display:inline-flex; align-items:center; gap:8px;
 }
+[data-theme="dark"] .btnGhost{ border-color:rgba(255,255,255,.18); color:#fff }
+.btnGhost:hover{ background:rgba(15,23,42,.04) }
+[data-theme="dark"] .btnGhost:hover{ background:rgba(255,255,255,.06) }
+
+.heroGrid{ display:grid; align-items:center; gap:36px; grid-template-columns: 1.2fr .8fr }
 @media (max-width:980px){ .heroGrid{ grid-template-columns:1fr } }
 
-/* --- Hero art (right column) --- */
-.heroArtWrap{
-  position: relative;
-  display:flex; align-items:center; justify-content:center;
-  height:320px;
-  --logo-pad: clamp(20px, 6%, 44px);
-}
-.heroArtBase{
-  position:absolute; inset:24px; border-radius:24px;
-  background: linear-gradient(160deg,#eef2ff,#fdf2f8);
-  box-shadow: 0 50px 120px rgba(109,40,217,.15);
-  overflow:hidden; z-index:1;
-}
+.search{ display:flex; gap:12px; align-items:center; padding:10px 12px; background:var(--panel); border-radius:9999px;
+  box-shadow:var(--ring), var(--shadow-lg); max-width:720px }
+.searchIcon{ width:22px; height:22px; opacity:.55; margin-left:6px }
+.searchInput{ flex:1; border:0; outline:0; font:inherit; color:var(--ink); padding:8px 6px; background:transparent }
+.btnPrimary{ appearance:none; border:0; outline:0; cursor:pointer; padding:10px 16px; border-radius:9999px; font-weight:700;
+  color:#fff; background:linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow:0 10px 30px rgba(109,40,217,.25); text-decoration:none; display:inline-flex; align-items:center; gap:8px }
+.btnPrimary:hover{ filter:brightness(.98) }
+[data-theme="dark"] .btnPrimary{ box-shadow:0 14px 40px rgba(34,211,238,.22) }
+
+/* Hero art */
+.heroArtWrap{ position:relative; display:flex; align-items:center; justify-content:center; height:320px }
+.heroArtBase{ position:absolute; inset:24px; border-radius:24px; background:linear-gradient(160deg,#eef2ff,#fdf2f8);
+  box-shadow:0 50px 120px rgba(109,40,217,.15); overflow:hidden; z-index:1 }
 .heroArtBase::after{
-  content:""; position:absolute; inset:var(--logo-pad);
+  content:""; position:absolute; inset:clamp(20px,6%,44px);
   background: var(--hero-logo, url("/logo.png")) center / contain no-repeat;
-  opacity:1; pointer-events:none;
-  animation: heroLogoIn 420ms ease-out 120ms both;
+  animation: heroLogoIn 420ms ease-out 120ms both
 }
-.heroArtCard{
-  position:absolute; inset:0; border-radius:28px;
+.heroArtCard{ position:absolute; inset:0; border-radius:28px;
   background: conic-gradient(from 120deg at 50% 50%, #60a5fa, #a78bfa, #fb7185, #60a5fa);
-  padding:20px;
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor; mask-composite: exclude;
-  pointer-events:none; z-index:2;
-}
+  padding:20px; -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none; z-index:2 }
 @keyframes heroLogoIn{ from{ transform:scale(.97); opacity:0 } to{ transform:scale(1); opacity:1 } }
-@media (max-width:980px){
-  .heroArtWrap{ height:260px; --logo-pad: clamp(14px, 7%, 32px) }
-}
-[data-theme="dark"] .heroArtBase{
-  background: linear-gradient(160deg,#0b1220,#111827);
-  box-shadow: 0 40px 120px rgba(14,165,233,.20), 0 20px 60px rgba(0,0,0,.65);
-}
-[data-theme="dark"] .heroArtCard{
-  background: conic-gradient(from 120deg at 50% 50%, #7dd3fc, #a78bfa, #fb7185, #7dd3fc);
-}
+@media (max-width:980px){ .heroArtWrap{ height:260px } }
 
-/* --- Rotating CTA line --- */
-.rotatorRow{
-  display:flex; align-items:baseline; gap:16px;
-  margin-top: clamp(20%, 9vw, 12px);
-}
+/* Dark tweaks */
+[data-theme="dark"] .heroArtBase{ background:linear-gradient(160deg,#0b1220,#111827);
+  box-shadow:0 40px 120px rgba(14,165,233,.20), 0 20px 60px rgba(0,0,0,.65) }
+[data-theme="dark"] .heroArtCard{ background:conic-gradient(from 120deg at 50% 50%, #7dd3fc, #a78bfa, #fb7185, #7dd3fc) }
+
+/* Rotating line */
+.rotatorRow{ display:flex; align-items:baseline; gap:16px; margin-top: clamp(88px, 10vw, 120px) }
 .ctaPrefix{ color:var(--ink); font-weight:800 }
-.ctaPrefixLarge{
-  font-size: clamp(28px, 3.2vw, 44px);
-  line-height:1.05; letter-spacing:.5px;
-  text-shadow: 0 1px 0 rgba(255,255,255,.25);
-}
+.ctaPrefixLarge{ font-size: clamp(28px, 3.2vw, 44px); line-height:1.05; letter-spacing:.5px; text-shadow:0 1px 0 rgba(255,255,255,.25) }
 .rotatorChip{
-  font-size: clamp(14px, 1.2vw, 18px);
-  padding:10px 16px; border-radius:9999px; color:#fff;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  box-shadow: 0 10px 30px rgba(109,40,217,.25);
+  font-size:clamp(14px,1.2vw,18px); padding:10px 16px; border-radius:9999px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#fff;
+  box-shadow:0 10px 30px rgba(109,40,217,.25)
 }
 
-/* --- NEW: full-width row under hero grid ------------------------------ */
-.calRow{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;   /* copy to the far left, widget to the far right */
-  gap:24px;
-  margin-top: clamp(12px, 5vw, 32px);
+/* “How it works” mini strip */
+.steps{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:18px; max-width:760px
 }
+.steps li{
+  display:flex; align-items:center; gap:10px; padding:12px 14px;
+  border-radius:12px; background:var(--panel); box-shadow:var(--ring), var(--shadow-sm);
+  color:var(--ink)
+}
+.steps li span{
+  width:26px; height:26px; border-radius:999px; display:inline-grid; place-items:center;
+  font-weight:800; font-size:12px; color:#fff;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2))
+}
+@media (max-width:980px){ .steps{ grid-template-columns:1fr } }
+
+/* Stronger, more “premium” paragraph */
 .calCopy{
-  max-width: 560px;
-  font-size: clamp(27px, 1.05vw, 18px);
-  line-height: 1.65;
-  color: var(--ink);          /* darker than --ink-dim */
-  font-weight: 600;           /* give it some weight */
-  letter-spacing: .1px;
-  margin-top: 70px;
-  position: relative;
-  padding-left: 14px;         /* room for the accent bar */
+  max-width:420px; font-size:16.5px; line-height:1.55; font-weight:600; color:var(--ink);
+  margin-right:24px; border-left:4px solid var(--accent); padding-left:14px
 }
-.calCopy::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  top: .4em;
-  bottom: .4em;
-  width: 4px;
-  border-radius: 4px;
-  background: linear-gradient(180deg, var(--accent), var(--accent-2));
-  box-shadow: 0 6px 18px rgba(109, 40, 217, .18);
-}
+[data-theme="dark"] .calCopy{ color:#e7e9ee; opacity:.95; border-color:var(--accent-2) }
 
-[data-theme="dark"] .calCopy{ color:#f8fafc; opacity:.85 }
-
-/* Widget: scale with screen width, no positioning hacks */
+/* Widget docking + responsive scaling */
 .calDock{ --cal-scale:1; transform:translateZ(0) }
-.calDock > *{
-  transform: scale(var(--cal-scale));
-  transform-origin: top right;
-}
+.calDock > *{ transform:scale(var(--cal-scale)); transform-origin:top right }
 @media (min-width:1280px){ .calDock{ --cal-scale:1.15 } }
 @media (min-width:1440px){ .calDock{ --cal-scale:1.25 } }
 @media (min-width:1680px){ .calDock{ --cal-scale:1.35 } }
 
-/* Mobile/tablet: stack copy above widget */
-@media (max-width:980px){
-  .calRow{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:10px;
-  }
-  .calCopy{ max-width:520px }
-  .calDock{ --cal-scale:1 }
-  .calDock > *{ transform:none }
-}
+.hero{ padding:88px 0; padding-bottom: clamp(200px, 20vw, 340px) }
 
-/* (rest of your existing utility/section/footer styles unchanged) */
-
-/* bump widget size on wider screens */
-@media (min-width:1280px){ .calDock{ --cal-scale:1.15 } }
-@media (min-width:1440px){ .calDock{ --cal-scale:1.25 } }
-@media (min-width:1680px){ .calDock{ --cal-scale:1.35 } }
-
-/* Page bottom padding to reserve space for the row on desktop */
-.hero{ padding-bottom: clamp(200px, 20vw, 340px) }
-
-/* Mobile / tablet: stack copy above widget under the hero */
+/* Mobile/tablet */
 @media (max-width:980px){
   .hero{ padding-bottom:56px }
-  .calRow{
-    position:static; right:auto; top:auto;
-    margin-top:24px;
-    flex-direction:column; align-items:flex-start; gap:10px;
-  }
+  .calRow{ position:static; right:auto; top:auto; margin-top:24px; flex-direction:column; align-items:flex-start; gap:10px }
   .calCopy{ max-width:520px }
   .calDock{ --cal-scale:1 }
   .calDock > *{ transform:none }
 }
 
-/* --- Misc existing styles (cards, footer, etc.) ---------------------- */
+/* Cards, footer, etc. (unchanged) */
 .cardsGrid3{ display:grid; gap:18px; grid-template-columns:repeat(3,1fr) }
 @media (max-width:980px){ .cardsGrid3{ grid-template-columns:1fr } }
 .valueIconDot{ width:10px; height:10px; border-radius:999px; background:#a78bfa; box-shadow:0 0 0 6px rgba(167,139,250,.15); margin-bottom:8px }
@@ -160,14 +116,13 @@
 .aboutGrid{ display:grid; gap:24px; grid-template-columns: 1.2fr .8fr }
 @media (max-width:980px){ .aboutGrid{ grid-template-columns:1fr } }
 .aboutArt{ height:220px; border-radius:var(--radius-lg); background:linear-gradient(135deg,#f5f3ff,#fdf2f8); box-shadow:var(--shadow-lg) }
-
 .newsletterBand{ margin:56px 0 0; background: radial-gradient(1200px 200px at 50% 0, rgba(147,51,234,.10), transparent 60%); padding:42px 0 }
 .newsletterInner{ display:flex; align-items:center; justify-content:space-between; gap:18px }
 .newsCopy{ color:var(--ink-dim); margin:4px 0 0 }
-.newsForm{ display:flex; gap:10px; background:var(--panel); padding:8px; border-radius:999px; box-shadow:var(--ring), var(--shadow-lg) }
+.newsForm{ display:flex; gap:10px; background:var(--panel); padding:8px; border-radius:9999px; box-shadow:var(--ring), var(--shadow-lg) }
 .newsInput{ border:0; outline:0; padding:10px 12px; font:inherit; min-width:260px }
-.btnGlass{ border:0; padding:10px 16px; border-radius:999px; font-weight:700; color:#fff; background:linear-gradient(90deg,var(--accent),var(--accent-2)) }
-
+.btnGlass{ border:0; padding:10px 16px; border-radius:999px; font-weight:700; color:#fff;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2)) }
 .footer{ margin-top:44px; padding:90px 0; border-top:1px solid rgba(15,23,42,.06); box-shadow:0 -10px 30px rgba(15,23,42,.06); background:black; color:white }
 .containerGrid4{ display:grid; gap:18px; grid-template-columns:repeat(4,1fr) }
 @media (max-width:980px){ .containerGrid4{ grid-template-columns:1fr 1fr } }
@@ -178,3 +133,86 @@
 .footerLink{ color:var(--ink-dim); text-decoration:none }
 .footerLink:hover{ color:var(--ink) }
 .footerBottom{ text-align:center; margin-top:16px; color:var(--ink-dim) }
+.h2{ font-size:28px; line-height:1.2; margin:0 0 12px }
+
+
+/* Rotating line */
+.rotatorRow{
+  display:flex;
+  align-items:baseline;
+  gap:16px;
+  margin-top: clamp(20%, 9vw, 12px);
+}
+
+/* --- Docked copy + widget row (IN FLOW, spans container) --- */
+.calRow{
+  display: grid;
+  grid-template-columns: 1fr auto;  /* copy hugs left edge, widget on the right */
+  align-items: start;
+  gap: 24px;
+  margin-top: clamp(56px, 7.5vw, 120px);                 /* space under the hero grid */
+}
+
+.calCopy{
+  /* keep the left accent + spacing you already had */
+  border-left: 4px solid var(--accent);
+  padding-left: 14px;
+  margin: 0;
+
+  /* bigger, fluid type + comfortable measure */
+  font-size: clamp(23px, 1.15vw, 22px);
+  line-height: 1.6;
+  font-weight: 650;
+
+  /* width by characters keeps it readable as size grows */
+  max-width: 56ch;
+  color: var(--ink);
+}
+
+[data-theme="dark"] .calCopy{
+  color:#e7e9ee;
+  opacity:.95;
+  border-color:var(--accent-2);
+}
+.calCopy strong { font-weight: 1000; }
+.calRow { margin-top: 56px; }  /* was 42px */
+
+
+.calDock{
+  /* keep to the right, don’t shrink, allow visual scale */
+  --cal-scale: 1;
+  flex-shrink: 0;
+  transform: translateZ(0);
+}
+.calDock > *{
+  transform: scale(var(--cal-scale));
+  transform-origin: top right;
+}
+
+@media (min-width:1280px){ .calDock{ --cal-scale: 1.10 } }
+@media (min-width:1440px){ .calDock{ --cal-scale: 1.20 } }
+@media (min-width:1680px){ .calDock{ --cal-scale: 1.30 } }
+
+/* Section padding: no giant bottom padding now that calRow isn’t absolute */
+.hero{
+  padding: 88px 0 64px;
+}
+
+/* Mobile/tablet: stack copy over widget */
+@media (max-width:980px){
+  .calRow{
+    grid-template-columns: 1fr;     /* stack */
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .calCopy{ max-width: 100% }
+  .calDock{ --cal-scale: 1 }
+  .calDock > *{ transform: none }
+}
+
+.footer { position: relative; }
+.footer::before{
+  content:""; position:absolute; left:0; right:0; top:-36px; height:36px;
+  background: radial-gradient(800px 60px at 50% 100%, rgba(147,51,234,.10), transparent 70%);
+  pointer-events:none;
+}

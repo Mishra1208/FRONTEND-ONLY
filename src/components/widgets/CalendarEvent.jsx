@@ -15,7 +15,7 @@ const DEFAULT_EVENTS = [
   },
   {
     title: "Last Date to Disc",
-    time: "14:00 - PM",
+    time: "14:00 PM",
     colors: { bg: "#BBF7D0", bar: "#16A34A", text: "#052E16", meta: "#15803D" }, // green
   },
   {
