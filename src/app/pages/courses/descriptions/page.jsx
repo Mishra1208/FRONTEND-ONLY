@@ -60,14 +60,21 @@ export default function DescriptionsPage() {
     return () => { alive = false; };
   }, []);
 
+  // open/scroll when hash changes (e.g., user clicks another deep link)
+  useEffect(() => {
+    const onHash = () => {
+      const id = decodeURIComponent((window.location.hash || "").slice(1));
+      if (id) setOpenId(id);
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+
   // after render, scroll to open item
   useEffect(() => {
-    if (!items.length) return;
-    const id = openId || decodeURIComponent((window.location.hash || "").slice(1));
-    if (!id) return;
-
+    if (!items.length || !openId) return;
     const raf = requestAnimationFrame(() => {
-      const el = document.getElementById(id);
+      const el = document.getElementById(openId);
       if (el) {
         el.scrollIntoView({ block: "start", behavior: "smooth" });
         el.classList.add(styles.justFocused);
@@ -77,27 +84,32 @@ export default function DescriptionsPage() {
     return () => cancelAnimationFrame(raf);
   }, [items.length, openId]);
 
+  // click handler that *controls* the toggle (single-click open)
+  const handleSummaryClick = (id, isOpen) => (e) => {
+    // prevent native <details> toggle; we control via state
+    e.preventDefault();
+    const next = isOpen ? null : id;
+    setOpenId(next);
+    if (next) {
+      history.replaceState(null, "", `#${encodeURIComponent(next)}`);
+    } else {
+      history.replaceState(null, "", location.pathname + location.search);
+    }
+  };
+
   return (
     <main className={styles.wrap}>
-      <h1 className={styles.title}>Computer Science course descriptions</h1>
+      <h1 className={styles.title}>Course Descriptions</h1>
 
       <div className={styles.accordion}>
         {items.map((r) => {
           const id = anchorIdFor(r);
           const isOpen = openId === id;
-
-          const credits =
-            Number(r.course_credit || r.credits || 0).toFixed(1) + " credits";
+          const credits = Number(r.course_credit || r.credits || 0).toFixed(1) + " credits";
 
           return (
-            <details
-              id={id}
-              key={id}
-              className={styles.item}
-              open={isOpen}
-              onToggle={(e) => setOpenId(e.currentTarget.open ? id : null)}
-            >
-              <summary className={styles.summary}>
+            <details id={id} key={id} className={styles.item} open={isOpen}>
+              <summary className={styles.summary} onClick={handleSummaryClick(id, isOpen)}>
                 <span className={styles.code}>
                   {(r.subject || "").toUpperCase()} {(r.catalogue || "").toUpperCase()}
                 </span>
