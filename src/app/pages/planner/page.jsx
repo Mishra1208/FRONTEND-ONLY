@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { exportPlannerToExcel } from "@/lib/exportPlannerExcel";
+import styles from "./planner.module.css";
 
 const KEY = "conu-planner:selected";
 
@@ -50,9 +52,10 @@ function broadcastPlannerChange() {
 /* -------------------------------- page ----------------------------------- */
 export default function PlannerPage() {
   const [items, setItems] = useState([]);
+  const [exporting, setExporting] = useState(false);
 
   const refresh = () => {
-    const raw  = loadList();
+    const raw   = loadList();
     const clean = dedupeByOffering(raw);
     if (clean.length !== raw.length) saveList(clean);
     setItems(clean);
@@ -84,12 +87,32 @@ export default function PlannerPage() {
     broadcastPlannerChange();
   }
 
+  async function handleExport() {
+    try {
+      setExporting(true);
+      await exportPlannerToExcel(items);
+    } finally {
+      setExporting(false);
+    }
+  }
+
   return (
     <main className="container" style={{ paddingTop: 16 }}>
       <h1 className="h2">Planner</h1>
 
       <div className="card" style={{ borderRadius: "var(--radius)", overflow: "hidden" }}>
-        <div style={{ fontWeight: 800, marginBottom: 8 }}>Your Planner</div>
+        <div className={styles.toolbar}>
+          <div style={{ fontWeight: 800 }}>Your Planner</div>
+
+          <button
+            className={styles.exportBtn}
+            onClick={handleExport}
+            disabled={!items.length || exporting}
+            aria-busy={exporting ? "true" : "false"}
+          >
+            {exporting ? "Preparing…" : "Download Excel"}
+          </button>
+        </div>
 
         {items.length === 0 ? (
           <div className="body">No courses yet. Add from the Courses page.</div>
