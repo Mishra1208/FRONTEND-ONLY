@@ -22,38 +22,43 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
           rel="stylesheet"
         />
+        {/* Prevents first-paint flash; prefers cookie -> system.
+           The hydrator will enforce localStorage on the client after mount. */}
         <Script id="theme-init" strategy="beforeInteractive">{`
-          (function(){
+          (function () {
             try {
               var m = document.cookie.match(/(?:^|; )theme=(dark|light)/);
               var cookieTheme = m && m[1];
               var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-              var next = cookieTheme || (systemDark ? 'dark' : 'light');
-              document.documentElement.dataset.theme = next;
+              var theme = cookieTheme || (systemDark ? 'dark' : 'light');
+              var root = document.documentElement;
+              root.dataset.theme = theme;
+              root.style.colorScheme = theme;
             } catch(e){}
           })();
         `}</Script>
       </head>
       <body>
-      <header className="site-nav">
-        <nav className="site-nav__inner">
-          <Link href="/" className="brand" aria-label="ConU Planner">
-            <img src="/logo2.png" alt="ConU Planner" className="brandLogo"/>
-          </Link>
-
-          <ul>
-            <li><NavLink href="/">Home</NavLink></li>
-            <li><NavLink href="/pages/courses">Courses</NavLink></li>
-            <li><NavLink href="/pages/planner">Planner</NavLink></li>
-            <li><NavLink href="/about">About</NavLink></li>
-            <li><ThemeToggle/></li>
-          </ul>
-        </nav>
-      </header>
 
 
-      <main className="site-main">{children}</main>
-      <Footer/>
+        <header className="site-nav">
+          <nav className="site-nav__inner">
+            <Link href="/" className="brand" aria-label="ConU Planner">
+              <img src="/logo2.png" alt="ConU Planner" className="brandLogo" />
+            </Link>
+
+            <ul>
+              <li><NavLink href="/">Home</NavLink></li>
+              <li><NavLink href="/pages/courses">Courses</NavLink></li>
+              <li><NavLink href="/pages/planner">Planner</NavLink></li>
+              <li><NavLink href="/about">About</NavLink></li>
+              <li><ThemeToggle /></li>
+            </ul>
+          </nav>
+        </header>
+
+        <main className="site-main">{children}</main>
+        <Footer />
       </body>
     </html>
   );

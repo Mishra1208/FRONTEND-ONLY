@@ -1,20 +1,47 @@
 "use client";
 import { useEffect, useState } from "react";
 
+function readTheme() {
+  // 1) localStorage  2) cookie  3) current DOM  4) system
+  try {
+    const ls = localStorage.getItem("theme");
+    if (ls === "dark" || ls === "light") return ls;
+  } catch {}
+  try {
+    const m = document.cookie.match(/(?:^|; )theme=(dark|light)/);
+    if (m && (m[1] === "dark" || m[1] === "light")) return m[1];
+  } catch {}
+  const dom = document.documentElement.dataset.theme;
+  if (dom === "dark" || dom === "light") return dom;
+  const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+  return prefersDark ? "dark" : "light";
+}
+
+function applyTheme(next) {
+  const root = document.documentElement;
+  root.dataset.theme = next;
+  root.style.colorScheme = next;
+
+  // persist everywhere (cookie must be site-wide so SSR sees it on any route)
+  try { localStorage.setItem("theme", next); } catch {}
+  try {
+    document.cookie = `theme=${next}; Path=/; Max-Age=31536000; SameSite=Lax`;
+  } catch {}
+}
+
 export default function ThemeToggle() {
   const [theme, setTheme] = useState("light");
 
-  // sync with DOM on mount
   useEffect(() => {
-    const current = document.documentElement.dataset.theme || "light";
-    setTheme(current);
+    const t = readTheme();
+    applyTheme(t);
+    setTheme(t);
   }, []);
 
   function toggle() {
     const next = theme === "dark" ? "light" : "dark";
     setTheme(next);
-    document.documentElement.dataset.theme = next;
-    try { localStorage.setItem("theme", next); } catch {}
+    applyTheme(next);
   }
 
   return (

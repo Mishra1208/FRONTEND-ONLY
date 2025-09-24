@@ -1,0 +1,44 @@
+.wrap{ max-width: 980px; margin: 24px auto 56px; padding: 0 20px; }
+.title{ font-size:42px; font-weight:800; margin:0 0 10px; letter-spacing:-.01em; }
+
+.accordion{ display:flex; flex-direction:column; gap:12px; }
+
+.item{
+  border:1px solid rgba(15,23,42,.12);
+  border-radius:12px;
+  background:#fff;
+  overflow:hidden;
+  scroll-margin-top: 84px;
+}
+
+.justFocused{
+  box-shadow: 0 0 0 2px rgba(147, 51, 234, .35);
+  border-radius: 12px;
+}
+:global([data-theme="dark"]) .item{
+  background: var(--panel);
+  border:1px solid rgba(255,255,255,.10);
+}
+
+.summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  font-weight:800;
+}
+.item[open] .summary{ border-bottom:1px solid rgba(15,23,42,.08); }
+:global([data-theme="dark"]) .item[open] .summary{ border-bottom:1px solid rgba(255,255,255,.08); }
+
+.code{ font-variant-numeric: tabular-nums; min-width:108px; }
+.name{ flex:1; }
+.credits{ opacity:.7; font-weight:700; }
+
+.body{ padding:14px 16px 16px; }
+.label{ font-weight:800; margin:10px 0 4px; }
+
+/* remove default disclosure marker so our layout is clean */
+.summary::-webkit-details-marker { display: none; }
+.summary::marker { content: ""; }

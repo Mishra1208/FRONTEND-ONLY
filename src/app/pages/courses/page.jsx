@@ -164,6 +164,11 @@ export default function CoursesPage() {
             {data.map((c) => {
               const k = courseKey(c);
               const isSelected = selectedKeys.has(k);
+
+              // Build the anchor for the description page
+              const anchorId = `${safeUpper(c?.subject)}-${safeUpper(c?.catalogue)}`;
+              const descHref = `/pages/courses/descriptions#${anchorId}`;
+
               return (
                 <div key={k} className={`card ${isSelected ? styles.cardSelected : ""}`}>
                   <div className="courseCode">
@@ -183,6 +188,9 @@ export default function CoursesPage() {
 
                   <div className={styles.actions}>
                     <AddButton onAdd={() => addToPlanner(c)} />
+                    <a className={styles.ghostBtn} href={descHref}>
+                      Get Description
+                    </a>
                   </div>
                 </div>
               );

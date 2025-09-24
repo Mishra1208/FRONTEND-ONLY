@@ -122,3 +122,27 @@
 .toast[data-kind="warn"]{
   box-shadow: 0 0 0 2px rgba(245,158,11,.55), 0 10px 30px rgba(0,0,0,.35);
 }
+
+
+
+/* Ghost secondary button used for "Get Description" */
+.ghostBtn{
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(15,23,42,.18);
+  background:transparent;
+  font-weight:700;
+  text-decoration:none;
+  color:inherit;
+}
+.ghostBtn:hover{
+  border-color: rgba(15,23,42,.35);
+}
+
+/* Dark theme */
+:global([data-theme="dark"]) .ghostBtn{
+  border-color: rgba(255,255,255,.16);
+}
+:global([data-theme="dark"]) .ghostBtn:hover{
+  border-color: rgba(255,255,255,.28);
+}
