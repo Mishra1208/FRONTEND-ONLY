@@ -48,3 +48,169 @@
   justify-content:space-between;
   gap:16px;
 }
+
+/* about.module.css */
+.section :global(.beamWrap) { margin: 16px 0 8px; }
+
+/* existing */
+.page{ padding:48px 0 72px }
+.title{ font-size:44px; line-height:1.15; margin:0 0 10px; font-weight:800; letter-spacing:-.01em }
+.lead{ color:var(--ink-dim); max-width:65ch; margin:8px 0 24px }
+
+/* NEW fancy bits */
+.gradient{
+  background: linear-gradient(90deg,#111827,#6b21a8 35%,#0ea5e9 65%,#ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.brand{ filter: drop-shadow(0 6px 18px rgba(236,72,153,.25)); }
+
+.glow{
+  color: var(--ink-dim);
+  text-shadow: 0 1px 0 rgba(255,255,255,.2);
+}
+
+.body{
+  color: var(--ink);
+  max-width: 75ch;
+  margin: 12px 0;
+  line-height: 1.65;
+}
+
+/* cute little tag pills used in the paragraph */
+.pill{
+  display:inline-block;
+  padding: .15rem .5rem;
+  margin: 0 .12rem;
+  border-radius:999px;
+  background: rgba(99,102,241,.12);
+  border: 1px solid rgba(99,102,241,.25);
+  color:#3b3b7e;
+  font-weight:600;
+  backdrop-filter: blur(2px);
+}
+
+.note{
+  opacity:.8;
+}
+
+/* --- Top section typography --- */
+.kicker{
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:700;
+  font-size:12px;
+  color: var(--ink-dim);
+  margin: 0 0 6px;
+}
+
+.title{
+  font-size: clamp(28px, 4.5vw, 44px);
+  line-height: 1.1;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+  background: linear-gradient(180deg, #151a24 0%, #2a3242 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.lead{
+  font-size: clamp(16px, 2.3vw, 20px);
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 6px 0 14px;
+}
+
+/* --- Subtle chips (smaller than the previous pills) --- */
+.chips{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin: 6px 0 8px;
+  padding:0;
+  list-style:none;
+}
+
+.chip{
+  padding:6px 10px;
+  border-radius:999px;
+  background: rgba(98,106,137,.12);
+  color: #2a3242;
+  font-size:14px;
+  font-weight:600;
+  border: 1px solid rgba(98,106,137,.18);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
+}
+
+/* Body + small note */
+.body{
+  font-size:16.5px;
+  color: var(--ink);
+  margin: 8px 0 0;
+}
+.note{ color: var(--ink-dim) }
+
+
+/* ===== About hero — dark theme polish ===== */
+
+/* brighter, brandy title on dark */
+[data-theme="dark"] .title{
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 55%, #ec4899 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 18px rgba(34,211,238,.10);
+}
+
+/* kicker + lead + body contrasts */
+[data-theme="dark"] .kicker{ color: rgba(255,255,255,.75) }
+[data-theme="dark"] .lead  { color: #e7e9ee; opacity: .92 }
+[data-theme="dark"] .body  { color: #d7dbe6; opacity: .9 }
+[data-theme="dark"] .note  { color: rgba(231,233,238,.65) }
+
+/* compact, subtle chips that read well on dark */
+.chips{ gap: 12px; margin-top: 10px }
+.chip{
+  padding: 10px 16px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: transform .12s ease, background .2s ease, border-color .2s ease;
+}
+[data-theme="dark"] .chip{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  color: #eaf0ff;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 6px 20px rgba(0,0,0,.25);
+  backdrop-filter: blur(4px);
+}
+[data-theme="dark"] .chip:hover{
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.22);
+  transform: translateY(-1px);
+}
+
+/* spacing harmony with your system */
+.page { padding-bottom: 80px }
+.section { padding: 48px 0 }            /* a touch tighter under dark */
+
+
+.bodyWide {
+  font-size: 17px;
+  line-height: 1.65;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 18px 0;
+
+  /* let it stretch wider */
+  max-width: 100% !important;
+}
+
+[data-theme="dark"] .bodyWide {
+  color: #e7e9ee;
+  opacity: 0.95;
+}

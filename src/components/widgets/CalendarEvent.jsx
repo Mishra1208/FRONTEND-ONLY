@@ -5,17 +5,17 @@ import styles from "./calendar-event.module.css";
 const DEFAULT_EVENTS = [
   {
     title: "Enrollment Start",
-    time: "08:00 AM",
+    time: "View on Your Student Hub",
     colors: { bg: "#E9D5FF", bar: "#7C3AED", text: "#3B0764", meta: "#7E22CE" }, // purple
   },
   {
     title: "Last Date to Register",
-    time: "11: 59 PM",
+    time: "View on Your Student Hub",
     colors: { bg: "#BAE6FD", bar: "#0EA5E9", text: "#083344", meta: "#0891B2" }, // cyan
   },
   {
     title: "Last Date to Disc",
-    time: "14:00 PM",
+    time: "View on Your Student Hub",
     colors: { bg: "#BBF7D0", bar: "#16A34A", text: "#052E16", meta: "#15803D" }, // green
   },
   {

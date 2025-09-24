@@ -56,7 +56,7 @@ export default async function HomePage() {
                   All you have to
                 </span>
                 <RotatingText
-                  texts={["Search", "Select", "Add/Remove", "Download"]}
+                  texts={["Firstly search", "Make your Select ", "Move on to Add/Remove", "Finally Download"]}
                   mainClassName={styles.rotatorChip}
                   staggerFrom="last"
                   initial={{ y: "120%", opacity: 0 }}
@@ -64,7 +64,7 @@ export default async function HomePage() {
                   exit={{ y: "-120%", opacity: 0 }}
                   staggerDuration={0.03}
                   transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                  rotationInterval={1800}
+                  rotationInterval={2800}
                 />
               </div>
 
@@ -97,6 +97,20 @@ export default async function HomePage() {
                   />
                   <Image
                     src="/img3.jpg"
+                    alt="Concordia vibes"
+                    fill
+                    sizes="(max-width: 980px) 100vw, 520px"
+                    className={`${styles.slide} ${styles.s3}`}
+                  />
+                  <Image
+                    src="/img4.jpg"
+                    alt="Concordia vibes"
+                    fill
+                    sizes="(max-width: 980px) 100vw, 520px"
+                    className={`${styles.slide} ${styles.s3}`}
+                  />
+                  <Image
+                    src="/img5.jpg"
                     alt="Concordia vibes"
                     fill
                     sizes="(max-width: 980px) 100vw, 520px"
