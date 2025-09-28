@@ -1,26 +1,33 @@
-// src/lib/courseCatalog.js
 "use server";
 import fs from "fs/promises";
 import path from "path";
-import { parse } from "csv-parse/sync";
+import Papa from "papaparse";
 
-const slug = (code) => code.replace(/\s+/g, "-").toLowerCase(); // "COMP 108" -> "comp-108"
+export const slug = (code) => (code ?? "").toString().trim().replace(/\s+/g, "-").toLowerCase();
 
 export async function loadCourseDescriptions() {
-  const csvPath = path.join(process.cwd(), "src", "data", "course_descriptions.csv");
+  // Re-use the same source as everything else
+  const csvPath = path.join(process.cwd(), "public", "courses_merged.csv");
   const text = await fs.readFile(csvPath, "utf8");
-  const rows = parse(text, { columns: true, skip_empty_lines: true });
+  const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
+  const rows = parsed.data || [];
 
-  // Normalize + derive ids
-  return rows.map((r) => ({
-    id: slug(String(r.code || "").trim()),
-    code: String(r.code || "").trim(),
-    title: String(r.title || "").trim(),
-    credits: String(r.credits || "").trim(),
-    description: String(r.description || "").trim(),
-    prereq: String(r.prereq || "").trim(),
-    equivalent: String(r.equivalent || "").trim(),
-  }));
+  // Normalize a compact shape the descriptions page needs
+  return rows.map((r) => {
+    const subj = (r.subject ?? "").toString().trim().toUpperCase();
+    const cat = (r.catalogue ?? "").toString().trim().toUpperCase();
+    const code = `${subj} ${cat}`;
+
+    return {
+      id: slug(code),
+      code,
+      title: (r.title ?? "").toString().trim(),
+      credits: (r.course_credit ?? r.credits ?? "").toString().trim(),
+      description: (r.description ?? "").toString().trim(),
+      prereq: (r.prereqdescription ?? "").toString().trim(),
+      equivalent: (r.equivalent_course_description ?? "").toString().trim(),
+      term: (r.term ?? "").toString().trim(),
+      session: (r.session ?? "").toString().trim(),
+    };
+  });
 }
-
-export { slug };

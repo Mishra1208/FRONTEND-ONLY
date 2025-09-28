@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
 import Script from "next/script";
 import { cookies } from "next/headers";
+import ChatWidget from "@/components/ChatWidget";
 import "@/styles/globals.css";
 
 export const metadata = {
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
 
         <main className="site-main">{children}</main>
         <Footer />
+      <ChatWidget />
       </body>
     </html>
   );

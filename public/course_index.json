@@ -1,0 +1,4012 @@
+{
+  "list": [
+    {
+      "key": "comp-108",
+      "code": "COMP 108",
+      "subject": "COMP",
+      "catalogue": "108",
+      "title": "COMP INDUS EXPER REF LRNG I",
+      "credits": "3.0",
+      "terms": [
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "This course is a reflective learning module for students in their related field which is based on their academic requirements and their first industrial experience.Prerequisite: Permission of the Faculty.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 108"
+    },
+    {
+      "key": "comp-208",
+      "code": "COMP 208",
+      "subject": "COMP",
+      "catalogue": "208",
+      "title": "COMP INDUS EXPER REF LRNG II",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "This course expands on the students' second industrial experience term in their related field of study to further develop their knowledge and work-related skills.Prerequisite: COMP 108 and permission of the Faculty.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 208"
+    },
+    {
+      "key": "comp-218",
+      "code": "COMP 218",
+      "subject": "COMP",
+      "catalogue": "218",
+      "title": "FUNDAMENTALS OF PROGRAMMING",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Computers and computing: problem solving with computers, basic data types, expressions, assignments, control structures, simple library functions, programmer-defined functions, arrays of basic types. Basic elements of object-oriented programming: classes, objects and methods. Lectures: three hours per week. Tutorial: one hour per week.Prerequisite: MATH 201 or equivalent (no prior experience with computers is assumed).NOTE: Students who have received credit for COMP 248 may not take this course for credit.",
+      "prereq": "Never Taken/Not Registered: COMP248 You must complete 1 of the following rules   Course Prerequisite: MATH201",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "On Line",
+      "course_name": "COMP 218"
+    },
+    {
+      "key": "comp-228",
+      "code": "COMP 228",
+      "subject": "COMP",
+      "catalogue": "228",
+      "title": "SYSTEM HARDWARE",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Prerequisite/Corequisite:The following course must be completed previously: COMP 248. The following courses must be completed previously or concurrently: MATH 203 or Cegep Mathematics 103 or NYA; MATH 204 or Cegep Mathematics 105 or NYC.Description:Levels of system abstraction and von Neumann model. Basics of digital logic design. Data representation and manipulation. Instruction set architecture. Processor internals. Assembly language programming. Memory subsystem and cache management. I/O subsystem. Introduction to network organization and architecture.NOTE: Students who have received credit for SOEN 228 may not take this course for credit.",
+      "prereq": "Prerequisite/Corequisite:The following course must be completed previously: COMP 248. The following courses must be completed previously or concurrently: MATH 203 or Cegep Mathematics 103 or NYA; MATH 204 or Cegep Mathematics 105 or NYC.",
+      "equivalent": "SOEN 228 = COMP 228",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 228"
+    },
+    {
+      "key": "comp-232",
+      "code": "COMP 232",
+      "subject": "COMP",
+      "catalogue": "232",
+      "title": "MATH. FOR COMPUTER SCIENCE",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Sets. Propositional logic and predicate calculus. Functions and relations. Elements of number theory. Proof techniques: direct proof, indirect proof, proof by contradiction, proof by induction. Lectures: three hours per week. Tutorial: two hours per week.Prerequisite: MATH 203 or Cegep Mathematics 103 or NYA  MATH 204 or Cegep Mathematics 105 or NYC NOTE: Students who have received credit for COMP 238 or COEN 231 may not take this course for credit.",
+      "prereq": "Course Prerequisite: MATH204, MATH203Never Taken: COMP 238 or COEN 231",
+      "equivalent": "COMP 232 = COMP 238",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 232"
+    },
+    {
+      "key": "comp-233",
+      "code": "COMP 233",
+      "subject": "COMP",
+      "catalogue": "233",
+      "title": "PROB. & STATS. FOR COMP. SC.",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Please see UGRD Calendar",
+      "prereq": "Course Prerequisite: MATH205• Students who have received credit for BIOL 322, ENGR 371, STAT 249, STAT 250, COMM 215, MAST 221, MAST 333 may not take this course for credit.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 233"
+    },
+    {
+      "key": "comp-248",
+      "code": "COMP 248",
+      "subject": "COMP",
+      "catalogue": "248",
+      "title": "OBJ-ORIENTED PROGRAMMING I",
+      "credits": "3.5",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Basic data types, variables, expressions, assignments, control flow. Classes, objects, methods. Information hiding, public vs. private visibility, data abstraction and encapsulation. References. Arrays. Lectures: three hours per week. Tutorial: two hours per week. Laboratory: one hour per week Prerequisite: MATH 204 or Cegep Mathematics 105 or NYC previously or concurrently. Introduction to programming.",
+      "prereq": "Pre-requisite: Previously or Co-currently: MATH204",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 248"
+    },
+    {
+      "key": "comp-249",
+      "code": "COMP 249",
+      "subject": "COMP",
+      "catalogue": "249",
+      "title": "OBJ-ORIENTED PROGRAMMING II",
+      "credits": "3.5",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Design of classes. Inheritance. Polymorphism. Static and dynamic binding. Abstract classes. Exception handling. File I/O. Recursion. Interfaces and inner classes. Graphical user interfaces. Generics. Collections and iterators. Lectures: three hours per week. Tutorial: two hours per week. Laboratory:one hour per week.Prerequisite: COMP 248; MATH 203 or Cegep Mathematics 103 or NYA; MATH 205 or Cegep Mathematics 203 or NYB previously or concurrently.",
+      "prereq": "Course Prerequisite: COMP248; MATH 203; Course Co-requisite: MATH205",
+      "equivalent": "COEN 241 = COEN 244",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 249"
+    },
+    {
+      "key": "comp-326",
+      "code": "COMP 326",
+      "subject": "COMP",
+      "catalogue": "326",
+      "title": "COMPUTER ARCHITECTURE",
+      "credits": "3.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Computer architecture models: control-flow and data-flow. Concurrency and locality, data dependency theory. Instruction level parallelism. Instruction scheduling. Pipelined processors. Vector processors. Thread level parallelism. Multiprocessors. Shared memory models. Coherence protocols. Interconnection networks. Performance issues. Advanced topics in contemporary computer architectures. Lectures: three hours per week. Tutorial: one hour per week.Prerequisite: COMP 346.",
+      "prereq": "Course Prerequisite: COMP346",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 326"
+    },
+    {
+      "key": "comp-333",
+      "code": "COMP 333",
+      "subject": "COMP",
+      "catalogue": "333",
+      "title": "DATA ANALYTICS",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite: COMP 233 or ENGR 371; COMP 352; ENCS 282. This course introduces the process of data analytics with the aid of examples from several disciplines. It covers data wrangling: extract-transform-load (ETL), cleaning, structuring, integration; data analytics activities: description, prescription, modelling, simulation, optimization, storytelling; and the Python ecosystem: language, libraries, and Jupyter environment. Lectures: three hours per week",
+      "prereq": "Prerequisite: COMP 233 or ENGR 371; COMP 352; ENCS 282",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 333"
+    },
+    {
+      "key": "comp-335",
+      "code": "COMP 335",
+      "subject": "COMP",
+      "catalogue": "335",
+      "title": "INTRO/THEORETICAL COMP SCI",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Prerequisite/Corequisite:The following courses must be completed previously: COMP 232 or COEN 231; and COMP 352 or COEN 352.Description:This course introduces database design, applications, and aspects of database management systems. It covers conceptual database design using the entity-relationship model. Students are introduced to the relational data model, relational algebra, as well as the SQL language, and their applications. Furthermore, the course covers the development of database applications. Students also learn about other data models, including Datalog and Object-oriented. A project is required.",
+      "prereq": "Prerequisite/Corequisite: The following courses must be completed previously: COMP 232 or COEN 231; and COMP 249 or COEN 244.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 335"
+    },
+    {
+      "key": "comp-339",
+      "code": "COMP 339",
+      "subject": "COMP",
+      "catalogue": "339",
+      "title": "COMBINATORICS",
+      "credits": "3.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see UGRD Calendar",
+      "prereq": "Course Prerequisite: COMP232",
+      "equivalent": "COMP 339 = MATH 339",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 339"
+    },
+    {
+      "key": "comp-345",
+      "code": "COMP 345",
+      "subject": "COMP",
+      "catalogue": "345",
+      "title": "ADVANCED PROGRAM DESIGN, C++",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see UGRD Calendar",
+      "prereq": "Course Corequisite: COMP352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 345"
+    },
+    {
+      "key": "comp-346",
+      "code": "COMP 346",
+      "subject": "COMP",
+      "catalogue": "346",
+      "title": "OPERATING SYSTEMS",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Prerequisite/Corequisite:The following courses must be completed previously: COMP 228 or SOEN 228; COMP 352.Description:Fundamentals of operating system functionalities, design and implementation. Multiprogramming: processes and threads, context switching, queuing models and scheduling. Interprocess communication and synchronization. Principles of concurrency. Synchronization primitives. Deadlock detection and recovery, prevention and avoidance schemes. Memory management. Device management. File systems. Protection models and schemes.Component(s):Lecture 3 hours per week; Tutorial 1 hour per week; Laboratory 2 hours per weekNotes:Students who have received credit for COEN 346 may not take this course for credit.",
+      "prereq": "Prerequisite: COMP 228 or SOEN 228; COMP 352.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 346"
+    },
+    {
+      "key": "comp-348",
+      "code": "COMP 348",
+      "subject": "COMP",
+      "catalogue": "348",
+      "title": "PRIN./PROGRAMMING LANGUAGES",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Prerequisite: The following course must be completed previously: COMP 249.Description:The course discusses the design, efficiency, and implementation of programming languages. A comparison of common high-level programming paradigms, including both imperative and functional approaches, is provided. Core language features such as binding, visibility, and scope are evaluated across a set of current and historical languages. In addition, statically constrained typing and memory management models are compared to dynamic run-time alternatives, with an emphasis on the trade-offs between flexibility and performance.",
+      "prereq": "Prerequisite: The following courses must be completed previously: COMP 249",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 348"
+    },
+    {
+      "key": "comp-352",
+      "code": "COMP 352",
+      "subject": "COMP",
+      "catalogue": "352",
+      "title": "DATA STRUCTURES + ALGORITHMS",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Abstract data types: stacks and queues, trees, priority queues, dictionaries. Data structures: arrays, linked lists, heaps, hash tables, search trees. Design and analysis of algorithms: asymptotic notation, recursive algorithms, searching and sorting, tree traversal, graph algorithms. Lectures: three hours per week. Tutorial: one hour per week.Prerequisite: COMP 232 previously or concurrently; COMP 249.NOTE: Students who have received credit for COEN 352 may not take this course for credit.",
+      "prereq": "Prerequisite: COMP 249; Co-requisite COMP 232",
+      "equivalent": "COEN 352 = COMP 352",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 352"
+    },
+    {
+      "key": "comp-353",
+      "code": "COMP 353",
+      "subject": "COMP",
+      "catalogue": "353",
+      "title": "DATABASES",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Introduction to database management systems. Conceptual database design: the entity-relationship model. The relational data model and relational algebra: functional dependencies and normalization. The SQL language and its application in defining, querying, and updating databases; integrity constraints; triggers. Developing database applications. Other data models: Datalog. Object-oriented data model and ODL. Semi-structured data. Project. Lectures: three hours per week. Tutorial: one hour per week. Laboratory: two hours per week.Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352.",
+      "prereq": "Never Taken: COMP451, COMP454, COMP458, SOEN 363Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 353"
+    },
+    {
+      "key": "comp-354",
+      "code": "COMP 354",
+      "subject": "COMP",
+      "catalogue": "354",
+      "title": "SOFTWARE ENGINEERING I",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Software development process models (e.g. linear vs. iterative). Project management; roles, activities and deliverables for each software life cycle phase. Requirements management: analysis, elicitation, and scope. Architecture, design and the mapping of requirements to design and design to implementation. Traceability. Software quality assurance: verification, validation and the role of testing. Maintenance and evolution. Project. Lectures: three hours per week. Tutorial: one hour per week. Laboratory: two hours per week.Prerequisite: COMP 352; ENCS 282.NOTE: 1. Students who have received credit for SOEN 341 may not take this course for credit.NOTE: Students in the BEng in Software Engineering program may not take this course for credit.",
+      "prereq": "Course Prerequisite: COMP352; ENCS282",
+      "equivalent": "COEN 431 = COMP 354",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 354"
+    },
+    {
+      "key": "comp-361",
+      "code": "COMP 361",
+      "subject": "COMP",
+      "catalogue": "361",
+      "title": "ELEMENTARY NUMERICAL METHODS",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Vector and matrix norms. Numerical methods for solving linear systems, Gaussian elimination, LU decomposition, error analysis. Numerical solution of nonlinear equations, Newton's method, fixed point iterations. Interpolation and approximation, Taylor, Lagrange, Chebyshev and Legendre polynomials. Cubic spline interpolation. Numerical differentiation, numerical integration, Gauss quadrature. Discrete least-squares approximation. Initial value problems in ordinary differential equations, stiff differential equations. Boundary value problems in ordinary differential equations. Lectures: three hours per week. Tutorial: one hour per week.Prerequisite: COMP 232, 249.NOTE: Students who have received credit for ENGR 391 or MAST 334 may not take this course for credit.",
+      "prereq": "Course Prerequisite: COMP249; COMP238 or COMP232",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 361"
+    },
+    {
+      "key": "comp-367",
+      "code": "COMP 367",
+      "subject": "COMP",
+      "catalogue": "367",
+      "title": "TECH./SYMBOLIC COMPUTATIONS",
+      "credits": "3.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite/Corequisite:The following courses must be completed previously: MATH 222 or COMP 232 or equivalent; COMP 248 or equivalent.Description:This course is an application-oriented introduction to algebraic methods involved in symbolic computation, as it applies to number theory and modular algebra, and covering the following topics: numbers, primes, modular arithmetic, Diophantine equations; congruence classes and applications, finite fields and rings; Fermat’s and Euler’s theorems; Chinese Remainder theorem and applications; polynomial congruences and rings. Applications to: error-correcting codes (Humming codes), Hill Cryptosystem, public key encryption schemes, polynomial factorization, polynomial interpolation. A symbolic computation system (e.g. MAPLE), is used as a computational tool and a platform for writing all assignments and tests but not as an object of study itself.",
+      "prereq": "Course Prerequisite: MATH 222 or COMP 232 or equivalent; COMP 248 or equivalent",
+      "equivalent": "COMP 367 = MAST 332",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 367"
+    },
+    {
+      "key": "comp-371",
+      "code": "COMP 371",
+      "subject": "COMP",
+      "catalogue": "371",
+      "title": "COMPUTER GRAPHICS",
+      "credits": "4.0",
+      "terms": [
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Introduction to computer graphics and graphics hardware. Introduction to graphics API and graphics systems architecture. Mathematics of 2D and 3D transformations, and 2D and 3D viewing. Colour and basic rendering algorithms. Visual realism and visibility. Illumination and shading, global illumination techniques, and textures. Introduction to curves and surfaces, and 3D object modelling. Introduction to computer animation. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352.",
+      "prereq": "Never Taken: COMP376, COMP477 Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352",
+      "equivalent": "COMP 371 = COMP 471",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 371"
+    },
+    {
+      "key": "comp-376",
+      "code": "COMP 376",
+      "subject": "COMP",
+      "catalogue": "376",
+      "title": "INTRO. TO GAME DEVELOPMENT",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Introduction to design and implementation aspects of computer gaming: basic game design, storytelling and narratives, and game genres. Virtual environments, 2D and 3D game engines, and game development tools. Character development, gameplay strategies, level design in games, and user interfaces. Architecture of game consoles, analog and digital controllers, and the incorporation of graphics, sound, and music in game implementations. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 371 previously",
+      "prereq": "Prerequisite/Corequisite: The following courses must be completed previously: COMP 371.Never Taken: COMP476, CARTR 315",
+      "equivalent": "CART 315 = CART 398 = COMP 376",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 376"
+    },
+    {
+      "key": "comp-425",
+      "code": "COMP 425",
+      "subject": "COMP",
+      "catalogue": "425",
+      "title": "COMPUTER VISION",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "This course introduces basic techniques and concepts in computervision including image formation, grouping and fitting, geometricvision, recognition, perceptual organization, and the state-of-the-artsoftware tools. Students learn fundamental algorithms and techniques,and gain experience in programming vision based components. Aproject is required.",
+      "prereq": "PREREQ COMP425: must complete all 200 level courses before enrolling in any 400 level course",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 425"
+    },
+    {
+      "key": "comp-426",
+      "code": "COMP 426",
+      "subject": "COMP",
+      "catalogue": "426",
+      "title": "MULTICORE PROGRAMMING",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Fundamental concepts of computer architecture. Architecture of the selected multicore platform. Review of shared-memory parallel programming. The difficulties inherent to parallel programming. Scalability of program-ming models. The stream programming model for multicore. Implicit and explicit threading. Implicit and explicit orchestration of data movement, both on chip and off. Adapting standard algorithms to multicore. Critical assessment of the available system-software support. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 346 or COEN 346.",
+      "prereq": "Prerequisite: COMP346 or COEN346",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 426"
+    },
+    {
+      "key": "comp-428",
+      "code": "COMP 428",
+      "subject": "COMP",
+      "catalogue": "428",
+      "title": "PARALLEL PROGRAMMING",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Parallel programming techniques as a natural extension to sequential programming. Overview of parallel programming architectures and models. Parallel programming issues: locality, granularity, scheduling, data decomposition and distribution, load balancing, communication and synchronization, determinacy and non-determinacy, cost and performance. Techniques and tools for message-passing parallel programming. Case studies. Project. Lectures: three hours per week. Tutorial: one hour per week. Laboratory: two hours per week.Prerequisite: COMP 346.",
+      "prereq": "Course Prerequisite: COMP346;",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 428"
+    },
+    {
+      "key": "comp-432",
+      "code": "COMP 432",
+      "subject": "COMP",
+      "catalogue": "432",
+      "title": "MACHINE LEARNING",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite: COMP 352. This course introduces conceptual and practical aspects of machine learning. Concepts include regression, classification, maximum likelihood estimation, discriminative vs. generative modelling, generalization, supervised learning, unsupervised learning, semi-supervised learning and transfer learning. Methods include linear models, mixture models, nearest neighbours, support vector machines, random forests, boosting, and basics of deep learning. A project is required. Lectures: three hours per week. Laboratory: two hours per week.",
+      "prereq": "Prerequisite: COMP 352, Must complete all 200 level courses before enrolling in 400 level courses.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 432"
+    },
+    {
+      "key": "comp-433",
+      "code": "COMP 433",
+      "subject": "COMP",
+      "catalogue": "433",
+      "title": "INTRODUCTION TO DEEP LEARNING",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite:COMP 352This course introduces conceptual and practical aspects of deep learning and their implementation in software. Topics covered include commonly used deep learning model architectures, loss functions, regularization, optimization methods, and a strong emphasis is placed on review of their foundations and use of software tools such as pytorch, jax, and tensorflow to implement and/or apply these models. Applications in computer vision and natural language processing are covered.",
+      "prereq": "Prerequisite: COMP 352, Must complete all 200 level courses before enrolling in 400 level courses.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 433"
+    },
+    {
+      "key": "comp-438",
+      "code": "COMP 438",
+      "subject": "COMP",
+      "catalogue": "438",
+      "title": "GEOMETRIC MODELING AND PROCESS",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite:  COMP352. Description: This course exposes the students to the geometric modeling pipeline. It includes topics such as efficient mesh data structures such as half-edge and cornertable, digital differential geometry, spectral mesh processing, discrete modeling tools and analytic modeling tools (B-Splines, Bezier and subdivision surfaces), optimization-driven modeling and simulation, 3D shape acquisition, 3D printing and prototyping. Application- related topics are discussed such as smoothing, resampling, compression, as well as deep neural network architectures for geometric data and modeling problems. A project is required.",
+      "prereq": "Prerequisite: COMP 352, Must complete all 200 level courses before enrolling in 400 level courses.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 438"
+    },
+    {
+      "key": "comp-442",
+      "code": "COMP 442",
+      "subject": "COMP",
+      "catalogue": "442",
+      "title": "COMPILER DESIGN",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Compiler organization and implementation: lexical analysis and parsing, syntax-directed translation, code optimization. Run-time systems. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 228 or SOEN 228 or COEN 311; COMP 335; COMP 352 or COEN 352.",
+      "prereq": "Prerequisite: COMP 228 or SOEN 228 or COEN 311; COMP 335; COMP 352 or COEN 352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 442"
+    },
+    {
+      "key": "comp-445",
+      "code": "COMP 445",
+      "subject": "COMP",
+      "catalogue": "445",
+      "title": "DATA COMM + COMP NETWORKS",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Network architectures: OSI and Internet models. Link layer: error detection, multiple access protocols, addressing. Local area networks: Ethernet, ATM, switches and hubs. Network layer: forwarding and routing, IP, routing algorithms, multicast. Transport layer: connectionless and connection-oriented transport, reliable data transport, congestion control, QoS, UDP and TCP. Application layer: DNS, the web and http, file transfer, and email. Introduction to network security, multimedia protocols and wireless networking. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 346.",
+      "prereq": "Course Prerequisite: COMP346;",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 445"
+    },
+    {
+      "key": "comp-465",
+      "code": "COMP 465",
+      "subject": "COMP",
+      "catalogue": "465",
+      "title": "DESIGN+ANALYSIS/ALGORITHMS",
+      "credits": "3.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Order statistics: worst-case, average-case and amortized analysis. Algorithm design techniques: greedy algorithms, dynamic programming. Selected algorithms from graph theory, linear programming, number theory, string matching, and computational geometry. A survey of hard problems, NP-completeness, and approximation algorithms. Lectures: three hours per week.Prerequisite: COMP 232 or COEN 231; COMP 339; COMP 352 or COEN 352.",
+      "prereq": "Prerequisite: COMP 232 or COEN 231; COMP 339; COMP 352 or COEN?352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 465"
+    },
+    {
+      "key": "comp-472",
+      "code": "COMP 472",
+      "subject": "COMP",
+      "catalogue": "472",
+      "title": "ARTIFICIAL INTELLIGENCE",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Scope of AI. First-order logic. Automated reasoning. Search and heuristic search. Game-playing. Planning. Knowledge representation. Probabilistic reasoning. Introduction to machine learning. Introduction to natural language processing. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 352 or COEN 352.",
+      "prereq": "Course Prerequisite: COMP352 or COEN352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 472"
+    },
+    {
+      "key": "comp-473",
+      "code": "COMP 473",
+      "subject": "COMP",
+      "catalogue": "473",
+      "title": "PATTERN RECOGNITION",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Preprocessing. Feature extraction and selection. Similarity between patterns and distance measurements. Syntactic and statistical approaches. Clustering analysis. Bayesian decision theory and discriminant functions. Neural networks and machine learning. Applications. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 352.",
+      "prereq": "Course Prerequisite: COMP352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 473"
+    },
+    {
+      "key": "comp-474",
+      "code": "COMP 474",
+      "subject": "COMP",
+      "catalogue": "474",
+      "title": "INTELLIGENT SYSTEMS",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Rule-based expert systems, blackboard architecture, and agent-based. Knowledge acquisition and representation. Uncertainty and conflict resolution. Reasoning and explanation. Design of intelligent systems. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 352 or COEN 352.",
+      "prereq": "Course Prerequisite: COMP352 or COEN352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 474"
+    },
+    {
+      "key": "comp-475",
+      "code": "COMP 475",
+      "subject": "COMP",
+      "catalogue": "475",
+      "title": "Immersive Technologies",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite: COMP 371. This course covers the fundamentals of immersive technologies, a brief history and overview of immersive technologies, analyzes case studies of interactive experiences using immersive technologies, and identifies the main challenges of the current state of the art. Furthermore, it covers the basic principles of 3D graphics for creating virtual assets and environments, and basic concepts and technologies for interaction. A project provides hands‑on experience in the design and development of interactive experiences with the user of immersive technologies. Lectures: three hours per week.",
+      "prereq": "Prerequisite: COMP 371, and must complete all 200 level courses before enrolling in any 400 level course",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 475"
+    },
+    {
+      "key": "comp-476",
+      "code": "COMP 476",
+      "subject": "COMP",
+      "catalogue": "476",
+      "title": "ADVANCED GAME DEVELOPMENT",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Introduction to advanced aspects of computer games. Game engine design. Artificial Intelligence (AI): non-player character movement, coordinated movement, pathfinding, world representations; decision making; tactical AI, strategic AI, learning in games. Physics-based techniques: collision detection and response. Networked gaming: multi-player games, networking and distributed game design, mobile gaming. Improving realism: cut scenes, 3D sound. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 361 or ENGR 391; COMP 376.",
+      "prereq": "Course Prerequisite: COMP376; COMP361 or ENGR391",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 476"
+    },
+    {
+      "key": "comp-477",
+      "code": "COMP 477",
+      "subject": "COMP",
+      "catalogue": "477",
+      "title": "ANIMATION FOR COMPUTER GAMES",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Introduction to the algorithms, data structures, and techniques used in modelling and rendering dynamic scenes. Topics include principles of traditional animation, production pipeline, animation hardware and software, orientation representation and interpolation, modelling physical and articulated objects, forward and inverse kinematics, motion control and capture, key-frame, procedural, and behavioural animation, camera animation, scripting system, and free-form deformation. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 361 or ENGR 391; COMP 371.",
+      "prereq": "Course Prerequisite: COMP371; COMP361 or ENGR391",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 477"
+    },
+    {
+      "key": "comp-478",
+      "code": "COMP 478",
+      "subject": "COMP",
+      "catalogue": "478",
+      "title": "IMAGE PROCESSING",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Digital image fundamentals, image transforms (Fourier, Walsh, Haar, Hotelling, wavelet), image enhancement (histogram processing, spatial filtering, high- and low-pass filtering), image restoration, image compression (elements of information theory, image compression models, error-free compression, lossy compression, image compression standards), image segmentation (line detection, Hough transform, edge detection and linking, thresholding, region splitting and merging), representation and description (chain codes, signatures, skeletons, shape descriptors, moments, texture). Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 352.",
+      "prereq": "Course Prerequisite: COMP352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 478"
+    },
+    {
+      "key": "comp-479",
+      "code": "COMP 479",
+      "subject": "COMP",
+      "catalogue": "479",
+      "title": "INFO. RETRIEVAL & WEB SEARCH",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Basics of information retrieval (IR): boolean, vector space and probabilistic models. Tokenization and creation of inverted files. Weighting schemes. Evaluation of IR systems: precision, recall, F-measure. Relevance feedback and query expansion. Application of IR to web search engines: XML, link analysis, PageRank algorithm. Text categorization and clustering techniques as used in spam filtering. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 233 or ENGR 371; COMP 352.",
+      "prereq": "Course Prerequisite: COMP352; ENGR371or COMP233",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 479"
+    },
+    {
+      "key": "comp-490",
+      "code": "COMP 490",
+      "subject": "COMP",
+      "catalogue": "490",
+      "title": "COMPUTER SCIENCE PROJECT I",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Students work on a computer science project under the supervision of a faculty member and submit a suitable written report on the work carried out. Students planning to register for this course should consult with the Department prior to registration in the final year of study.Prerequisite: ENCS 282; completion of 60 credits; permission of the Department.NOTE: Students can register for COMP 490 by itself or, with the permission of the Department, students can register for COMP 490 and 492 concurrently and carry out a major project.",
+      "prereq": "Course Prerequisite: ENCS282",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 490"
+    },
+    {
+      "key": "comp-492",
+      "code": "COMP 492",
+      "subject": "COMP",
+      "catalogue": "492",
+      "title": "COMPUTER SCIENCE PROJECT II",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Students work on a computer science project under the supervision of a faculty member and submit a suitable written report on the work carried out. Students planning to register for this course should consult with the Department prior to registration in their final year of study.Prerequisite: COMP 490 previously or concurrently; permission of the Department.NOTE: Students can register for COMP 492 by itself or, with the permission of the Department, students can register for COMP 490 and 492 concurrently and carry out a major project.",
+      "prereq": "Course Corequisite: COMP490",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 492"
+    },
+    {
+      "key": "comp-495",
+      "code": "COMP 495",
+      "subject": "COMP",
+      "catalogue": "495",
+      "title": "HONOURS SEMINAR",
+      "credits": "1.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Students are required to attend a number of departmental seminars and submit a written report on them.Prerequisite: ENCS 282; registration in the final year of the honours program.",
+      "prereq": "Course Prerequisite: ENCS282",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 495"
+    },
+    {
+      "key": "comp-498",
+      "code": "COMP 498",
+      "subject": "COMP",
+      "catalogue": "498",
+      "title": "TOPICS IN COMPUTER SCIENCE",
+      "credits": "3.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see UGRD Calendar",
+      "prereq": "Students must complete all 200-level courses required for their program before registering for any 400-level courses.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 498"
+    },
+    {
+      "key": "comp-499",
+      "code": "COMP 499",
+      "subject": "COMP",
+      "catalogue": "499",
+      "title": "TOPICS IN COMPUTER SCIENCE",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite: Permission of the Department. This course may be offered in a given year upon the authorization of the Department. The content may vary from offering to offering and will be chosen to complement the available elective courses. Lectures: three hours per week. Laboratory: two hours per week.",
+      "prereq": "Students must complete all 200-level courses required for their program before registering for any 400-level courses.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 499"
+    },
+    {
+      "key": "comp-5201",
+      "code": "COMP 5201",
+      "subject": "COMP",
+      "catalogue": "5201",
+      "title": "COMP. ORGANIZ N+ASSEMB.LANG.",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5201"
+    },
+    {
+      "key": "comp-5261",
+      "code": "COMP 5261",
+      "subject": "COMP",
+      "catalogue": "5261",
+      "title": "COMPUTER ARCHITECTURE",
+      "credits": "3.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5461",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5261"
+    },
+    {
+      "key": "comp-5361",
+      "code": "COMP 5361",
+      "subject": "COMP",
+      "catalogue": "5361",
+      "title": "DISCRETE STR.+FORMAL LANG.",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5361"
+    },
+    {
+      "key": "comp-5421",
+      "code": "COMP 5421",
+      "subject": "COMP",
+      "catalogue": "5421",
+      "title": "ADVANCED PROGRAMMING",
+      "credits": "4.0",
+      "terms": [
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5511",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5421"
+    },
+    {
+      "key": "comp-5461",
+      "code": "COMP 5461",
+      "subject": "COMP",
+      "catalogue": "5461",
+      "title": "OPERATING SYSTEMS",
+      "credits": "4.0",
+      "terms": [
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5201, COMP5511",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5461"
+    },
+    {
+      "key": "comp-5511",
+      "code": "COMP 5511",
+      "subject": "COMP",
+      "catalogue": "5511",
+      "title": "PRINCIPLES/DATA STRUCTURES",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5481",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5511"
+    },
+    {
+      "key": "comp-5531",
+      "code": "COMP 5531",
+      "subject": "COMP",
+      "catalogue": "5531",
+      "title": "FILES AND DATABASES",
+      "credits": "4.0",
+      "terms": [
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5361, COMP5511",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5531"
+    },
+    {
+      "key": "comp-5541",
+      "code": "COMP 5541",
+      "subject": "COMP",
+      "catalogue": "5541",
+      "title": "TOOLS+TECHNIQUES / SW ENGR.",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5361, COMP5511, ENCS6721",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5541"
+    },
+    {
+      "key": "comp-5611",
+      "code": "COMP 5611",
+      "subject": "COMP",
+      "catalogue": "5611",
+      "title": "ELEMENTARY NUMERICAL METHODS",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5361, COMP5511",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5611"
+    },
+    {
+      "key": "comp-6231",
+      "code": "COMP 6231",
+      "subject": "COMP",
+      "catalogue": "6231",
+      "title": "DISTRIBUTED SYSTEM DESIGN",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6231"
+    },
+    {
+      "key": "comp-6281",
+      "code": "COMP 6281",
+      "subject": "COMP",
+      "catalogue": "6281",
+      "title": "PARALLEL PROGRAMMING",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Migration from Von Neumann to parallel processing architectures: shared-memory and message-passing paradigms; massively parallel computers; recent trends in commodity parallel processing; clusters, multi-core, CPU-GPU based heterogeneous computing. Issues of memory consistency and load balancing. Parallel algorithms for shared-memory and message passing platforms; efficiency and scalability; issues of performance overhead. Parallel programming environments: parallel programming models; languages; software tools. Laboratory: two hours per week. A project.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6281"
+    },
+    {
+      "key": "comp-6311",
+      "code": "COMP 6311",
+      "subject": "COMP",
+      "catalogue": "6311",
+      "title": "ANIMATION FOR COMPUTER GAMES",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Corequisite: COMP6761",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6311"
+    },
+    {
+      "key": "comp-6321",
+      "code": "COMP 6321",
+      "subject": "COMP",
+      "catalogue": "6321",
+      "title": "MACHINE LEARNING",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6321"
+    },
+    {
+      "key": "comp-6331",
+      "code": "COMP 6331",
+      "subject": "COMP",
+      "catalogue": "6331",
+      "title": "ADVANCED GAME DEVELOPMENT",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Introduction to advanced aspects of computer games. Game engine design. Artificial Intelligence (AI): non-player character movement, coordinated movement, pathfinding, world representations; decision making; tactical AI, strategic AI, learning in games. Physics-based techniques: collision detection and response. Networked gaming: multi-player games, networking and distributed game design, mobile gaming. Improving realism: cut scenes, 3D sound. A project. Laboratory: two hours per week.Prerequisite: Permission of instructor.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6331"
+    },
+    {
+      "key": "comp-6341",
+      "code": "COMP 6341",
+      "subject": "COMP",
+      "catalogue": "6341",
+      "title": "COMPUTER VISION",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "See GRAD Calendar.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6341"
+    },
+    {
+      "key": "comp-6361",
+      "code": "COMP 6361",
+      "subject": "COMP",
+      "catalogue": "6361",
+      "title": "NUMERIC ANALY/NONLINEAR EQUA",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite: COMP 5611.An introduction to numerical algorithms for nonlinear equations, including discrete as well as continuous systems. The emphasis is on computer-aided numerical analysis rather than numerical simulation. This course is suitable for scientists and engineers with a practical interest in nonlinear phenomena. Topics include computational aspects of: homotopy and continuation methods, fixed points and stationary solutions, asymptotic stability, bifurcations, periodic solutions, transition to chaos, conservative systems, travelling wave solutions, discretization techniques. A variety of applications will be considered. Numerical software packages will be available. A project.",
+      "prereq": "Prereq for COMP 6361",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6361"
+    },
+    {
+      "key": "comp-6371",
+      "code": "COMP 6371",
+      "subject": "COMP",
+      "catalogue": "6371",
+      "title": "IMMERSIVE TECHNOLOGIES",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see Graduate Calendar.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6371"
+    },
+    {
+      "key": "comp-6381",
+      "code": "COMP 6381",
+      "subject": "COMP",
+      "catalogue": "6381",
+      "title": "DIGITAL GEOMETRIC MODELING",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6381"
+    },
+    {
+      "key": "comp-6411",
+      "code": "COMP 6411",
+      "subject": "COMP",
+      "catalogue": "6411",
+      "title": "COMPARAT.STUDY/PROGRAM.LANG.",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6411"
+    },
+    {
+      "key": "comp-6421",
+      "code": "COMP 6421",
+      "subject": "COMP",
+      "catalogue": "6421",
+      "title": "COMPILER DESIGN",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6421"
+    },
+    {
+      "key": "comp-6461",
+      "code": "COMP 6461",
+      "subject": "COMP",
+      "catalogue": "6461",
+      "title": "COMPUTER NETWORKS + PROTOCOL",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6461"
+    },
+    {
+      "key": "comp-6481",
+      "code": "COMP 6481",
+      "subject": "COMP",
+      "catalogue": "6481",
+      "title": "PROGRAM & PROBLEM SOLVING",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6481"
+    },
+    {
+      "key": "comp-6521",
+      "code": "COMP 6521",
+      "subject": "COMP",
+      "catalogue": "6521",
+      "title": "ADV.DATABASE TECH. AND APPL.",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6521"
+    },
+    {
+      "key": "comp-6531",
+      "code": "COMP 6531",
+      "subject": "COMP",
+      "catalogue": "6531",
+      "title": "FOUNDATIONS/SEMANTIC WEB",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6531"
+    },
+    {
+      "key": "comp-6591",
+      "code": "COMP 6591",
+      "subject": "COMP",
+      "catalogue": "6591",
+      "title": "INTRO/KNOWLEDGE-BASE SYSTEMS",
+      "credits": "4.0",
+      "terms": [
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6591"
+    },
+    {
+      "key": "comp-6631",
+      "code": "COMP 6631",
+      "subject": "COMP",
+      "catalogue": "6631",
+      "title": "LARGE-SCALE OPTIMIZATION",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6631"
+    },
+    {
+      "key": "comp-6651",
+      "code": "COMP 6651",
+      "subject": "COMP",
+      "catalogue": "6651",
+      "title": "ALGORITHM DESIGN TECHNIQUES",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6651"
+    },
+    {
+      "key": "comp-6661",
+      "code": "COMP 6661",
+      "subject": "COMP",
+      "catalogue": "6661",
+      "title": "COMBINATORIAL ALGORITHMS",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6661"
+    },
+    {
+      "key": "comp-6711",
+      "code": "COMP 6711",
+      "subject": "COMP",
+      "catalogue": "6711",
+      "title": "COMPUTATIONAL GEOMETRY",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6711"
+    },
+    {
+      "key": "comp-6721",
+      "code": "COMP 6721",
+      "subject": "COMP",
+      "catalogue": "6721",
+      "title": "APPLIED ARTIFICIAL INTELLIGENC",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Never Taken/Not Registered: COMP472",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6721"
+    },
+    {
+      "key": "comp-6731",
+      "code": "COMP 6731",
+      "subject": "COMP",
+      "catalogue": "6731",
+      "title": "PATTERN RECOGNITION",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Never Taken/Not Registered: COMP473",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6731"
+    },
+    {
+      "key": "comp-6741",
+      "code": "COMP 6741",
+      "subject": "COMP",
+      "catalogue": "6741",
+      "title": "INTELLIGENT SYSTEMS",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Never Taken/Not Registered: COMP474",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6741"
+    },
+    {
+      "key": "comp-6751",
+      "code": "COMP 6751",
+      "subject": "COMP",
+      "catalogue": "6751",
+      "title": "NATURAL LANGUAGE ANALYSIS",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6751"
+    },
+    {
+      "key": "comp-6771",
+      "code": "COMP 6771",
+      "subject": "COMP",
+      "catalogue": "6771",
+      "title": "Image Processing",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Never Taken/Not Registered: COMP478",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6771"
+    },
+    {
+      "key": "comp-6781",
+      "code": "COMP 6781",
+      "subject": "COMP",
+      "catalogue": "6781",
+      "title": "STAT L NAT. LANG PROCESSING",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "The course covers robust methods to natural language processing (NLP) and their applications to manipulate large text collections. Topics covered in this course include: Zipf’s law, information retrieval, statistical machine translation, N-gram language models and smoothing techniques, word sense disambiguation, part-of-speech tagging and probabilistic grammars and parsing. A project.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6781"
+    },
+    {
+      "key": "comp-6791",
+      "code": "COMP 6791",
+      "subject": "COMP",
+      "catalogue": "6791",
+      "title": "INFO. RETRIEVAL & WEB SEARCH",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Never Taken/Not Registered: COMP479",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6791"
+    },
+    {
+      "key": "comp-6811",
+      "code": "COMP 6811",
+      "subject": "COMP",
+      "catalogue": "6811",
+      "title": "BIOINFORMATICS ALGORITHMS",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6811"
+    },
+    {
+      "key": "comp-6821",
+      "code": "COMP 6821",
+      "subject": "COMP",
+      "catalogue": "6821",
+      "title": "Bioinformatics Dbases and Sys",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see Grad Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6821"
+    },
+    {
+      "key": "comp-6831",
+      "code": "COMP 6831",
+      "subject": "COMP",
+      "catalogue": "6831",
+      "title": "APPLIED MACHINE LEARNING",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see graduate calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6831"
+    },
+    {
+      "key": "comp-6841",
+      "code": "COMP 6841",
+      "subject": "COMP",
+      "catalogue": "6841",
+      "title": "APPLIED DEEP LEARNING",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "please see Graduate Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6841"
+    },
+    {
+      "key": "comp-6861",
+      "code": "COMP 6861",
+      "subject": "COMP",
+      "catalogue": "6861",
+      "title": "Conversational AI",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see the graduate calander",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6861"
+    },
+    {
+      "key": "comp-691",
+      "code": "COMP 691",
+      "subject": "COMP",
+      "catalogue": "691",
+      "title": "TOPICS/COMPUTER SCIENCE",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 691"
+    },
+    {
+      "key": "comp-6961",
+      "code": "COMP 6961",
+      "subject": "COMP",
+      "catalogue": "6961",
+      "title": "GRADUATE SEMINAR-COMP.SC.",
+      "credits": "1.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6961"
+    },
+    {
+      "key": "comp-6971",
+      "code": "COMP 6971",
+      "subject": "COMP",
+      "catalogue": "6971",
+      "title": "Project and Report",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite: Completion of 16 credits; a CGPA of 3.40 or greater; permission of the Department.See Requirements for the Master of/Magisteriate in Applied Computer Science (MApCompSc) section. Project: 8 hours per week.Note: Students who have received credit for SOEN 6951 or SOEN 6971 may not take this course for credit.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6971"
+    },
+    {
+      "key": "comp-6981",
+      "code": "COMP 6981",
+      "subject": "COMP",
+      "catalogue": "6981",
+      "title": "PROJECT AND REPORT II",
+      "credits": "4.0",
+      "terms": [
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Prerequisite: COMP 6971 ;Students who have received credit for SOEN 6951, SOEN 6971, or ENCS 6931 may not take this course for credit",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6981"
+    },
+    {
+      "key": "comp-7251",
+      "code": "COMP 7251",
+      "subject": "COMP",
+      "catalogue": "7251",
+      "title": "MOBILE COMP+WIRELESS NETWKS",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP6461",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 7251"
+    },
+    {
+      "key": "comp-792",
+      "code": "COMP 792",
+      "subject": "COMP",
+      "catalogue": "792",
+      "title": "MASTER S RESEARCH AND THESIS",
+      "credits": "30.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 792"
+    },
+    {
+      "key": "comp-7921",
+      "code": "COMP 7921",
+      "subject": "COMP",
+      "catalogue": "7921",
+      "title": "MASTER S RESEARCH AND THESIS",
+      "credits": "30.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 7921"
+    },
+    {
+      "key": "comp-7941",
+      "code": "COMP 7941",
+      "subject": "COMP",
+      "catalogue": "7941",
+      "title": "MASTER S RESEARCH AND THESIS",
+      "credits": "29.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 7941"
+    },
+    {
+      "key": "comp-890",
+      "code": "COMP 890",
+      "subject": "COMP",
+      "catalogue": "890",
+      "title": "DOCTORAL RESEARCH AND THESIS",
+      "credits": "72.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 890"
+    },
+    {
+      "key": "comp-8901",
+      "code": "COMP 8901",
+      "subject": "COMP",
+      "catalogue": "8901",
+      "title": "DOCTORAL RESEARCH AND THESIS",
+      "credits": "70.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 8901"
+    }
+  ],
+  "map": {
+    "comp-108": {
+      "key": "comp-108",
+      "code": "COMP 108",
+      "subject": "COMP",
+      "catalogue": "108",
+      "title": "COMP INDUS EXPER REF LRNG I",
+      "credits": "3.0",
+      "terms": [
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "This course is a reflective learning module for students in their related field which is based on their academic requirements and their first industrial experience.Prerequisite: Permission of the Faculty.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 108"
+    },
+    "comp-208": {
+      "key": "comp-208",
+      "code": "COMP 208",
+      "subject": "COMP",
+      "catalogue": "208",
+      "title": "COMP INDUS EXPER REF LRNG II",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "This course expands on the students' second industrial experience term in their related field of study to further develop their knowledge and work-related skills.Prerequisite: COMP 108 and permission of the Faculty.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 208"
+    },
+    "comp-218": {
+      "key": "comp-218",
+      "code": "COMP 218",
+      "subject": "COMP",
+      "catalogue": "218",
+      "title": "FUNDAMENTALS OF PROGRAMMING",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Computers and computing: problem solving with computers, basic data types, expressions, assignments, control structures, simple library functions, programmer-defined functions, arrays of basic types. Basic elements of object-oriented programming: classes, objects and methods. Lectures: three hours per week. Tutorial: one hour per week.Prerequisite: MATH 201 or equivalent (no prior experience with computers is assumed).NOTE: Students who have received credit for COMP 248 may not take this course for credit.",
+      "prereq": "Never Taken/Not Registered: COMP248 You must complete 1 of the following rules   Course Prerequisite: MATH201",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "On Line",
+      "course_name": "COMP 218"
+    },
+    "comp-228": {
+      "key": "comp-228",
+      "code": "COMP 228",
+      "subject": "COMP",
+      "catalogue": "228",
+      "title": "SYSTEM HARDWARE",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Prerequisite/Corequisite:The following course must be completed previously: COMP 248. The following courses must be completed previously or concurrently: MATH 203 or Cegep Mathematics 103 or NYA; MATH 204 or Cegep Mathematics 105 or NYC.Description:Levels of system abstraction and von Neumann model. Basics of digital logic design. Data representation and manipulation. Instruction set architecture. Processor internals. Assembly language programming. Memory subsystem and cache management. I/O subsystem. Introduction to network organization and architecture.NOTE: Students who have received credit for SOEN 228 may not take this course for credit.",
+      "prereq": "Prerequisite/Corequisite:The following course must be completed previously: COMP 248. The following courses must be completed previously or concurrently: MATH 203 or Cegep Mathematics 103 or NYA; MATH 204 or Cegep Mathematics 105 or NYC.",
+      "equivalent": "SOEN 228 = COMP 228",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 228"
+    },
+    "comp-232": {
+      "key": "comp-232",
+      "code": "COMP 232",
+      "subject": "COMP",
+      "catalogue": "232",
+      "title": "MATH. FOR COMPUTER SCIENCE",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Sets. Propositional logic and predicate calculus. Functions and relations. Elements of number theory. Proof techniques: direct proof, indirect proof, proof by contradiction, proof by induction. Lectures: three hours per week. Tutorial: two hours per week.Prerequisite: MATH 203 or Cegep Mathematics 103 or NYA  MATH 204 or Cegep Mathematics 105 or NYC NOTE: Students who have received credit for COMP 238 or COEN 231 may not take this course for credit.",
+      "prereq": "Course Prerequisite: MATH204, MATH203Never Taken: COMP 238 or COEN 231",
+      "equivalent": "COMP 232 = COMP 238",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 232"
+    },
+    "comp-233": {
+      "key": "comp-233",
+      "code": "COMP 233",
+      "subject": "COMP",
+      "catalogue": "233",
+      "title": "PROB. & STATS. FOR COMP. SC.",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Please see UGRD Calendar",
+      "prereq": "Course Prerequisite: MATH205• Students who have received credit for BIOL 322, ENGR 371, STAT 249, STAT 250, COMM 215, MAST 221, MAST 333 may not take this course for credit.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 233"
+    },
+    "comp-248": {
+      "key": "comp-248",
+      "code": "COMP 248",
+      "subject": "COMP",
+      "catalogue": "248",
+      "title": "OBJ-ORIENTED PROGRAMMING I",
+      "credits": "3.5",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Basic data types, variables, expressions, assignments, control flow. Classes, objects, methods. Information hiding, public vs. private visibility, data abstraction and encapsulation. References. Arrays. Lectures: three hours per week. Tutorial: two hours per week. Laboratory: one hour per week Prerequisite: MATH 204 or Cegep Mathematics 105 or NYC previously or concurrently. Introduction to programming.",
+      "prereq": "Pre-requisite: Previously or Co-currently: MATH204",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 248"
+    },
+    "comp-249": {
+      "key": "comp-249",
+      "code": "COMP 249",
+      "subject": "COMP",
+      "catalogue": "249",
+      "title": "OBJ-ORIENTED PROGRAMMING II",
+      "credits": "3.5",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Design of classes. Inheritance. Polymorphism. Static and dynamic binding. Abstract classes. Exception handling. File I/O. Recursion. Interfaces and inner classes. Graphical user interfaces. Generics. Collections and iterators. Lectures: three hours per week. Tutorial: two hours per week. Laboratory:one hour per week.Prerequisite: COMP 248; MATH 203 or Cegep Mathematics 103 or NYA; MATH 205 or Cegep Mathematics 203 or NYB previously or concurrently.",
+      "prereq": "Course Prerequisite: COMP248; MATH 203; Course Co-requisite: MATH205",
+      "equivalent": "COEN 241 = COEN 244",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 249"
+    },
+    "comp-326": {
+      "key": "comp-326",
+      "code": "COMP 326",
+      "subject": "COMP",
+      "catalogue": "326",
+      "title": "COMPUTER ARCHITECTURE",
+      "credits": "3.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Computer architecture models: control-flow and data-flow. Concurrency and locality, data dependency theory. Instruction level parallelism. Instruction scheduling. Pipelined processors. Vector processors. Thread level parallelism. Multiprocessors. Shared memory models. Coherence protocols. Interconnection networks. Performance issues. Advanced topics in contemporary computer architectures. Lectures: three hours per week. Tutorial: one hour per week.Prerequisite: COMP 346.",
+      "prereq": "Course Prerequisite: COMP346",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 326"
+    },
+    "comp-333": {
+      "key": "comp-333",
+      "code": "COMP 333",
+      "subject": "COMP",
+      "catalogue": "333",
+      "title": "DATA ANALYTICS",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite: COMP 233 or ENGR 371; COMP 352; ENCS 282. This course introduces the process of data analytics with the aid of examples from several disciplines. It covers data wrangling: extract-transform-load (ETL), cleaning, structuring, integration; data analytics activities: description, prescription, modelling, simulation, optimization, storytelling; and the Python ecosystem: language, libraries, and Jupyter environment. Lectures: three hours per week",
+      "prereq": "Prerequisite: COMP 233 or ENGR 371; COMP 352; ENCS 282",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 333"
+    },
+    "comp-335": {
+      "key": "comp-335",
+      "code": "COMP 335",
+      "subject": "COMP",
+      "catalogue": "335",
+      "title": "INTRO/THEORETICAL COMP SCI",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Prerequisite/Corequisite:The following courses must be completed previously: COMP 232 or COEN 231; and COMP 352 or COEN 352.Description:This course introduces database design, applications, and aspects of database management systems. It covers conceptual database design using the entity-relationship model. Students are introduced to the relational data model, relational algebra, as well as the SQL language, and their applications. Furthermore, the course covers the development of database applications. Students also learn about other data models, including Datalog and Object-oriented. A project is required.",
+      "prereq": "Prerequisite/Corequisite: The following courses must be completed previously: COMP 232 or COEN 231; and COMP 249 or COEN 244.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 335"
+    },
+    "comp-339": {
+      "key": "comp-339",
+      "code": "COMP 339",
+      "subject": "COMP",
+      "catalogue": "339",
+      "title": "COMBINATORICS",
+      "credits": "3.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see UGRD Calendar",
+      "prereq": "Course Prerequisite: COMP232",
+      "equivalent": "COMP 339 = MATH 339",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 339"
+    },
+    "comp-345": {
+      "key": "comp-345",
+      "code": "COMP 345",
+      "subject": "COMP",
+      "catalogue": "345",
+      "title": "ADVANCED PROGRAM DESIGN, C++",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see UGRD Calendar",
+      "prereq": "Course Corequisite: COMP352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 345"
+    },
+    "comp-346": {
+      "key": "comp-346",
+      "code": "COMP 346",
+      "subject": "COMP",
+      "catalogue": "346",
+      "title": "OPERATING SYSTEMS",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Prerequisite/Corequisite:The following courses must be completed previously: COMP 228 or SOEN 228; COMP 352.Description:Fundamentals of operating system functionalities, design and implementation. Multiprogramming: processes and threads, context switching, queuing models and scheduling. Interprocess communication and synchronization. Principles of concurrency. Synchronization primitives. Deadlock detection and recovery, prevention and avoidance schemes. Memory management. Device management. File systems. Protection models and schemes.Component(s):Lecture 3 hours per week; Tutorial 1 hour per week; Laboratory 2 hours per weekNotes:Students who have received credit for COEN 346 may not take this course for credit.",
+      "prereq": "Prerequisite: COMP 228 or SOEN 228; COMP 352.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 346"
+    },
+    "comp-348": {
+      "key": "comp-348",
+      "code": "COMP 348",
+      "subject": "COMP",
+      "catalogue": "348",
+      "title": "PRIN./PROGRAMMING LANGUAGES",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Prerequisite: The following course must be completed previously: COMP 249.Description:The course discusses the design, efficiency, and implementation of programming languages. A comparison of common high-level programming paradigms, including both imperative and functional approaches, is provided. Core language features such as binding, visibility, and scope are evaluated across a set of current and historical languages. In addition, statically constrained typing and memory management models are compared to dynamic run-time alternatives, with an emphasis on the trade-offs between flexibility and performance.",
+      "prereq": "Prerequisite: The following courses must be completed previously: COMP 249",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 348"
+    },
+    "comp-352": {
+      "key": "comp-352",
+      "code": "COMP 352",
+      "subject": "COMP",
+      "catalogue": "352",
+      "title": "DATA STRUCTURES + ALGORITHMS",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Abstract data types: stacks and queues, trees, priority queues, dictionaries. Data structures: arrays, linked lists, heaps, hash tables, search trees. Design and analysis of algorithms: asymptotic notation, recursive algorithms, searching and sorting, tree traversal, graph algorithms. Lectures: three hours per week. Tutorial: one hour per week.Prerequisite: COMP 232 previously or concurrently; COMP 249.NOTE: Students who have received credit for COEN 352 may not take this course for credit.",
+      "prereq": "Prerequisite: COMP 249; Co-requisite COMP 232",
+      "equivalent": "COEN 352 = COMP 352",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 352"
+    },
+    "comp-353": {
+      "key": "comp-353",
+      "code": "COMP 353",
+      "subject": "COMP",
+      "catalogue": "353",
+      "title": "DATABASES",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Introduction to database management systems. Conceptual database design: the entity-relationship model. The relational data model and relational algebra: functional dependencies and normalization. The SQL language and its application in defining, querying, and updating databases; integrity constraints; triggers. Developing database applications. Other data models: Datalog. Object-oriented data model and ODL. Semi-structured data. Project. Lectures: three hours per week. Tutorial: one hour per week. Laboratory: two hours per week.Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352.",
+      "prereq": "Never Taken: COMP451, COMP454, COMP458, SOEN 363Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 353"
+    },
+    "comp-354": {
+      "key": "comp-354",
+      "code": "COMP 354",
+      "subject": "COMP",
+      "catalogue": "354",
+      "title": "SOFTWARE ENGINEERING I",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Software development process models (e.g. linear vs. iterative). Project management; roles, activities and deliverables for each software life cycle phase. Requirements management: analysis, elicitation, and scope. Architecture, design and the mapping of requirements to design and design to implementation. Traceability. Software quality assurance: verification, validation and the role of testing. Maintenance and evolution. Project. Lectures: three hours per week. Tutorial: one hour per week. Laboratory: two hours per week.Prerequisite: COMP 352; ENCS 282.NOTE: 1. Students who have received credit for SOEN 341 may not take this course for credit.NOTE: Students in the BEng in Software Engineering program may not take this course for credit.",
+      "prereq": "Course Prerequisite: COMP352; ENCS282",
+      "equivalent": "COEN 431 = COMP 354",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 354"
+    },
+    "comp-361": {
+      "key": "comp-361",
+      "code": "COMP 361",
+      "subject": "COMP",
+      "catalogue": "361",
+      "title": "ELEMENTARY NUMERICAL METHODS",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Vector and matrix norms. Numerical methods for solving linear systems, Gaussian elimination, LU decomposition, error analysis. Numerical solution of nonlinear equations, Newton's method, fixed point iterations. Interpolation and approximation, Taylor, Lagrange, Chebyshev and Legendre polynomials. Cubic spline interpolation. Numerical differentiation, numerical integration, Gauss quadrature. Discrete least-squares approximation. Initial value problems in ordinary differential equations, stiff differential equations. Boundary value problems in ordinary differential equations. Lectures: three hours per week. Tutorial: one hour per week.Prerequisite: COMP 232, 249.NOTE: Students who have received credit for ENGR 391 or MAST 334 may not take this course for credit.",
+      "prereq": "Course Prerequisite: COMP249; COMP238 or COMP232",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 361"
+    },
+    "comp-367": {
+      "key": "comp-367",
+      "code": "COMP 367",
+      "subject": "COMP",
+      "catalogue": "367",
+      "title": "TECH./SYMBOLIC COMPUTATIONS",
+      "credits": "3.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite/Corequisite:The following courses must be completed previously: MATH 222 or COMP 232 or equivalent; COMP 248 or equivalent.Description:This course is an application-oriented introduction to algebraic methods involved in symbolic computation, as it applies to number theory and modular algebra, and covering the following topics: numbers, primes, modular arithmetic, Diophantine equations; congruence classes and applications, finite fields and rings; Fermat’s and Euler’s theorems; Chinese Remainder theorem and applications; polynomial congruences and rings. Applications to: error-correcting codes (Humming codes), Hill Cryptosystem, public key encryption schemes, polynomial factorization, polynomial interpolation. A symbolic computation system (e.g. MAPLE), is used as a computational tool and a platform for writing all assignments and tests but not as an object of study itself.",
+      "prereq": "Course Prerequisite: MATH 222 or COMP 232 or equivalent; COMP 248 or equivalent",
+      "equivalent": "COMP 367 = MAST 332",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 367"
+    },
+    "comp-371": {
+      "key": "comp-371",
+      "code": "COMP 371",
+      "subject": "COMP",
+      "catalogue": "371",
+      "title": "COMPUTER GRAPHICS",
+      "credits": "4.0",
+      "terms": [
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Introduction to computer graphics and graphics hardware. Introduction to graphics API and graphics systems architecture. Mathematics of 2D and 3D transformations, and 2D and 3D viewing. Colour and basic rendering algorithms. Visual realism and visibility. Illumination and shading, global illumination techniques, and textures. Introduction to curves and surfaces, and 3D object modelling. Introduction to computer animation. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352.",
+      "prereq": "Never Taken: COMP376, COMP477 Prerequisite: COMP 232 or COEN 231; COMP 352 or COEN 352",
+      "equivalent": "COMP 371 = COMP 471",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 371"
+    },
+    "comp-376": {
+      "key": "comp-376",
+      "code": "COMP 376",
+      "subject": "COMP",
+      "catalogue": "376",
+      "title": "INTRO. TO GAME DEVELOPMENT",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Introduction to design and implementation aspects of computer gaming: basic game design, storytelling and narratives, and game genres. Virtual environments, 2D and 3D game engines, and game development tools. Character development, gameplay strategies, level design in games, and user interfaces. Architecture of game consoles, analog and digital controllers, and the incorporation of graphics, sound, and music in game implementations. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 371 previously",
+      "prereq": "Prerequisite/Corequisite: The following courses must be completed previously: COMP 371.Never Taken: COMP476, CARTR 315",
+      "equivalent": "CART 315 = CART 398 = COMP 376",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 376"
+    },
+    "comp-425": {
+      "key": "comp-425",
+      "code": "COMP 425",
+      "subject": "COMP",
+      "catalogue": "425",
+      "title": "COMPUTER VISION",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "This course introduces basic techniques and concepts in computervision including image formation, grouping and fitting, geometricvision, recognition, perceptual organization, and the state-of-the-artsoftware tools. Students learn fundamental algorithms and techniques,and gain experience in programming vision based components. Aproject is required.",
+      "prereq": "PREREQ COMP425: must complete all 200 level courses before enrolling in any 400 level course",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 425"
+    },
+    "comp-426": {
+      "key": "comp-426",
+      "code": "COMP 426",
+      "subject": "COMP",
+      "catalogue": "426",
+      "title": "MULTICORE PROGRAMMING",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Fundamental concepts of computer architecture. Architecture of the selected multicore platform. Review of shared-memory parallel programming. The difficulties inherent to parallel programming. Scalability of program-ming models. The stream programming model for multicore. Implicit and explicit threading. Implicit and explicit orchestration of data movement, both on chip and off. Adapting standard algorithms to multicore. Critical assessment of the available system-software support. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 346 or COEN 346.",
+      "prereq": "Prerequisite: COMP346 or COEN346",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 426"
+    },
+    "comp-428": {
+      "key": "comp-428",
+      "code": "COMP 428",
+      "subject": "COMP",
+      "catalogue": "428",
+      "title": "PARALLEL PROGRAMMING",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Parallel programming techniques as a natural extension to sequential programming. Overview of parallel programming architectures and models. Parallel programming issues: locality, granularity, scheduling, data decomposition and distribution, load balancing, communication and synchronization, determinacy and non-determinacy, cost and performance. Techniques and tools for message-passing parallel programming. Case studies. Project. Lectures: three hours per week. Tutorial: one hour per week. Laboratory: two hours per week.Prerequisite: COMP 346.",
+      "prereq": "Course Prerequisite: COMP346;",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 428"
+    },
+    "comp-432": {
+      "key": "comp-432",
+      "code": "COMP 432",
+      "subject": "COMP",
+      "catalogue": "432",
+      "title": "MACHINE LEARNING",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite: COMP 352. This course introduces conceptual and practical aspects of machine learning. Concepts include regression, classification, maximum likelihood estimation, discriminative vs. generative modelling, generalization, supervised learning, unsupervised learning, semi-supervised learning and transfer learning. Methods include linear models, mixture models, nearest neighbours, support vector machines, random forests, boosting, and basics of deep learning. A project is required. Lectures: three hours per week. Laboratory: two hours per week.",
+      "prereq": "Prerequisite: COMP 352, Must complete all 200 level courses before enrolling in 400 level courses.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 432"
+    },
+    "comp-433": {
+      "key": "comp-433",
+      "code": "COMP 433",
+      "subject": "COMP",
+      "catalogue": "433",
+      "title": "INTRODUCTION TO DEEP LEARNING",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite:COMP 352This course introduces conceptual and practical aspects of deep learning and their implementation in software. Topics covered include commonly used deep learning model architectures, loss functions, regularization, optimization methods, and a strong emphasis is placed on review of their foundations and use of software tools such as pytorch, jax, and tensorflow to implement and/or apply these models. Applications in computer vision and natural language processing are covered.",
+      "prereq": "Prerequisite: COMP 352, Must complete all 200 level courses before enrolling in 400 level courses.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 433"
+    },
+    "comp-438": {
+      "key": "comp-438",
+      "code": "COMP 438",
+      "subject": "COMP",
+      "catalogue": "438",
+      "title": "GEOMETRIC MODELING AND PROCESS",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite:  COMP352. Description: This course exposes the students to the geometric modeling pipeline. It includes topics such as efficient mesh data structures such as half-edge and cornertable, digital differential geometry, spectral mesh processing, discrete modeling tools and analytic modeling tools (B-Splines, Bezier and subdivision surfaces), optimization-driven modeling and simulation, 3D shape acquisition, 3D printing and prototyping. Application- related topics are discussed such as smoothing, resampling, compression, as well as deep neural network architectures for geometric data and modeling problems. A project is required.",
+      "prereq": "Prerequisite: COMP 352, Must complete all 200 level courses before enrolling in 400 level courses.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 438"
+    },
+    "comp-442": {
+      "key": "comp-442",
+      "code": "COMP 442",
+      "subject": "COMP",
+      "catalogue": "442",
+      "title": "COMPILER DESIGN",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Compiler organization and implementation: lexical analysis and parsing, syntax-directed translation, code optimization. Run-time systems. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 228 or SOEN 228 or COEN 311; COMP 335; COMP 352 or COEN 352.",
+      "prereq": "Prerequisite: COMP 228 or SOEN 228 or COEN 311; COMP 335; COMP 352 or COEN 352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 442"
+    },
+    "comp-445": {
+      "key": "comp-445",
+      "code": "COMP 445",
+      "subject": "COMP",
+      "catalogue": "445",
+      "title": "DATA COMM + COMP NETWORKS",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Network architectures: OSI and Internet models. Link layer: error detection, multiple access protocols, addressing. Local area networks: Ethernet, ATM, switches and hubs. Network layer: forwarding and routing, IP, routing algorithms, multicast. Transport layer: connectionless and connection-oriented transport, reliable data transport, congestion control, QoS, UDP and TCP. Application layer: DNS, the web and http, file transfer, and email. Introduction to network security, multimedia protocols and wireless networking. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 346.",
+      "prereq": "Course Prerequisite: COMP346;",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 445"
+    },
+    "comp-465": {
+      "key": "comp-465",
+      "code": "COMP 465",
+      "subject": "COMP",
+      "catalogue": "465",
+      "title": "DESIGN+ANALYSIS/ALGORITHMS",
+      "credits": "3.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Order statistics: worst-case, average-case and amortized analysis. Algorithm design techniques: greedy algorithms, dynamic programming. Selected algorithms from graph theory, linear programming, number theory, string matching, and computational geometry. A survey of hard problems, NP-completeness, and approximation algorithms. Lectures: three hours per week.Prerequisite: COMP 232 or COEN 231; COMP 339; COMP 352 or COEN 352.",
+      "prereq": "Prerequisite: COMP 232 or COEN 231; COMP 339; COMP 352 or COEN?352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 465"
+    },
+    "comp-472": {
+      "key": "comp-472",
+      "code": "COMP 472",
+      "subject": "COMP",
+      "catalogue": "472",
+      "title": "ARTIFICIAL INTELLIGENCE",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Scope of AI. First-order logic. Automated reasoning. Search and heuristic search. Game-playing. Planning. Knowledge representation. Probabilistic reasoning. Introduction to machine learning. Introduction to natural language processing. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 352 or COEN 352.",
+      "prereq": "Course Prerequisite: COMP352 or COEN352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 472"
+    },
+    "comp-473": {
+      "key": "comp-473",
+      "code": "COMP 473",
+      "subject": "COMP",
+      "catalogue": "473",
+      "title": "PATTERN RECOGNITION",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Preprocessing. Feature extraction and selection. Similarity between patterns and distance measurements. Syntactic and statistical approaches. Clustering analysis. Bayesian decision theory and discriminant functions. Neural networks and machine learning. Applications. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 352.",
+      "prereq": "Course Prerequisite: COMP352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 473"
+    },
+    "comp-474": {
+      "key": "comp-474",
+      "code": "COMP 474",
+      "subject": "COMP",
+      "catalogue": "474",
+      "title": "INTELLIGENT SYSTEMS",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Rule-based expert systems, blackboard architecture, and agent-based. Knowledge acquisition and representation. Uncertainty and conflict resolution. Reasoning and explanation. Design of intelligent systems. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 352 or COEN 352.",
+      "prereq": "Course Prerequisite: COMP352 or COEN352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 474"
+    },
+    "comp-475": {
+      "key": "comp-475",
+      "code": "COMP 475",
+      "subject": "COMP",
+      "catalogue": "475",
+      "title": "Immersive Technologies",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite: COMP 371. This course covers the fundamentals of immersive technologies, a brief history and overview of immersive technologies, analyzes case studies of interactive experiences using immersive technologies, and identifies the main challenges of the current state of the art. Furthermore, it covers the basic principles of 3D graphics for creating virtual assets and environments, and basic concepts and technologies for interaction. A project provides hands‑on experience in the design and development of interactive experiences with the user of immersive technologies. Lectures: three hours per week.",
+      "prereq": "Prerequisite: COMP 371, and must complete all 200 level courses before enrolling in any 400 level course",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 475"
+    },
+    "comp-476": {
+      "key": "comp-476",
+      "code": "COMP 476",
+      "subject": "COMP",
+      "catalogue": "476",
+      "title": "ADVANCED GAME DEVELOPMENT",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Introduction to advanced aspects of computer games. Game engine design. Artificial Intelligence (AI): non-player character movement, coordinated movement, pathfinding, world representations; decision making; tactical AI, strategic AI, learning in games. Physics-based techniques: collision detection and response. Networked gaming: multi-player games, networking and distributed game design, mobile gaming. Improving realism: cut scenes, 3D sound. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 361 or ENGR 391; COMP 376.",
+      "prereq": "Course Prerequisite: COMP376; COMP361 or ENGR391",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 476"
+    },
+    "comp-477": {
+      "key": "comp-477",
+      "code": "COMP 477",
+      "subject": "COMP",
+      "catalogue": "477",
+      "title": "ANIMATION FOR COMPUTER GAMES",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Introduction to the algorithms, data structures, and techniques used in modelling and rendering dynamic scenes. Topics include principles of traditional animation, production pipeline, animation hardware and software, orientation representation and interpolation, modelling physical and articulated objects, forward and inverse kinematics, motion control and capture, key-frame, procedural, and behavioural animation, camera animation, scripting system, and free-form deformation. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 361 or ENGR 391; COMP 371.",
+      "prereq": "Course Prerequisite: COMP371; COMP361 or ENGR391",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 477"
+    },
+    "comp-478": {
+      "key": "comp-478",
+      "code": "COMP 478",
+      "subject": "COMP",
+      "catalogue": "478",
+      "title": "IMAGE PROCESSING",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Digital image fundamentals, image transforms (Fourier, Walsh, Haar, Hotelling, wavelet), image enhancement (histogram processing, spatial filtering, high- and low-pass filtering), image restoration, image compression (elements of information theory, image compression models, error-free compression, lossy compression, image compression standards), image segmentation (line detection, Hough transform, edge detection and linking, thresholding, region splitting and merging), representation and description (chain codes, signatures, skeletons, shape descriptors, moments, texture). Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 352.",
+      "prereq": "Course Prerequisite: COMP352",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 478"
+    },
+    "comp-479": {
+      "key": "comp-479",
+      "code": "COMP 479",
+      "subject": "COMP",
+      "catalogue": "479",
+      "title": "INFO. RETRIEVAL & WEB SEARCH",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Basics of information retrieval (IR): boolean, vector space and probabilistic models. Tokenization and creation of inverted files. Weighting schemes. Evaluation of IR systems: precision, recall, F-measure. Relevance feedback and query expansion. Application of IR to web search engines: XML, link analysis, PageRank algorithm. Text categorization and clustering techniques as used in spam filtering. Project. Lectures: three hours per week. Laboratory: two hours per week.Prerequisite: COMP 233 or ENGR 371; COMP 352.",
+      "prereq": "Course Prerequisite: COMP352; ENGR371or COMP233",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 479"
+    },
+    "comp-490": {
+      "key": "comp-490",
+      "code": "COMP 490",
+      "subject": "COMP",
+      "catalogue": "490",
+      "title": "COMPUTER SCIENCE PROJECT I",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Students work on a computer science project under the supervision of a faculty member and submit a suitable written report on the work carried out. Students planning to register for this course should consult with the Department prior to registration in the final year of study.Prerequisite: ENCS 282; completion of 60 credits; permission of the Department.NOTE: Students can register for COMP 490 by itself or, with the permission of the Department, students can register for COMP 490 and 492 concurrently and carry out a major project.",
+      "prereq": "Course Prerequisite: ENCS282",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 490"
+    },
+    "comp-492": {
+      "key": "comp-492",
+      "code": "COMP 492",
+      "subject": "COMP",
+      "catalogue": "492",
+      "title": "COMPUTER SCIENCE PROJECT II",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Students work on a computer science project under the supervision of a faculty member and submit a suitable written report on the work carried out. Students planning to register for this course should consult with the Department prior to registration in their final year of study.Prerequisite: COMP 490 previously or concurrently; permission of the Department.NOTE: Students can register for COMP 492 by itself or, with the permission of the Department, students can register for COMP 490 and 492 concurrently and carry out a major project.",
+      "prereq": "Course Corequisite: COMP490",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 492"
+    },
+    "comp-495": {
+      "key": "comp-495",
+      "code": "COMP 495",
+      "subject": "COMP",
+      "catalogue": "495",
+      "title": "HONOURS SEMINAR",
+      "credits": "1.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Students are required to attend a number of departmental seminars and submit a written report on them.Prerequisite: ENCS 282; registration in the final year of the honours program.",
+      "prereq": "Course Prerequisite: ENCS282",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 495"
+    },
+    "comp-498": {
+      "key": "comp-498",
+      "code": "COMP 498",
+      "subject": "COMP",
+      "catalogue": "498",
+      "title": "TOPICS IN COMPUTER SCIENCE",
+      "credits": "3.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see UGRD Calendar",
+      "prereq": "Students must complete all 200-level courses required for their program before registering for any 400-level courses.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 498"
+    },
+    "comp-499": {
+      "key": "comp-499",
+      "code": "COMP 499",
+      "subject": "COMP",
+      "catalogue": "499",
+      "title": "TOPICS IN COMPUTER SCIENCE",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite: Permission of the Department. This course may be offered in a given year upon the authorization of the Department. The content may vary from offering to offering and will be chosen to complement the available elective courses. Lectures: three hours per week. Laboratory: two hours per week.",
+      "prereq": "Students must complete all 200-level courses required for their program before registering for any 400-level courses.",
+      "equivalent": "",
+      "career": "UGRD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 499"
+    },
+    "comp-5201": {
+      "key": "comp-5201",
+      "code": "COMP 5201",
+      "subject": "COMP",
+      "catalogue": "5201",
+      "title": "COMP. ORGANIZ N+ASSEMB.LANG.",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5201"
+    },
+    "comp-5261": {
+      "key": "comp-5261",
+      "code": "COMP 5261",
+      "subject": "COMP",
+      "catalogue": "5261",
+      "title": "COMPUTER ARCHITECTURE",
+      "credits": "3.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5461",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5261"
+    },
+    "comp-5361": {
+      "key": "comp-5361",
+      "code": "COMP 5361",
+      "subject": "COMP",
+      "catalogue": "5361",
+      "title": "DISCRETE STR.+FORMAL LANG.",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5361"
+    },
+    "comp-5421": {
+      "key": "comp-5421",
+      "code": "COMP 5421",
+      "subject": "COMP",
+      "catalogue": "5421",
+      "title": "ADVANCED PROGRAMMING",
+      "credits": "4.0",
+      "terms": [
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5511",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5421"
+    },
+    "comp-5461": {
+      "key": "comp-5461",
+      "code": "COMP 5461",
+      "subject": "COMP",
+      "catalogue": "5461",
+      "title": "OPERATING SYSTEMS",
+      "credits": "4.0",
+      "terms": [
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5201, COMP5511",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5461"
+    },
+    "comp-5511": {
+      "key": "comp-5511",
+      "code": "COMP 5511",
+      "subject": "COMP",
+      "catalogue": "5511",
+      "title": "PRINCIPLES/DATA STRUCTURES",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5481",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5511"
+    },
+    "comp-5531": {
+      "key": "comp-5531",
+      "code": "COMP 5531",
+      "subject": "COMP",
+      "catalogue": "5531",
+      "title": "FILES AND DATABASES",
+      "credits": "4.0",
+      "terms": [
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5361, COMP5511",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5531"
+    },
+    "comp-5541": {
+      "key": "comp-5541",
+      "code": "COMP 5541",
+      "subject": "COMP",
+      "catalogue": "5541",
+      "title": "TOOLS+TECHNIQUES / SW ENGR.",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5361, COMP5511, ENCS6721",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5541"
+    },
+    "comp-5611": {
+      "key": "comp-5611",
+      "code": "COMP 5611",
+      "subject": "COMP",
+      "catalogue": "5611",
+      "title": "ELEMENTARY NUMERICAL METHODS",
+      "credits": "3.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP5361, COMP5511",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 5611"
+    },
+    "comp-6231": {
+      "key": "comp-6231",
+      "code": "COMP 6231",
+      "subject": "COMP",
+      "catalogue": "6231",
+      "title": "DISTRIBUTED SYSTEM DESIGN",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6231"
+    },
+    "comp-6281": {
+      "key": "comp-6281",
+      "code": "COMP 6281",
+      "subject": "COMP",
+      "catalogue": "6281",
+      "title": "PARALLEL PROGRAMMING",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Migration from Von Neumann to parallel processing architectures: shared-memory and message-passing paradigms; massively parallel computers; recent trends in commodity parallel processing; clusters, multi-core, CPU-GPU based heterogeneous computing. Issues of memory consistency and load balancing. Parallel algorithms for shared-memory and message passing platforms; efficiency and scalability; issues of performance overhead. Parallel programming environments: parallel programming models; languages; software tools. Laboratory: two hours per week. A project.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6281"
+    },
+    "comp-6311": {
+      "key": "comp-6311",
+      "code": "COMP 6311",
+      "subject": "COMP",
+      "catalogue": "6311",
+      "title": "ANIMATION FOR COMPUTER GAMES",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Corequisite: COMP6761",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6311"
+    },
+    "comp-6321": {
+      "key": "comp-6321",
+      "code": "COMP 6321",
+      "subject": "COMP",
+      "catalogue": "6321",
+      "title": "MACHINE LEARNING",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6321"
+    },
+    "comp-6331": {
+      "key": "comp-6331",
+      "code": "COMP 6331",
+      "subject": "COMP",
+      "catalogue": "6331",
+      "title": "ADVANCED GAME DEVELOPMENT",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Introduction to advanced aspects of computer games. Game engine design. Artificial Intelligence (AI): non-player character movement, coordinated movement, pathfinding, world representations; decision making; tactical AI, strategic AI, learning in games. Physics-based techniques: collision detection and response. Networked gaming: multi-player games, networking and distributed game design, mobile gaming. Improving realism: cut scenes, 3D sound. A project. Laboratory: two hours per week.Prerequisite: Permission of instructor.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6331"
+    },
+    "comp-6341": {
+      "key": "comp-6341",
+      "code": "COMP 6341",
+      "subject": "COMP",
+      "catalogue": "6341",
+      "title": "COMPUTER VISION",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "See GRAD Calendar.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6341"
+    },
+    "comp-6361": {
+      "key": "comp-6361",
+      "code": "COMP 6361",
+      "subject": "COMP",
+      "catalogue": "6361",
+      "title": "NUMERIC ANALY/NONLINEAR EQUA",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite: COMP 5611.An introduction to numerical algorithms for nonlinear equations, including discrete as well as continuous systems. The emphasis is on computer-aided numerical analysis rather than numerical simulation. This course is suitable for scientists and engineers with a practical interest in nonlinear phenomena. Topics include computational aspects of: homotopy and continuation methods, fixed points and stationary solutions, asymptotic stability, bifurcations, periodic solutions, transition to chaos, conservative systems, travelling wave solutions, discretization techniques. A variety of applications will be considered. Numerical software packages will be available. A project.",
+      "prereq": "Prereq for COMP 6361",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6361"
+    },
+    "comp-6371": {
+      "key": "comp-6371",
+      "code": "COMP 6371",
+      "subject": "COMP",
+      "catalogue": "6371",
+      "title": "IMMERSIVE TECHNOLOGIES",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see Graduate Calendar.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6371"
+    },
+    "comp-6381": {
+      "key": "comp-6381",
+      "code": "COMP 6381",
+      "subject": "COMP",
+      "catalogue": "6381",
+      "title": "DIGITAL GEOMETRIC MODELING",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6381"
+    },
+    "comp-6411": {
+      "key": "comp-6411",
+      "code": "COMP 6411",
+      "subject": "COMP",
+      "catalogue": "6411",
+      "title": "COMPARAT.STUDY/PROGRAM.LANG.",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6411"
+    },
+    "comp-6421": {
+      "key": "comp-6421",
+      "code": "COMP 6421",
+      "subject": "COMP",
+      "catalogue": "6421",
+      "title": "COMPILER DESIGN",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6421"
+    },
+    "comp-6461": {
+      "key": "comp-6461",
+      "code": "COMP 6461",
+      "subject": "COMP",
+      "catalogue": "6461",
+      "title": "COMPUTER NETWORKS + PROTOCOL",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6461"
+    },
+    "comp-6481": {
+      "key": "comp-6481",
+      "code": "COMP 6481",
+      "subject": "COMP",
+      "catalogue": "6481",
+      "title": "PROGRAM & PROBLEM SOLVING",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6481"
+    },
+    "comp-6521": {
+      "key": "comp-6521",
+      "code": "COMP 6521",
+      "subject": "COMP",
+      "catalogue": "6521",
+      "title": "ADV.DATABASE TECH. AND APPL.",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6521"
+    },
+    "comp-6531": {
+      "key": "comp-6531",
+      "code": "COMP 6531",
+      "subject": "COMP",
+      "catalogue": "6531",
+      "title": "FOUNDATIONS/SEMANTIC WEB",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6531"
+    },
+    "comp-6591": {
+      "key": "comp-6591",
+      "code": "COMP 6591",
+      "subject": "COMP",
+      "catalogue": "6591",
+      "title": "INTRO/KNOWLEDGE-BASE SYSTEMS",
+      "credits": "4.0",
+      "terms": [
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6591"
+    },
+    "comp-6631": {
+      "key": "comp-6631",
+      "code": "COMP 6631",
+      "subject": "COMP",
+      "catalogue": "6631",
+      "title": "LARGE-SCALE OPTIMIZATION",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6631"
+    },
+    "comp-6651": {
+      "key": "comp-6651",
+      "code": "COMP 6651",
+      "subject": "COMP",
+      "catalogue": "6651",
+      "title": "ALGORITHM DESIGN TECHNIQUES",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H2"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6651"
+    },
+    "comp-6661": {
+      "key": "comp-6661",
+      "code": "COMP 6661",
+      "subject": "COMP",
+      "catalogue": "6661",
+      "title": "COMBINATORIAL ALGORITHMS",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6661"
+    },
+    "comp-6711": {
+      "key": "comp-6711",
+      "code": "COMP 6711",
+      "subject": "COMP",
+      "catalogue": "6711",
+      "title": "COMPUTATIONAL GEOMETRY",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6711"
+    },
+    "comp-6721": {
+      "key": "comp-6721",
+      "code": "COMP 6721",
+      "subject": "COMP",
+      "catalogue": "6721",
+      "title": "APPLIED ARTIFICIAL INTELLIGENC",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Never Taken/Not Registered: COMP472",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6721"
+    },
+    "comp-6731": {
+      "key": "comp-6731",
+      "code": "COMP 6731",
+      "subject": "COMP",
+      "catalogue": "6731",
+      "title": "PATTERN RECOGNITION",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Never Taken/Not Registered: COMP473",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6731"
+    },
+    "comp-6741": {
+      "key": "comp-6741",
+      "code": "COMP 6741",
+      "subject": "COMP",
+      "catalogue": "6741",
+      "title": "INTELLIGENT SYSTEMS",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Never Taken/Not Registered: COMP474",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6741"
+    },
+    "comp-6751": {
+      "key": "comp-6751",
+      "code": "COMP 6751",
+      "subject": "COMP",
+      "catalogue": "6751",
+      "title": "NATURAL LANGUAGE ANALYSIS",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6751"
+    },
+    "comp-6771": {
+      "key": "comp-6771",
+      "code": "COMP 6771",
+      "subject": "COMP",
+      "catalogue": "6771",
+      "title": "Image Processing",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Never Taken/Not Registered: COMP478",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6771"
+    },
+    "comp-6781": {
+      "key": "comp-6781",
+      "code": "COMP 6781",
+      "subject": "COMP",
+      "catalogue": "6781",
+      "title": "STAT L NAT. LANG PROCESSING",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "The course covers robust methods to natural language processing (NLP) and their applications to manipulate large text collections. Topics covered in this course include: Zipf’s law, information retrieval, statistical machine translation, N-gram language models and smoothing techniques, word sense disambiguation, part-of-speech tagging and probabilistic grammars and parsing. A project.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6781"
+    },
+    "comp-6791": {
+      "key": "comp-6791",
+      "code": "COMP 6791",
+      "subject": "COMP",
+      "catalogue": "6791",
+      "title": "INFO. RETRIEVAL & WEB SEARCH",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Never Taken/Not Registered: COMP479",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6791"
+    },
+    "comp-6811": {
+      "key": "comp-6811",
+      "code": "COMP 6811",
+      "subject": "COMP",
+      "catalogue": "6811",
+      "title": "BIOINFORMATICS ALGORITHMS",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6811"
+    },
+    "comp-6821": {
+      "key": "comp-6821",
+      "code": "COMP 6821",
+      "subject": "COMP",
+      "catalogue": "6821",
+      "title": "Bioinformatics Dbases and Sys",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see Grad Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6821"
+    },
+    "comp-6831": {
+      "key": "comp-6831",
+      "code": "COMP 6831",
+      "subject": "COMP",
+      "catalogue": "6831",
+      "title": "APPLIED MACHINE LEARNING",
+      "credits": "4.0",
+      "terms": [
+        "Fall"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see graduate calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6831"
+    },
+    "comp-6841": {
+      "key": "comp-6841",
+      "code": "COMP 6841",
+      "subject": "COMP",
+      "catalogue": "6841",
+      "title": "APPLIED DEEP LEARNING",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "please see Graduate Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6841"
+    },
+    "comp-6861": {
+      "key": "comp-6861",
+      "code": "COMP 6861",
+      "subject": "COMP",
+      "catalogue": "6861",
+      "title": "Conversational AI",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see the graduate calander",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6861"
+    },
+    "comp-691": {
+      "key": "comp-691",
+      "code": "COMP 691",
+      "subject": "COMP",
+      "catalogue": "691",
+      "title": "TOPICS/COMPUTER SCIENCE",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 691"
+    },
+    "comp-6961": {
+      "key": "comp-6961",
+      "code": "COMP 6961",
+      "subject": "COMP",
+      "catalogue": "6961",
+      "title": "GRADUATE SEMINAR-COMP.SC.",
+      "credits": "1.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6961"
+    },
+    "comp-6971": {
+      "key": "comp-6971",
+      "code": "COMP 6971",
+      "subject": "COMP",
+      "catalogue": "6971",
+      "title": "Project and Report",
+      "credits": "4.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Prerequisite: Completion of 16 credits; a CGPA of 3.40 or greater; permission of the Department.See Requirements for the Master of/Magisteriate in Applied Computer Science (MApCompSc) section. Project: 8 hours per week.Note: Students who have received credit for SOEN 6951 or SOEN 6971 may not take this course for credit.",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6971"
+    },
+    "comp-6981": {
+      "key": "comp-6981",
+      "code": "COMP 6981",
+      "subject": "COMP",
+      "catalogue": "6981",
+      "title": "PROJECT AND REPORT II",
+      "credits": "4.0",
+      "terms": [
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Prerequisite: COMP 6971 ;Students who have received credit for SOEN 6951, SOEN 6971, or ENCS 6931 may not take this course for credit",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 6981"
+    },
+    "comp-7251": {
+      "key": "comp-7251",
+      "code": "COMP 7251",
+      "subject": "COMP",
+      "catalogue": "7251",
+      "title": "MOBILE COMP+WIRELESS NETWKS",
+      "credits": "4.0",
+      "terms": [
+        "Winter"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "Course Prerequisite: COMP6461",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 7251"
+    },
+    "comp-792": {
+      "key": "comp-792",
+      "code": "COMP 792",
+      "subject": "COMP",
+      "catalogue": "792",
+      "title": "MASTER S RESEARCH AND THESIS",
+      "credits": "30.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 792"
+    },
+    "comp-7921": {
+      "key": "comp-7921",
+      "code": "COMP 7921",
+      "subject": "COMP",
+      "catalogue": "7921",
+      "title": "MASTER S RESEARCH AND THESIS",
+      "credits": "30.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 7921"
+    },
+    "comp-7941": {
+      "key": "comp-7941",
+      "code": "COMP 7941",
+      "subject": "COMP",
+      "catalogue": "7941",
+      "title": "MASTER S RESEARCH AND THESIS",
+      "credits": "29.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 7941"
+    },
+    "comp-890": {
+      "key": "comp-890",
+      "code": "COMP 890",
+      "subject": "COMP",
+      "catalogue": "890",
+      "title": "DOCTORAL RESEARCH AND THESIS",
+      "credits": "72.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 890"
+    },
+    "comp-8901": {
+      "key": "comp-8901",
+      "code": "COMP 8901",
+      "subject": "COMP",
+      "catalogue": "8901",
+      "title": "DOCTORAL RESEARCH AND THESIS",
+      "credits": "70.0",
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ],
+      "sessions": [
+        "13W",
+        "6H1"
+      ],
+      "description": "Please see GRAD Calendar",
+      "prereq": "",
+      "equivalent": "",
+      "career": "GRAD",
+      "location": "Sir George Williams Campus",
+      "course_name": "COMP 8901"
+    }
+  }
+}
