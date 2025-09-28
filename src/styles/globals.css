@@ -385,3 +385,20 @@ html, body, .site-nav, .card, .search, .newsForm {
 @media (max-width: 980px){
   .brandLogo{ height: clamp(48px, 8.5vw, var(--brand-logo-h)); }
 }
+
+
+:root {
+  /* Light theme */
+  --chat-bg-ai: linear-gradient(180deg, #ffffff, #f7f7fb);
+  --chat-text-ai: #1a1a1a;
+  --chat-bg-user: linear-gradient(90deg, #6d28d9, #9333ea); /* purple */
+  --chat-text-user: #ffffff;
+}
+
+[data-theme="dark"] {
+  /* Dark theme */
+  --chat-bg-ai: linear-gradient(180deg, #1f2937, #111827); /* dark grey */
+  --chat-text-ai: #f9fafb;
+  --chat-bg-user: linear-gradient(90deg, #3b82f6, #2563eb); /* blue */
+  --chat-text-user: #ffffff;
+}

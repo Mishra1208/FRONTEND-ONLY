@@ -2,37 +2,67 @@
 import fs from "fs/promises";
 import path from "node:path";
 import { NextResponse } from "next/server";
+
 export const runtime = "nodejs";
-export const revalidate = 0; // avoid any caching while debugging
+export const revalidate = 0;
 
-/* ---------- load index (once) ---------- */
+/* ---------- globals ---------- */
 let COURSE_INDEX = null;
-let CODE_MAP = null;       // "COMP 248" -> course object
-let TITLE_LIST = null;     // for fuzzy title contains()
+let CODE_MAP = null;          // "COMP 248" -> course object
+let TITLE_LIST = null;        // [code, lowerTitle, item]
+let TITLE_TOKENS_MAP = null;  // item -> Set(tokens)
 
+/* ---------- helpers ---------- */
 function normalizeCode(subj, num) {
   const s = (subj || "COMP").toString().trim().toUpperCase();
   const n = (num || "").toString().trim();
   return `${s} ${n}`;
 }
 
+const INTENT_WORDS = new Set([
+  "credit","credits","cr",
+  "prereq","prereqs","prerequisite","prerequisites",
+  "requirement","requirements",
+  "equivalent","equivalents",
+  "term","terms","semester","semesters","offered","when",
+  "session","sessions","week","duration",
+  "title","what","is","are","for","of","the","in"
+]);
+
+function tokenize(str) {
+  return (str || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean);
+}
+
+/* ---------- load index once ---------- */
 async function ensureIndex() {
   if (COURSE_INDEX) return;
+
   const p = path.join(process.cwd(), "public", "course_index.json");
   const raw = await fs.readFile(p, "utf8");
   COURSE_INDEX = JSON.parse(raw)?.list ?? [];
+
   CODE_MAP = new Map();
   TITLE_LIST = [];
+  TITLE_TOKENS_MAP = new Map();
+
   for (const item of COURSE_INDEX) {
     const code = normalizeCode(item.subject, item.catalogue);
     CODE_MAP.set(code, item);
-    TITLE_LIST.push([code, (item.title || "").toLowerCase(), item]);
+
+    const lowerTitle = (item.title || "").toLowerCase();
+    TITLE_LIST.push([code, lowerTitle, item]);
+    TITLE_TOKENS_MAP.set(item, new Set(tokenize(lowerTitle)));
   }
 }
 
-/* ---------- parse user question ---------- */
+/* ---------- parsing ---------- */
 function extractCourseFromText(text) {
-  const q = (text ?? "").toString();             // <-- guard
+  const q = (text ?? "").toString();
+  // "COMP 249", "comp-249", "249"
   const m = q.match(/([A-Za-z]{3,4})?\s*-?\s*(\d{3,4})\b/);
   if (!m) return null;
   const subj = m[1] ? m[1] : "COMP";
@@ -41,20 +71,23 @@ function extractCourseFromText(text) {
 }
 
 function detectIntent(text) {
-  const t = (text ?? "").toString().toLowerCase();  // <-- guard
+  const t = (text ?? "").toString().toLowerCase();
 
-  if (/\bcredit|cr\b/.test(t)) return "credits";
-  if (/\bprereq|pre-?requisite|pre requisite|requirement/.test(t)) return "prereq";
-  if (/\bequiv|equivalent/.test(t)) return "equivalent";
-  if (/\bterm|offered|semester|when/.test(t)) return "terms";
-  if (/\bsession|week|duration|13w|6h1/.test(t)) return "session";
-  if (/\blocation|campus|where\b/.test(t)) return "location";
-  if (/\btitle|what is\b/.test(t)) return "title";
+  if (/\bcredit(s)?\b|\bcr\b/.test(t)) return "credits";
+  if (/\bpre[-\s]?req(s|uisite|uisites)?\b|\brequirement(s)?\b/.test(t)) return "prereq";
+  if (/\bequiv(alent|alents)?\b/.test(t)) return "equivalent";
+  if (/\b(term|terms|semester|semesters|offered|when)\b/.test(t)) return "terms";
+  if (/\b(session|sessions|week|duration|13w|6h1)\b/.test(t)) return "session";
+  if (/\b(location|campus|where)\b/.test(t)) return "location";
+  if (/\btitle\b|\bwhat is\b/.test(t)) return "title";
   return "summary";
 }
 
+/* ---------- answering ---------- */
+function prettyPrereq(str = "") {
+  return str.replace(/^course\s+pre[-\s]?requisite[s]?:\s*/i, "").trim();
+}
 
-/* ---------- craft answers ---------- */
 function answerForIntent(course, intent) {
   const code = `${course.subject} ${course.catalogue}`;
   const name = `${code} — ${course.title || ""}`.trim();
@@ -65,11 +98,11 @@ function answerForIntent(course, intent) {
       return `${code} is ${cr} credits.`;
     }
     case "prereq": {
-      const p = course.prereq?.trim();
+      const p = prettyPrereq(course.prereq || "");
       return p ? `Prerequisites for ${code}: ${p}` : `There are no listed prerequisites for ${code}.`;
     }
     case "equivalent": {
-      const e = course.equivalent?.trim();
+      const e = (course.equivalent || "").trim();
       return e ? `Course(s) equivalent to ${code}: ${e}` : `No equivalents are listed for ${code}.`;
     }
     case "terms": {
@@ -93,7 +126,7 @@ function answerForIntent(course, intent) {
       if (course.credits) lines.push(`${course.credits} credits`);
       if (course.terms?.length) lines.push(`Offered: ${course.terms.join(", ")}`);
       if (course.sessions?.length) lines.push(`Session: ${course.sessions.join(", ")}`);
-      if (course.prereq) lines.push(`Prerequisite(s): ${course.prereq}`);
+      if (course.prereq) lines.push(`Prerequisite(s): ${prettyPrereq(course.prereq)}`);
       if (course.equivalent) lines.push(`Equivalent: ${course.equivalent}`);
       if (course.location) lines.push(`Location: ${course.location}`);
       if (course.description) lines.push(`\n${course.description}`);
@@ -102,12 +135,25 @@ function answerForIntent(course, intent) {
   }
 }
 
-/* ---------- fuzzy title fallback ---------- */
+/* ---------- fuzzy title lookup ---------- */
 function findByTitleFragment(text) {
-  const t = text.toLowerCase();
-  // very light contains search
-  const hit = TITLE_LIST.find(([code, title]) => title.includes(t));
-  return hit?.[2] || null;
+  const tokens = tokenize(text).filter(t => !INTENT_WORDS.has(t));
+  if (!tokens.length) return null;
+
+  let best = null;
+  let bestScore = 0;
+
+  for (const [, , item] of TITLE_LIST) {
+    const titleTokens = TITLE_TOKENS_MAP.get(item);
+    let hits = 0;
+    for (const t of tokens) if (titleTokens.has(t)) hits++;
+    const score = hits / tokens.length;
+    if (score > bestScore) {
+      bestScore = score;
+      best = item;
+    }
+  }
+  return bestScore >= 0.4 ? best : null; // small threshold to avoid wild guesses
 }
 
 /* ---------- POST /api/chat ---------- */
@@ -115,14 +161,8 @@ export async function POST(req) {
   try {
     await ensureIndex();
 
-    // Defensive parsing + logging
     const payload = await req.json().catch(() => ({}));
     const message = (payload?.message ?? payload?.q ?? payload?.text ?? "").toString();
-    console.log("Index size:", COURSE_INDEX?.length);
-    console.log("Incoming payload:", payload);
-    console.log("Message:", message);
-    console.log("Has COMP 249?", CODE_MAP?.has("COMP 249"));
-
 
     if (!message.trim()) {
       return NextResponse.json({
@@ -132,39 +172,24 @@ export async function POST(req) {
 
     const code = extractCourseFromText(message);
     const intent = detectIntent(message);
-    console.log("Parsed -> code:", code, "| intent:", intent);
 
     let course = null;
     if (code && CODE_MAP.has(code)) {
       course = CODE_MAP.get(code);
-    } else if (!code) {
+    } else {
       course = findByTitleFragment(message);
     }
 
     if (!course) {
-      // Helpful hint reply
       return NextResponse.json({
         reply:
-          "I couldn't find that course in our index. Try typing a full code like `COMP 248` or the course title (e.g., `fundamentals of programming`).",
+          "I couldn't find that course in our index. Try a full code like `COMP 248` or a course title (e.g., `fundamentals of programming`).",
       });
     }
 
-    // Optional: sanity check key existence
-    console.log("Found course:", `${course.subject} ${course.catalogue}`);
-
     const reply = answerForIntent(course, intent);
-
-// instead of redeclaring payload, just reuse another name or inline it:
-const out = {
-  reply,
-  message: reply,
-  text: reply,
-  answer: reply,
-};
-
-return NextResponse.json(out);
-
-
+    const out = { reply, message: reply, text: reply, answer: reply };
+    return NextResponse.json(out);
   } catch (e) {
     console.error("Chat route error:", e);
     return NextResponse.json(
