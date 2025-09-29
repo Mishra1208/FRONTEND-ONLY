@@ -1,20 +1,30 @@
 /* components/ChatWidget.module.css */
-.container { position: fixed; right: 22px; bottom: 22px; z-index: 1400; font-family: Inter, system-ui, sans-serif; }
+.container {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1400;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* FAB */
 .fab {
   width: 52px;
   height: 52px;
   border-radius: 999px;
   border: 0;
-  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
   color: #fff;
   font-size: 20px;
-  box-shadow: 0 8px 30px rgba(109,40,217,.18);
+  box-shadow: 0 8px 30px rgba(109, 40, 217, 0.18);
   cursor: pointer;
 }
+
+/* Panel */
 .panel {
-  width: 420px;
+  width: 560px;
   max-width: calc(100vw - 48px);
-  max-height: 72vh;
+  max-height: 76vh;
   background: var(--panel);
   border-radius: 12px;
   box-shadow: var(--ring), 0 30px 60px rgba(15,23,42,.12);
@@ -23,26 +33,286 @@
   display: flex;
   flex-direction: column;
 }
-.header { padding: 12px 14px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(15,23,42,.04); }
-.title { font-weight:700; }
-.close { border:0; background:transparent; cursor:pointer; padding:6px; border-radius:6px; }
-.messages { padding: 12px; overflow:auto; flex:1; display:flex; flex-direction:column; gap:8px; }
-.msgUser { align-self:flex-end; max-width:86%; }
-.msgAi { align-self:flex-start; max-width:86%; }
-.inputRow { display:flex; gap:8px; padding:10px; border-top:1px solid rgba(15,23,42,.04); }
-.input { flex:1; border-radius:8px; padding:10px; border:1px solid rgba(15,23,42,.06); resize:none; background:transparent; }
-.send { min-width:72px; border-radius:999px; border:0; padding:8px 12px; background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#fff; cursor:pointer; font-weight:700; }
-.hint { padding:8px 12px; font-size:13px; color:var(--ink-dim); border-top:1px solid rgba(15,23,42,.02); }
+
+.header {
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+}
+.title { font-weight: 700; }
+.close { border: 0; background: transparent; cursor: pointer; padding: 6px; border-radius: 6px; }
+
+/* Chat bubbles */
+.messages { padding: 12px; overflow: auto; flex: 1; display:flex; flex-direction: column; gap: 6px; }
+.msgUser { align-self: flex-end; max-width: 92%; }
+.msgAi   { align-self: flex-start; max-width: 92%; }
+
 .msgText {
   padding: 10px 12px;
   border-radius: 12px;
   background: var(--chat-bg-ai);
   color: var(--chat-text-ai);
   box-shadow: 0 4px 18px rgba(15,23,42,.04);
+  line-height: 1.45;
+  font-size: 14.5px;
 }
-
 .msgUser .msgText {
   background: var(--chat-bg-user);
   color: var(--chat-text-user);
   box-shadow: 0 6px 28px rgba(109,40,217,.12);
+}
+
+/* Community (Reddit) message tweaks:
+   - same background as normal AI bubble (no white slab)
+   - compact list and meta
+   - subtle Reddit pill */
+.msgCommunity .msgText { background: var(--chat-bg-ai); }
+
+/* Everything inside the rendered HTML */
+.msgTextHtml .community { margin: 0; }
+.msgText .community .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 69, 0, 0.14);  /* reddit tint, no hard white bg */
+  color: #e44a0c;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.msgText .community .badge svg {
+  width: 14px; height: 14px;
+  fill: currentColor;
+}
+.msgText .community ul {
+  margin: 6px 0 2px 0;
+  padding-left: 18px;           /* normal bullets, tighter */
+}
+.msgText .community li {
+  margin: 6px 0;                /* less space between items */
+}
+.msgText .community a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(109, 40, 217, 0.35);
+}
+.msgText .community .meta {
+  color: var(--ink-dim);
+  font-size: 12px;
+  margin-top: 4px;
+}
+.msgText .community .foot {
+  margin-top: 10px;
+  color: var(--ink-dim);
+  font-size: 12px;
+}
+
+/* Composer */
+.inputRow {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid rgba(15, 23, 42, 0.04);
+}
+.input {
+  flex: 1;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  resize: none;
+  background: transparent;
+}
+.send {
+  min-width: 72px;
+  border-radius: 999px;
+  border: 0;
+  padding: 8px 12px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.hint {
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--ink-dim);
+  border-top: 1px solid rgba(15, 23, 42, 0.02);
+}
+/* --- Reddit (community) bubble tidy --- */
+.msgAi.msgCommunity .msgText {
+  /* same bubble look as other assistant messages */
+  background: var(--chat-bg-ai);
+  color: var(--chat-text-ai);
+  padding: 10px 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(15,23,42,.04);
+}
+
+/* allow us to target HTML structure safely */
+.msgTextHtml .community { margin: 0; }
+
+/* small Reddit badge (no giant circle!) */
+.msgTextHtml .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 1;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: #ff4500;                       /* Reddit orange */
+  border: 1px solid rgba(255, 69, 0, .25);
+  background: transparent;
+  margin-bottom: 6px;
+}
+.msgTextHtml .badge svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  fill: #ff4500;                        /* color dot */
+  display: inline-block;
+}
+
+/* compact header */
+.msgTextHtml h4 {
+  margin: 6px 0 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* tidy list spacing */
+.msgTextHtml ul {
+  list-style: disc;
+  margin: 6px 0 0 18px;                 /* small indent */
+  padding: 0;
+}
+.msgTextHtml li {
+  margin: 6px 0;
+}
+
+/* subtle meta line under each link */
+.msgTextHtml .meta {
+  font-size: 12px;
+  opacity: .65;
+  margin-top: 2px;
+}
+
+/* disclaimer line */
+.msgTextHtml .foot {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: .75;
+}
+/* minimalist header with tiny Reddit pill */
+.msgTextHtml .community.minimalist .topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 6px 0;
+}
+.msgTextHtml .community.minimalist .label {
+  font-weight: 600;
+  font-size: 14px;
+}
+.msgTextHtml .community.minimalist .pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: #ff4500;
+  border: 1px solid rgba(255,69,0,.25);
+  background: transparent;
+  font-size: 12px;
+  line-height: 1;
+}
+.msgTextHtml .community.minimalist .pill svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  display: inline-block;
+  color: #ff4500; /* currentColor for the circle fill */
+}
+
+/* link list (no bullets, tight spacing) */
+.msgTextHtml .community.minimalist .rlinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msgTextHtml .community.minimalist .rlinks li {
+  margin: 4px 0;
+}
+.msgTextHtml .community.minimalist a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(109,40,217,.35);
+}
+.msgTextHtml .community.minimalist .meta {
+  margin-left: 6px;
+  font-size: 12px;
+  opacity: .65;
+}
+.msgTextHtml .community.minimalist .rfoot {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: .75;
+}
+/* Make CSS Modules style the HTML injected via dangerouslySetInnerHTML */
+.msgTextHtml :global(.community.minimalist .topline) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 6px 0;
+}
+.msgTextHtml :global(.community.minimalist .label) {
+  font-weight: 600;
+  font-size: 14px;
+}
+.msgTextHtml :global(.community.minimalist .pill) {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: #ff4500; /* Reddit orange */
+  border: 3px solid rgba(255,69,0,.25);
+  background: transparent;
+  font-size: 12px;
+  line-height: 1;
+}
+.msgTextHtml :global(.community.minimalist .pill svg) {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  /* SVG uses currentColor so it will be orange */
+}
+
+.msgTextHtml :global(.community.minimalist .rlinks) {
+  list-style: disc;
+  margin: 6px 0 0 18px;
+  padding: 0;
+}
+.msgTextHtml :global(.community.minimalist .rlinks li) {
+  margin: 6px 0;
+}
+.msgTextHtml :global(.community.minimalist a) {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(109,40,217,.35);
+}
+.msgTextHtml :global(.community.minimalist .meta) {
+  margin-left: 6px;
+  font-size: 12px;
+  opacity: .65;
+}
+.msgTextHtml :global(.community.minimalist .rfoot) {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: .75;
 }
