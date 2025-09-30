@@ -176,71 +176,72 @@ export default function ChatWidget() {
   }
 
   return (
-    <div className={styles.container} data-open={open ? "1" : "0"}>
-      <button className={styles.fab} aria-label="Chat" onClick={() => setOpen((v) => !v)}>
-        💬
-      </button>
+      <div className={styles.container} data-open={open ? "1" : "0"}>
+        <button className={styles.fab} aria-label="Chat" onClick={() => setOpen(v => !v)}>
+          <img src="/clara.svg" alt="Clara Chatbot" className={styles.fabIcon}/>
+        </button>
 
-      {open && (
-        <div className={styles.panel} role="dialog" aria-modal="true">
-          <div className={styles.header}>
-            <div className={styles.title}>Clara — Student Guide</div>
-            <button className={styles.close} onClick={() => setOpen(false)}>
-              ✕
-            </button>
-          </div>
 
-          <div className={styles.messages}>
-            {messages.map((m, i) => (
-              <div
-                key={i}
-                className={
-                  m.role === "user"
-                    ? styles.msgUser
-                    : `${styles.msgAi} ${m.isCommunity ? styles.msgCommunity : ""}`
-                }
-              >
-                {m.html ? (
-                  // HTML branch (no children alongside dangerouslySetInnerHTML)
-                  <div
-                    className={`${styles.msgText} ${styles.msgTextHtml || ""}`}
-                    dangerouslySetInnerHTML={{ __html: m.html }}
-                  />
-                ) : (
-                  <div className={styles.msgText}>
-                    {m.isLink ? (
-                      <a href={m.text.replace(/^View details: /, "")}>
-                        {m.text.replace(/^View details: /, "Open details")}
-                      </a>
-                    ) : (
-                      m.text
-                    )}
-                  </div>
-                )}
+        {open && (
+            <div className={styles.panel} role="dialog" aria-modal="true">
+              <div className={styles.header}>
+                <div className={styles.title}>Clara — Student Guide</div>
+                <button className={styles.close} onClick={() => setOpen(false)}>
+                  ✕
+                </button>
               </div>
-            ))}
-          </div>
 
-          <div className={styles.inputRow}>
+              <div className={styles.messages}>
+                {messages.map((m, i) => (
+                    <div
+                        key={i}
+                        className={
+                          m.role === "user"
+                              ? styles.msgUser
+                              : `${styles.msgAi} ${m.isCommunity ? styles.msgCommunity : ""}`
+                        }
+                    >
+                      {m.html ? (
+                          // HTML branch (no children alongside dangerouslySetInnerHTML)
+                          <div
+                              className={`${styles.msgText} ${styles.msgTextHtml || ""}`}
+                              dangerouslySetInnerHTML={{__html: m.html}}
+                          />
+                      ) : (
+                          <div className={styles.msgText}>
+                            {m.isLink ? (
+                                <a href={m.text.replace(/^View details: /, "")}>
+                                  {m.text.replace(/^View details: /, "Open details")}
+                                </a>
+                            ) : (
+                                m.text
+                            )}
+                          </div>
+                      )}
+                    </div>
+                ))}
+              </div>
+
+              <div className={styles.inputRow}>
             <textarea
-              ref={inputRef}
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              onKeyDown={onKey}
-              placeholder="Ask about a course e.g. 'How many credits is COMP 248?'"
-              className={styles.input}
-              rows={2}
+                ref={inputRef}
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                onKeyDown={onKey}
+                placeholder="Ask about a course e.g. 'How many credits is COMP 248?'"
+                className={styles.input}
+                rows={2}
             />
-            <button className={styles.send} onClick={send} disabled={loading || !text.trim()}>
-              {loading ? "…" : "Send"}
-            </button>
-          </div>
+                <button className={styles.send} onClick={send} disabled={loading || !text.trim()}>
+                  {loading ? "…" : "Send"}
+                </button>
+              </div>
 
-          <div className={styles.hint}>
-            Tip: ask for credits, terms, prerequisites — or try “Is COMP 248 hard?” to see community posts.
-          </div>
-        </div>
-      )}
-    </div>
+              <div className={styles.hint}>
+                Tip: ask for credits, terms, prerequisites — or try “Is COMP 248 hard?” to see community posts.
+              </div>
+            </div>
+        )}
+      </div>
   );
 }
