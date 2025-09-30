@@ -7,7 +7,9 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "generate-index": "node scripts/generateCourseIndex.cjs"
+    "generate-index": "node scripts/generateCourseIndex.cjs",
+    "build:index": "node scripts/generateCourseIndex.cjs"
+
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

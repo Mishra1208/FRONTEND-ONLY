@@ -316,3 +316,13 @@
   font-size: 12px;
   opacity: .75;
 }
+.welcome p {
+  margin: 0.4em 0;
+}
+.welcome ul {
+  margin: 0.4em 0 0.6em;
+  padding-left: 1.2em;
+}
+.welcome li {
+  margin: 0.2em 0;
+}

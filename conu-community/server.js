@@ -45,7 +45,8 @@ const topicQuery = {
 function courseVariants(course) {
   const compact = course.replace(/\s+/g, "");
   const dashed = course.replace(/\s+/, "-");
-  return `("${course}" OR ${compact} OR "${dashed}")`;
+  const  lower = course.toLowerCase();
+  return `("${course}" OR ${compact} OR "${dashed}" OR "${lower}" OR ${lower.replace(/\s+/g,"")})`;
 }
 function sinceDaysToTimestamp(days) {
   const ms = days * 24 * 60 * 60 * 1000;

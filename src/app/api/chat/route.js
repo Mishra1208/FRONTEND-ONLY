@@ -6,70 +6,53 @@ import { NextResponse } from "next/server";
 export const runtime = "nodejs";
 export const revalidate = 0;
 
-/* ---------- Community (Reddit) ---------- */
+/* --------------------------- Community (Reddit) --------------------------- */
 const COMMUNITY_API = process.env.COMMUNITY_API_URL || "http://localhost:4000";
 const DEV = process.env.NODE_ENV !== "production";
-const COMMUNITY_CACHE = new Map(); // key -> { ts, data }
+const COMMUNITY_CACHE = new Map();
 const COMMUNITY_TTL_MS = 30_000;
 
-function log(...a){ if (DEV) console.log("[community]", ...a); }
+function log(...a) { if (DEV) console.log("[community]", ...a); }
 
 function looksCommunityQuestion(q = "") {
   const s = q.toLowerCase();
-
-  // Factual → never Reddit
   if (/\b(credit|credits|cr|prereq|pre[-\s]?req|prerequisite|requirements?|equiv|equivalent|term|terms|semester|offered|session|sessions|location|campus|title)\b/.test(s)) {
     return false;
   }
-
-  // Opinion/experience → Reddit (now tolerant to "proffesor" etc.)
   return (
-    /\b(hard|harder|hardest|difficult|difficulty|tough|easy|easier|easiest|workload|time\s*commitment|drop\s*rate|withdraw(?:al)?\s*rate|fail\s*rate|pass\s*rate|curve|curved|final|midterm|exam|test|quiz|format|grading|grade(?:\s*distribution)?|tips?|advice|study|labs?|assignments?|resources?|textbook|notes)\b/.test(s)
-    ||
-    // instructor/professor intent (fuzzy)
-    /\b(best|good|great|avoid)\b.*\b(prof\w*|teacher|instructor)\b/.test(s)
-    || /\b(prof\w*|teacher|instructor)\b.*\b(best|good|great|avoid)\b/.test(s)
-    || /\bwho\s*(to|should)\s*take\b/.test(s)
-    || /\b(prof\w*|teacher|instructor)s?\b/.test(s) // bare mention
+    /\b(hard|harder|hardest|difficult|difficulty|tough|easy|easier|easiest|workload|time\s*commitment|drop\s*rate|withdraw(?:al)?\s*rate|fail\s*rate|pass\s*rate|curve|curved|final|midterm|exam|test|quiz|format|grading|grade(?:\s*distribution)?|tips?|advice|study|labs?|assignments?|resources?|textbook|notes)\b/.test(s) ||
+    /\b(best|good|great|avoid)\b.*\b(prof\w*|teacher|instructor)\b/.test(s) ||
+    /\b(prof\w*|teacher|instructor)\b.*\b(best|good|great|avoid)\b/.test(s) ||
+    /\bwho\s*(to|should)\s*take\b/.test(s) ||
+    /\b(proff?esor|professer)\b/.test(s) ||
+    /\b(prof\w*|teacher|instructor)s?\b/.test(s)
   );
 }
 
 const COURSE_RE = /\b([A-Z]{3,4})\s*-?\s*(\d{3})\b/i;
 function extractCourseFromText(text) {
   const m = (text || "").match(COURSE_RE);
-  if (!m) return null;
-  return `${(m[1] || "COMP").toUpperCase().trim()} ${m[2].trim()}`;
+  return m ? `${(m[1] || "COMP").toUpperCase().trim()} ${m[2].trim()}` : null;
 }
 
 async function fetchCommunityAnswer(question, course) {
-  // 30s small cache to avoid hammering Reddit during tests
   const key = `${course}::${question.toLowerCase()}`;
   const now = Date.now();
   const cached = COMMUNITY_CACHE.get(key);
-  if (cached && now - cached.ts < COMMUNITY_TTL_MS) {
-    log("cache hit");
-    return cached.data;
-  }
+  if (cached && now - cached.ts < COMMUNITY_TTL_MS) return cached.data;
 
-  // 6s timeout
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 6000);
-
   try {
     const url = new URL("/api/reddit/answer", COMMUNITY_API);
     url.searchParams.set("question", question);
     url.searchParams.set("course", course);
     url.searchParams.set("limit", "6");
     url.searchParams.set("windowDays", "720");
-
     const r = await fetch(url.toString(), { signal: controller.signal });
-    if (!r.ok) {
-      log("answer status", r.status);
-      return null;
-    }
+    if (!r.ok) return null;
     const data = await r.json().catch(() => null);
     if (!data?.answer || data?.count === 0) return null;
-
     const out = { answer: data.answer, sources: data.sources || [], topic: data.topic, count: data.count };
     COMMUNITY_CACHE.set(key, { ts: now, data: out });
     return out;
@@ -81,7 +64,7 @@ async function fetchCommunityAnswer(question, course) {
   }
 }
 
-/* ---------- CSV bot (your existing index) ---------- */
+/* ---------------------- CSV bot (course index lookup) --------------------- */
 let COURSE_INDEX = null, CODE_MAP = null, TITLE_LIST = null, TITLE_TOKENS_MAP = null;
 
 function normalizeCode(subj, num) {
@@ -93,10 +76,7 @@ const INTENT_WORDS = new Set([
   "semester","semesters","offered","when","session","sessions","week",
   "duration","title","what","is","are","for","of","the","in"
 ]);
-
-function tokenize(str) {
-  return (str || "").toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter(Boolean);
-}
+function tokenize(str){ return (str||"").toLowerCase().replace(/[^a-z0-9\s]/g," ").split(/\s+/).filter(Boolean); }
 
 async function ensureIndex() {
   if (COURSE_INDEX) return;
@@ -113,6 +93,20 @@ async function ensureIndex() {
   }
 }
 
+function summarizeCourse(course) {
+  const code = `${course.subject} ${course.catalogue}`;
+  const name = `${code} — ${course.title || ""}`.trim();
+  const lines = [name];
+  if (course.credits)        lines.push(`${course.credits} credits`);
+  if (course.terms?.length)  lines.push(`Offered: ${course.terms.join(", ")}`);
+  if (course.sessions?.length) lines.push(`Session: ${course.sessions.join(", ")}`);
+  if (course.prereq)         lines.push(`Prerequisite(s): ${prettyPrereq(course.prereq)}`);
+  if (course.equivalent)     lines.push(`Equivalent: ${course.equivalent}`);
+  if (course.location)       lines.push(`Location: ${course.location}`);
+  if (course.description)    lines.push(`\n${course.description}`);
+  return lines.join(" • ");
+}
+
 function detectIntent(text) {
   const t = (text ?? "").toLowerCase();
   if (/\bcredit(s)?\b|\bcr\b/.test(t)) return "credits";
@@ -121,104 +115,123 @@ function detectIntent(text) {
   if (/\b(term|terms|semester|semesters|offered|when)\b/.test(t)) return "terms";
   if (/\b(session|sessions|week|duration|13w|6h1)\b/.test(t)) return "session";
   if (/\b(location|campus|where)\b/.test(t)) return "location";
-  if (/\btitle\b|\bwhat is\b/.test(t)) return "title";
+  if (/\btitle\b/.test(t)) return "title";              // explicit “title”
+  if (/\bwhat\s+is\b/.test(t)) return "summary";        // “what is …” -> full summary
   return "summary";
 }
 
 function prettyPrereq(str=""){ return str.replace(/^course\s+pre[-\s]?requisite[s]?:\s*/i,"").trim(); }
 
+
 function answerForIntent(course, intent) {
   const code = `${course.subject} ${course.catalogue}`;
   const name = `${code} — ${course.title || ""}`.trim();
+
+  // helper to build full summary string
+  function buildSummary() {
+    const lines = [name];
+    if (course.credits) lines.push(`${course.credits} credits`);
+    if (course.terms?.length) lines.push(`Offered: ${course.terms.join(", ")}`);
+    if (course.sessions?.length) lines.push(`Session: ${course.sessions.join(", ")}`);
+    if (course.prereq) lines.push(`Prerequisite(s): ${prettyPrereq(course.prereq)}`);
+    if (course.equivalent) lines.push(`Equivalent: ${course.equivalent}`);
+    if (course.location) lines.push(`Location: ${course.location}`);
+    if (course.description) lines.push(`\n${course.description}`);
+    return lines.join(" • ");
+  }
+
   switch (intent) {
-    case "credits": return `${code} is ${course.credits || "-"} credits.`;
+    case "credits":
+      return `${code} is ${course.credits || "-"} credits.`;
     case "prereq": {
       const p = prettyPrereq(course.prereq || "");
-      return p ? `Prerequisites for ${code}: ${p}` : `There are no listed prerequisites for ${code}.`;
+      return p
+        ? `Prerequisites for ${code}: ${p}`
+        : `There are no listed prerequisites for ${code}.`;
     }
     case "equivalent": {
       const e = (course.equivalent || "").trim();
-      return e ? `Course(s) equivalent to ${code}: ${e}` : `No equivalents are listed for ${code}.`;
+      return e
+        ? `Course(s) equivalent to ${code}: ${e}`
+        : `No equivalents are listed for ${code}.`;
     }
-    case "terms": return `${code} is offered in: ${course.terms?.length ? course.terms.join(", ") : "—"}.`;
-    case "session": return `${code} session/format: ${course.sessions?.length ? course.sessions.join(", ") : "—"}.`;
-    case "location": return `${code} location: ${course.location || "—"}.`;
-    case "title": return name;
-    default: {
-      const lines = [name];
-      if (course.credits) lines.push(`${course.credits} credits`);
-      if (course.terms?.length) lines.push(`Offered: ${course.terms.join(", ")}`);
-      if (course.sessions?.length) lines.push(`Session: ${course.sessions.join(", ")}`);
-      if (course.prereq) lines.push(`Prerequisite(s): ${prettyPrereq(course.prereq)}`);
-      if (course.equivalent) lines.push(`Equivalent: ${course.equivalent}`);
-      if (course.location) lines.push(`Location: ${course.location}`);
-      if (course.description) lines.push(`\n${course.description}`);
-      return lines.join(" • ");
-    }
+    case "terms":
+      return `${code} is offered in: ${
+        course.terms?.length ? course.terms.join(", ") : "—"
+      }.`;
+    case "session":
+      return `${code} session/format: ${
+        course.sessions?.length ? course.sessions.join(", ") : "—"
+      }.`;
+    case "location":
+      return `${code} location: ${course.location || "—"}.`;
+    case "title":
+      return buildSummary(); // show full summary instead of just name
+    default:
+      return buildSummary();
   }
 }
 
-function findByTitleFragment(text) {
-  const tokens = tokenize(text).filter(t => !INTENT_WORDS.has(t));
+function findByTitleFragment(text){
+  const tokens = tokenize(text).filter(t=>!INTENT_WORDS.has(t));
   if (!tokens.length) return null;
-  let best = null, bestScore = 0;
-  for (const [, , item] of TITLE_LIST) {
+  let best=null,bestScore=0;
+  for (const [, , item] of TITLE_LIST){
     const titleTokens = TITLE_TOKENS_MAP.get(item);
-    let hits = 0; for (const t of tokens) if (titleTokens.has(t)) hits++;
+    let hits=0; for (const t of tokens) if (titleTokens.has(t)) hits++;
     const score = hits / tokens.length;
-    if (score > bestScore) { bestScore = score; best = item; }
+    if (score>bestScore){ bestScore=score; best=item; }
   }
-  return bestScore >= 0.4 ? best : null;
+  return bestScore>=0.4 ? best : null;
 }
 
-/* ---------- POST /api/chat ---------- */
-export async function POST(req) {
-  try {
+/* ----------------------------- POST /api/chat ----------------------------- */
+export async function POST(req){
+  try{
     await ensureIndex();
-    const body = await req.json().catch(() => ({}));
+
+    const body = await req.json().catch(()=>({}));
     const message = (body?.message ?? body?.q ?? body?.text ?? "").toString().trim();
 
-    if (!message) {
-      return NextResponse.json({ reply: "Ask about a course, e.g. “How many credits is COMP 248?”" });
+    if (!message){
+      const reply = "Ask about a course, e.g. “How many credits is COMP 248?”";
+      return NextResponse.json({ reply, message: reply, answer: reply, text: reply });
     }
 
-    // Try community (Reddit) if applicable
-    if (looksCommunityQuestion(message)) {
-      const course = extractCourseFromText(message) || "COMP 248";
-      log("community route →", course);
-      const community = await fetchCommunityAnswer(message, course);
-      if (community && community.count >= 2) {
-        // UI expects ok=true branch for community
+    // Try Reddit first for opinion/experience style questions
+    if (looksCommunityQuestion(message)){
+      const courseStr = extractCourseFromText(message) || "COMP 248";
+      log("community route →", courseStr);
+      const community = await fetchCommunityAnswer(message, courseStr);
+      if (community && community.count >= 1){
         return NextResponse.json({
           ok: true,
-          answer: community.answer,
+          course: courseStr,
           topic: community.topic,
-          course,
+          answer: community.answer,
           sources: community.sources
         });
       }
       log("community fallback → CSV");
     }
 
-    // CSV bot (existing)
+    // CSV fallback
     const code = extractCourseFromText(message);
     const intent = detectIntent(message);
-
     let course = null;
     if (code && CODE_MAP.has(code)) course = CODE_MAP.get(code);
     else course = findByTitleFragment(message);
 
-    if (!course) {
-      return NextResponse.json({
-        reply: "I couldn't find that course in our index. Try a full code like `COMP 248` or a course title (e.g., `fundamentals of programming`).",
-      });
+    if (!course){
+      const reply = "I couldn't find that course in our index. Try a full code like `COMP 248` or a course title (e.g., `fundamentals of programming`).";
+      return NextResponse.json({ reply, message: reply, answer: reply, text: reply });
     }
 
     const reply = answerForIntent(course, intent);
-    // Your widget reads .message when ok is undefined
-    return NextResponse.json({ reply, message: reply, text: reply, answer: reply });
-  } catch (e) {
+    return NextResponse.json({ reply, message: reply, answer: reply, text: reply });
+  } catch(e){
     console.error("Chat route error:", e);
-    return NextResponse.json({ reply: "Server error: " + String(e?.message || e) }, { status: 500 });
+    const reply = "Server error: " + String(e?.message || e);
+    return NextResponse.json({ reply, message: reply, answer: reply, text: reply }, { status: 500 });
   }
 }

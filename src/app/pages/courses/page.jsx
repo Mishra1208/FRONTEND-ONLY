@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import styles from "./courses.module.css";
-import { fetchCourses } from "@/lib/mockApi";
+import { fetchCourses, fetchSubjects } from "@/lib/mockApi"; // ← add fetchSubjects
 import AddButton from "@/components/AddButton";
 
 const KEY = "conu-planner:selected";
@@ -59,6 +59,7 @@ export default function CoursesPage() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const [subjects, setSubjects] = useState(["COMP", "COEN", "SOEN", "MECH", "ENGR", "ENCS", "AERO"]); // default until loaded
   const [selectedKeys, setSelectedKeys] = useState(new Set());
   const [toast, setToast] = useState(null); // { text, kind: "ok"|"warn" }
 
@@ -108,6 +109,26 @@ export default function CoursesPage() {
     [params]
   );
 
+  // Load subjects (unique list from CSV)
+  useEffect(() => {
+    let alive = true;
+    (async () => {
+      const list = await fetchSubjects();
+      if (!alive) return;
+      // Keep only the 7 engineering subjects you want (and sort them nicely)
+      const allow = new Set(["COMP", "COEN", "SOEN", "MECH", "ENGR", "ENCS", "AERO"]);
+      const filtered = list.filter((s) => allow.has(s));
+      const ordered = ["COMP", "COEN", "SOEN", "MECH", "ENGR", "ENCS", "AERO"].filter((s) =>
+        filtered.includes(s)
+      );
+      setSubjects(ordered.length ? ordered : ["COMP", "COEN", "SOEN", "MECH", "ENGR", "ENCS", "AERO"]);
+    })();
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  // Load courses according to filters
   useEffect(() => {
     let alive = true;
     (async () => {
@@ -152,7 +173,10 @@ export default function CoursesPage() {
         <h1 className="h2">Courses</h1>
       </div>
 
-      <FiltersInline onApply={(q) => router.push(`/pages/courses?${q}`)} />
+      <FiltersInline
+        subjects={subjects}
+        onApply={(q) => router.push(`/pages/courses?${q}`)}
+      />
 
       {loading ? (
         <p className="body">Loading…</p>
@@ -165,7 +189,6 @@ export default function CoursesPage() {
               const k = courseKey(c);
               const isSelected = selectedKeys.has(k);
 
-              // Build the anchor for the description page
               const anchorId = `${safeUpper(c?.subject)}-${safeUpper(c?.catalogue)}`;
               const descHref = `/pages/courses/descriptions#${anchorId}`;
 
@@ -182,8 +205,7 @@ export default function CoursesPage() {
                   </div>
 
                   <div className="cardMeta">
-                    {(c?.credits ?? "-")} cr {c?.session ? `• ${c.session}` : ""}{" "}
-                    {c?.term ? `• ${c.term}` : ""}
+                    {(c?.credits ?? "-")} cr {c?.session ? `• ${c.session}` : ""} {c?.term ? `• ${c.term}` : ""}
                   </div>
 
                   <div className={styles.actions}>
@@ -208,7 +230,7 @@ export default function CoursesPage() {
   );
 }
 
-function FiltersInline({ onApply }) {
+function FiltersInline({ onApply, subjects = [] }) {
   const params = useSearchParams();
   const [search, setSearch] = useState(params.get("search") ?? "");
   const [subject, setSubject] = useState(params.get("subject") ?? "ALL");
@@ -235,17 +257,25 @@ function FiltersInline({ onApply }) {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
+
+      {/* Subject — dynamic from CSV (limited to COMP/COEN/SOEN/MECH/ENGR/ENCS/AERO) */}
       <select className={styles.select} value={subject} onChange={(e) => setSubject(e.target.value)}>
         <option value="ALL">All Subjects</option>
-        <option value="COMP">COMP</option>
-        <option value="SOEN">SOEN</option>
+        {subjects.map((s) => (
+          <option key={s} value={s}>
+            {s}
+          </option>
+        ))}
       </select>
+
+      {/* Term — keep your existing options; they’ll still filter correctly */}
       <select className={styles.select} value={term} onChange={(e) => setTerm(e.target.value)}>
         <option value="ALL">All Terms</option>
         <option value="Fall">Fall</option>
         <option value="Winter">Winter</option>
         <option value="Summer">Summer</option>
       </select>
+
       <input
         className={styles.number}
         type="number"
