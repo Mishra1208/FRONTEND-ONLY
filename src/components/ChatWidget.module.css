@@ -332,3 +332,86 @@
   filter: drop-shadow(0 8px 14px rgba(15, 23, 42, 0.14));
   transition: transform 160ms ease, filter 160ms ease;
 }
+
+/* --- RMP card: readable on dark --- */
+.msgTextHtml :global(.community .card) {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+/* inherit the bubble text color, then lightly dim the labels */
+.msgTextHtml :global(.community) {
+  color: var(--chat-text-ai);
+}
+.msgTextHtml :global(.community .kv .k) {
+  color: var(--chat-text-ai) !important;
+  opacity: .8;
+}
+.msgTextHtml :global(.community .kv .v) {
+  color: var(--chat-text-ai) !important;
+  opacity: 1;
+}
+
+/* make the "RMP" pill and footer readable on dark */
+.msgTextHtml :global(.community .pill) {
+  border-color: rgba(255, 69, 0, .35);
+  color: #ff7a45;
+}
+.msgTextHtml :global(.community .rfoot) {
+  color: var(--ink-dim);
+}
+
+/* links inside the RMP card */
+.msgTextHtml :global(.community a) {
+  color: var(--accent);
+  border-bottom: 1px dotted rgba(109,40,217,.35);
+  text-decoration: none;
+}
+.msgTextHtml :global(.community a:hover) {
+  opacity: .9;
+}
+
+/* --- Typing indicator --- */
+.typing {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--chat-bg-ai);
+  color: var(--chat-text-ai);
+}
+
+.dots {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  min-width: 38px;
+  justify-content: center;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.65;
+  animation: hop 1.2s infinite ease-in-out;
+}
+
+.dot:nth-child(2) { animation-delay: 0.15s; }
+.dot:nth-child(3) { animation-delay: 0.30s; }
+
+.typingText {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* subtle “hopping” instead of big bounce so it feels classy */
+@keyframes hop {
+  0%   { transform: translateY(0);     opacity: .35; }
+  20%  { transform: translateY(-3px);  opacity: .8;  }
+  40%  { transform: translateY(0);     opacity: .55; }
+  100% { transform: translateY(0);     opacity: .35; }
+}
+

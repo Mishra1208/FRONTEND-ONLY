@@ -9,7 +9,6 @@
     "lint": "eslint",
     "generate-index": "node scripts/generateCourseIndex.cjs",
     "build:index": "node scripts/generateCourseIndex.cjs"
-
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -26,6 +25,9 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.5.3"
+    "eslint-config-next": "15.5.3",
+    "puppeteer": "^24.22.3",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   }
 }

@@ -43,6 +43,28 @@ export default function ChatWidget() {
   const [loading, setLoading] = useState(false);
   const inputRef = useRef();
 
+  const endRef = useRef();
+
+  useEffect(() => {
+   endRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, loading]);
+
+
+  function TypingBubble() {
+   return (
+      <div className={`${styles.msgAi}`}>
+        <div className={`${styles.msgText} ${styles.typing}`} aria-live="polite" aria-label="Assistant is typing">
+          <span className={styles.dots}>
+            <span className={styles.dot} />
+            <span className={styles.dot} />
+            <span className={styles.dot} />
+          </span>
+          <span className={styles.typingText}>Clara is typing…</span>
+        </div>
+      </div>
+    );
+  }
+
   // focus when opening
   useEffect(() => {
     if (open) setTimeout(() => inputRef.current?.focus(), 120);
@@ -68,10 +90,10 @@ export default function ChatWidget() {
       <ul>
         <li><em>How many credits is COMP 248?</em></li>
         <li><em>What are the prerequisites for SOEN 287?</em></li>
-        <li><em>Is COEN 231 hard? Who’s the best prof?</em></li>
-        <li><em>What’s the COMP 248 final like?</em></li>
+        <li><em>Is COEN 231 hard?</em></li>
+        <li><em>Or type in Professor's name to get his details from ratemyprofessors.com</em></li>
       </ul>
-      <p>Type your question below — I’ll pull official details and community feedback where helpful.</p>
+      <p>Type your question below, I’ll pull official details and community feedback where helpful.</p>
     </div>
   `;
 
@@ -100,7 +122,10 @@ export default function ChatWidget() {
         body: JSON.stringify({ text: user.text }),
       });
       const data = await res.json();
-
+      if (data?.html) {
+  pushMessage({ role: "assistant", html: data.html });
+  return;
+}
       // Community (Reddit) answer → render as compact HTML
       if (data?.ok && data?.answer) {
         const list =
@@ -220,6 +245,9 @@ export default function ChatWidget() {
                       )}
                     </div>
                 ))}
+                {loading && <TypingBubble />}
+
+                <div ref={endRef} /> {/* scroll anchor */}
               </div>
 
               <div className={styles.inputRow}>
