@@ -65,7 +65,7 @@ async function fetchRmpBlock(name) {
 
   const extractHumanName = (raw, fallbacks = []) => {
     const text = norm(raw);
-    const stripped = text.replace(/^QUALITY\s*[\d.]+\s*\d+\s*ratings\s*/i, {});
+    const stripped = text.replace(/^QUALITY\s*[\d.]+\s*\d+\s*ratings\s*/i, "");
     const m =
       text.match(/([A-Z][A-Za-z.'-]+(?:\s+[A-Z][A-Za-z.'-]+){1,3})/) ||
       (fallbacks[0] && norm(fallbacks[0]).match(/([A-Z][A-Za-z.'-]+(?:\s+[A-Z][A-Za-z.'-]+){1,3})/));
@@ -142,11 +142,34 @@ async function fetchRmpBlock(name) {
         .other { padding:.5rem .75rem; border:1px solid rgba(0,0,0,.08); border-radius:8px; margin:.35rem 0; }
         .rlinks { margin:.4rem 0 0 .2rem; padding-left:1rem; }
         .rlinks li { margin:.35rem 0; }
+    .community .pill.rmp{
+       display: inline-block;
+       background: #3b82f6;      /* blue */
+       color: #fff;
+       font-weight: 700;
+       font-size: 10.5px;
+       letter-spacing: .35px;
+       padding: 3px 7px;
+       border-radius: 6px;
+       line-height: 1;
+       box-shadow: 0 1px 0 rgba(0,0,0,.08);
+       position: relative;       /* <-- needed so the tail positions correctly */
+       border: none;             /* ensure no orange border leaks in */
+    }
+   .community .pill.rmp::after{
+      content:"";
+      position:absolute;
+      bottom:-4px;
+      left:8px;
+      border-width:4px 4px 0 4px;
+      border-style:solid;
+      border-color:#3b82f6 transparent transparent transparent; /* match the blue */
+   }     
       </style>
       <div class="community minimalist">
         <div class="topline">
           <span class="label">RateMyProfessors</span>
-          <span class="pill">RMP</span>
+          <span class="pill rmp">RMP</span>
         </div>
         <div class="msg">
           <div class="card">
@@ -366,3 +389,5 @@ export async function POST(req){
     return NextResponse.json({ reply, message: reply, answer: reply, text: reply }, { status: 500 });
   }
 }
+
+

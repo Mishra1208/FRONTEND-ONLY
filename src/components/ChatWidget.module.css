@@ -215,7 +215,7 @@
   font-weight: 600;
   font-size: 14px;
 }
-.msgTextHtml .community.minimalist .pill {
+.msgTextHtml .community.minimalist.reddit .pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -227,7 +227,7 @@
   font-size: 12px;
   line-height: 1;
 }
-.msgTextHtml .community.minimalist .pill svg {
+.msgTextHtml .community.minimalist.reddit .pill svg {
   width: 14px;
   height: 14px;
   flex: 0 0 14px;
@@ -270,7 +270,7 @@
   font-weight: 600;
   font-size: 14px;
 }
-.msgTextHtml :global(.community.minimalist .pill) {
+.msgTextHtml :global(.community.minimalist.reddit .pill) {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -282,7 +282,7 @@
   font-size: 12px;
   line-height: 1;
 }
-.msgTextHtml :global(.community.minimalist .pill svg) {
+.msgTextHtml :global(.community.minimalist.reddit .pill svg) {
   width: 14px;
   height: 14px;
   display: inline-block;
@@ -355,10 +355,6 @@
 }
 
 /* make the "RMP" pill and footer readable on dark */
-.msgTextHtml :global(.community .pill) {
-  border-color: rgba(255, 69, 0, .35);
-  color: #ff7a45;
-}
 .msgTextHtml :global(.community .rfoot) {
   color: var(--ink-dim);
 }

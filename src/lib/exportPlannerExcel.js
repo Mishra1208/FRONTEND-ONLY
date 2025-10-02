@@ -13,9 +13,9 @@ const num = (v) => {
 };
 
 const COORDS = {
-  Fall:   { startRow: 9,  rows: 6,  colSerial: "B", colCourse: "C", colCredits: "D", totalRow: 15, totalCol: "D" },
-  Winter: { startRow: 9,  rows: 6,  colSerial: "I", colCourse: "J", colCredits: "K", totalRow: 15, totalCol: "K" },
-  Summer: { startRow: 9,  rows: 6,  colSerial: "M", colCourse: "N", colCredits: "O", totalRow: 15, totalCol: "O" },
+  Fall:   { startRow: 10,  rows: 6,  colSerial: "B", colCourse: "C", colCredits: "D", totalRow: 16, totalCol: "D" },
+  Winter: { startRow: 10,  rows: 6,  colSerial: "I", colCourse: "J", colCredits: "K", totalRow: 16, totalCol: "K" },
+  Summer: { startRow: 10,  rows: 6,  colSerial: "M", colCourse: "N", colCredits: "O", totalRow: 16, totalCol: "O" },
 };
 
 function colRow(col, row) { return `${col}${row}`; }

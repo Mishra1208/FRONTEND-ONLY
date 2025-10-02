@@ -140,7 +140,7 @@ export default function ChatWidget() {
             .join("") || "";
 
         const html = `
-          <div class="community minimalist">
+          <div class="community minimalist reddit">
             <div class="topline">
               <span class="label">Top posts from Reddit</span>
               <span class="pill">
